@@ -4,7 +4,7 @@ export PATH := ${HOME}/.local/bin:${HOME}/.cargo/bin:$(PATH)
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' makefile | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-update: download process_results  ## Download and process the latest results
+update: download process_results generate_leaderboards  ## Download and process the latest results
 
 download:
 	@scp -o ConnectTimeout=5 percival:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl percival_results.jsonl || true
@@ -26,6 +26,9 @@ download:
 
 process_results:
 	@uv run src/process_results.py results/results.jsonl
+
+generate_leaderboards:
+	@uv run src/generate_leaderboards.py configs/danish.yaml
 
 install: ## Install dependencies
 	@echo "Installing the 'leaderboards' project..."
