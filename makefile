@@ -28,10 +28,7 @@ process_results:
 	@uv run src/process_results.py results/results.jsonl
 
 generate_leaderboards:
-	@for config in configs/*.yaml; do \
-		if [ "$${config}" = "configs/task_metrics.yaml" ]; then \
-			continue; \
-		fi; \
+	@for config in leaderboard_configs/*.yaml; do \
 		uv run src/generate_leaderboards.py $${config}; \
 	done
 
