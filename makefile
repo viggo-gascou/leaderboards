@@ -12,20 +12,20 @@ download:
 	@scp -o ConnectTimeout=5 blackknight:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl blackknight_results.jsonl || true
 	@touch results.jsonl
 	@if [ -f percival_results.jsonl ]; then \
-		cat percival_results.jsonl >> raw_results/results.jsonl; \
+		cat percival_results.jsonl >> results/results.jsonl; \
 		rm percival_results.jsonl; \
 	fi
 	@if [ -f lancelot_results.jsonl ]; then \
-		cat lancelot_results.jsonl >> raw_results/results.jsonl; \
+		cat lancelot_results.jsonl >> results/results.jsonl; \
 		rm lancelot_results.jsonl; \
 	fi
 	@if [ -f blackknight_results.jsonl ]; then \
-		cat blackknight_results.jsonl >> raw_results/results.jsonl; \
+		cat blackknight_results.jsonl >> results/results.jsonl; \
 		rm blackknight_results.jsonl; \
 	fi
 
 process_results:
-	@uv run src/process_results.py raw_results/results.jsonl
+	@uv run src/process_results.py results/results.jsonl
 
 install: ## Install dependencies
 	@echo "Installing the 'leaderboards' project..."
