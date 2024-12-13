@@ -1,0 +1,10 @@
+[project]
+name = "leaderboards"
+version = "0.1.0"
+description = "Collection of all evaluation results from the ScandEval framework."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1.7",
+    "huggingface-hub>=0.26.5",
+]
