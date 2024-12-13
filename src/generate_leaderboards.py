@@ -23,29 +23,20 @@ logger = logging.getLogger(__name__)
 
 @click.command()
 @click.argument("leaderboard_config")
-@click.option(
-    "--task-metrics-config",
-    "-t",
-    default="configs/task_metrics.yaml",
-    help="The path to the YAML file containing the task metrics configuration.",
-)
-def main(leaderboard_config: str | Path, task_metrics_config: str | Path) -> None:
+def main(leaderboard_config: str | Path) -> None:
     """Generate leaderboard CSV files from the ScandEval results.
 
     Args:
         leaderboard_config:
             The path to the leaderboard configuration file.
-        task_metrics_config:
-            The path to the YAML file containing the task metrics configuration.
     """
-    task_metrics_config = Path(task_metrics_config)
     leaderboard_config = Path(leaderboard_config)
 
     logger.info(f"Generating {leaderboard_config.stem.title()} leaderboard...")
 
     # Load configs
-    with task_metrics_config.open(mode="r") as f:
-        task_metrics: dict[str, str] = safe_load(stream=f)
+    with Path("task_config.yaml").open(mode="r") as f:
+        task_config: dict[str, dict[str, str]] = safe_load(stream=f)
     with leaderboard_config.open(mode="r") as f:
         config: dict[str, list[str]] = safe_load(stream=f)
 
@@ -57,7 +48,7 @@ def main(leaderboard_config: str | Path, task_metrics_config: str | Path) -> Non
     # Load results and set them up for the leaderboard
     results = load_results(allowed_datasets=datasets)
     model_results = group_results_by_model(
-        results=results, task_metrics=task_metrics, required_datasets=datasets
+        results=results, task_config=task_config, required_datasets=datasets
     )
     ranks = compute_ranks(model_results=model_results, config=config)
     metadata_dict = extract_model_metadata(results=results)
@@ -111,7 +102,7 @@ def load_results(allowed_datasets: list[str]) -> list[dict]:
 
 def group_results_by_model(
     results: list[dict],
-    task_metrics: dict[str, str],
+    task_config: dict[str, dict[str, str]],
     required_datasets: list[str],
 ) -> dict[str, dict[str, tuple[list[float], float]]]:
     """Group results by model ID.
@@ -119,8 +110,8 @@ def group_results_by_model(
     Args:
         results:
             The processed results.
-        task_metrics:
-            The task -> metric mapping.
+        task_config:
+            The task configuration.
         required_datasets:
             The list of datasets to include in the leaderboard, which every model must
             have been evaluated on.
@@ -132,7 +123,7 @@ def group_results_by_model(
     for record in results:
         model_id = extract_model_id_from_record(record=record)
         dataset: str = record["dataset"]
-        metric = task_metrics[record["task"]]
+        metric = task_config[record["task"]]["metric"]
 
         # Get the metrics for the dataset
         total_score: float = record["results"]["total"][f"test_{metric}"]
