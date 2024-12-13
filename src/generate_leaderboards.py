@@ -63,7 +63,7 @@ def main(leaderboard_config: str | Path, task_metrics_config: str | Path) -> Non
     metadata_dict = extract_model_metadata(results=results)
 
     # Generate the leaderboard and store it to disk
-    leaderboard_path = Path("leaderboards") / leaderboard_config.with_suffix(".csv")
+    leaderboard_path = Path("leaderboards") / f"{leaderboard_config.stem}.csv"
     df = generate_dataframe(
         model_results=model_results,
         ranks=ranks,
