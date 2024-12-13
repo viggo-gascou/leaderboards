@@ -1,29 +1,15 @@
 sentiment-classification:
-  - name: angry-tweets
-    pretty_name: Angry Tweets
-
+  - angry-tweets
 named-entity-recognition:
-  - name: dansk
-    pretty_name: DANSK
-
+  - dansk
 linguistic-acceptability:
-  - name: scala-da
-    pretty_name: ScaLA-da
-
+  - scala-da
 reading-comprehension:
-  - name: scandiqa-da
-    pretty_name: ScandiQA-da
-
+  - scandiqa-da
 summarization:
-  - name: nordjylland-news
-    pretty_name: Nordjylland News
-
+  - nordjylland-news
 knowledge:
-  - name: danske-talemaader
-    pretty_name: Danske Talemåder
-  - name: danish-citizen-tests
-    pretty_name: Danish Citizen Tests
-
+  - danske-talemaader
+  - danish-citizen-tests
 common-sense-reasoning:
-  - name: hellaswag-da
-    pretty_name: HellaSwag-da
+  - hellaswag-da
