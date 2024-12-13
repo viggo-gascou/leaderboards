@@ -8,6 +8,7 @@ import logging
 from huggingface_hub import HfApi
 from huggingface_hub.hf_api import RepositoryNotFoundError
 from tqdm.auto import tqdm
+import typing as t
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
@@ -15,12 +16,13 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+BANNED_VERSIONS: list[str] = ["9.3.0", "10.0.0"]
 MERGE_CACHE: dict[str, bool] = dict()
 COMMERCIALLY_LICENSED_CACHE: dict[str, bool] = dict()
 
 
 @click.command()
-@click.argument('filename')
+@click.argument("filename")
 def main(filename: str) -> None:
     """Process ScandEval records from a JSONL file.
 
@@ -31,21 +33,22 @@ def main(filename: str) -> None:
     # Build caches
     global MERGE_CACHE
     global COMMERCIALLY_LICENSED_CACHE
-    old_records = list()
+    old_records: list[dict[str, t.Any]] = list()
     with Path(filename).with_suffix(".processed.jsonl").open(mode="r") as f:
         for line_idx, line in enumerate(f):
             if not line.strip():
                 continue
-            for record in line.replace("}{", "}\n{").split("\n"):
-                if not record.strip():
+            for line in line.replace("}{", "}\n{").split("\n"):
+                if not line.strip():
                     continue
                 try:
-                    old_records.append(json.loads(record))
+                    old_records.append(json.loads(line))
                 except json.JSONDecodeError:
-                    logger.error(f"Invalid JSON on line {line_idx:,}: {record}.")
+                    logger.error(f"Invalid JSON on line {line_idx:,}: {line}.")
                     return
     for record in tqdm(old_records, desc="Building caches"):
-        model_id = record["model"].split("@")[0]
+        model_id: str = record["model"]
+        model_id = model_id.split("@")[0]
         if "merge" in record:
             MERGE_CACHE[model_id] = record["merge"]
         if "commercially_licensed" in record:
@@ -273,7 +276,6 @@ def record_is_valid(record: dict) -> bool:
     Returns:
         True if the record is valid, False otherwise.
     """
-    BANNED_VERSIONS: list[str] = ["9.3.0", "10.0.0"]
     if record.get("scandeval_version") in BANNED_VERSIONS:
         return False
 
