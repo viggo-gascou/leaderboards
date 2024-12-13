@@ -10,7 +10,7 @@ download:
 	@scp -o ConnectTimeout=5 percival:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl percival_results.jsonl || true
 	@scp -o ConnectTimeout=5 lancelot:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl lancelot_results.jsonl || true
 	@scp -o ConnectTimeout=5 blackknight:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl blackknight_results.jsonl || true
-	@touch results.jsonl
+	@touch results/results.jsonl
 	@if [ -f percival_results.jsonl ]; then \
 		cat percival_results.jsonl >> results/results.jsonl; \
 		rm percival_results.jsonl; \
