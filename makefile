@@ -28,7 +28,12 @@ process_results:
 	@uv run src/process_results.py results/results.jsonl
 
 generate_leaderboards:
-	@uv run src/generate_leaderboards.py configs/danish.yaml
+	@for config in configs/*.yaml; do \
+		if [ "$${config}" = "configs/task_metrics.yaml" ]; then \
+			continue; \
+		fi; \
+		uv run src/generate_leaderboards.py $${config}; \
+	done
 
 install: ## Install dependencies
 	@echo "Installing the 'leaderboards' project..."
