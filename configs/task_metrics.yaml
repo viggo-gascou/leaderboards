@@ -1,8 +1,0 @@
-sentiment-classification: mcc
-named-entity-recognition: micro_f1_no_misc
-linguistic-acceptability: mcc
-reading-comprehension: f1
-knowledge: mcc
-common-sense-reasoning: mcc
-summarization: bertscore
-speed: speed

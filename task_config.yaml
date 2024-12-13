@@ -1,0 +1,31 @@
+sentiment-classification:
+  category: nlu
+  metric: mcc
+
+named-entity-recognition:
+  category: nlu
+  metric: micro_f1_no_misc
+
+linguistic-acceptability:
+  category: nlu
+  metric: mcc
+
+reading-comprehension:
+  category: nlu
+  metric: f1
+
+knowledge:
+  category: nlg
+  metric: mcc
+
+common-sense-reasoning:
+  category: nlg
+  metric: mcc
+
+summarization:
+  category: nlg
+  metric: bertscore
+
+speed:
+  category: null
+  metric: speed
