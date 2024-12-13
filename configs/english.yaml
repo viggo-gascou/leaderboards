@@ -1,0 +1,14 @@
+sentiment-classification:
+  - sst5
+named-entity-recognition:
+  - conll-en
+linguistic-acceptability:
+  - scala-en
+reading-comprehension:
+  - squad
+summarization:
+  - cnn-dailymail
+knowledge:
+  - mmlu
+common-sense-reasoning:
+  - hellaswag

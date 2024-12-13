@@ -1,0 +1,16 @@
+sentiment-classification:
+  - norec
+named-entity-recognition:
+  - norne-nb
+  - norne-nn
+linguistic-acceptability:
+  - scala-nb
+  - scala-nn
+reading-comprehension:
+  - norquad
+summarization:
+  - no-sammendrag
+knowledge:
+  - mmlu-no
+common-sense-reasoning:
+  - hellaswag-no

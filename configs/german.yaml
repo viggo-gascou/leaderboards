@@ -1,0 +1,14 @@
+sentiment-classification:
+  - sb10k
+named-entity-recognition:
+  - germeval
+linguistic-acceptability:
+  - scala-de
+reading-comprehension:
+  - germanquad
+summarization:
+  - mlsum
+knowledge:
+  - mmlu-de
+common-sense-reasoning:
+  - hellaswag-de

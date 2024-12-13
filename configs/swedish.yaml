@@ -1,0 +1,14 @@
+sentiment-classification:
+  - swerec
+named-entity-recognition:
+  - suc3
+linguistic-acceptability:
+  - scala-sv
+reading-comprehension:
+  - scandiqa-sv
+summarization:
+  - swedn
+knowledge:
+  - mmlu-sv
+common-sense-reasoning:
+  - hellaswag-sv
