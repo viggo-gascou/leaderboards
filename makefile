@@ -1,10 +1,7 @@
 # Set the PATH env var used by cargo and uv
 export PATH := ${HOME}/.local/bin:${HOME}/.cargo/bin:$(PATH)
 
-help:
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' makefile | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
-
-update: download process_results generate_leaderboards publish  ## Download and process the latest results
+update: download process_results generate_leaderboards publish
 
 download:
 	@scp -o ConnectTimeout=5 percival:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl percival_results.jsonl || true
@@ -43,7 +40,7 @@ publish:
 	@git push
 	@echo "Published leaderboards!"
 
-install: ## Install dependencies
+install:
 	@echo "Installing the 'leaderboards' project..."
 	@$(MAKE) --quiet install-rust
 	@$(MAKE) --quiet install-uv
@@ -69,7 +66,7 @@ install-dependencies:
 	@uv python install 3.11
 	@uv sync --all-extras --python 3.11
 
-install-pre-commit:  ## Install pre-commit hooks
+install-pre-commit:
 	@uv run pre-commit install
 
 lint:
@@ -86,4 +83,4 @@ type-check:
 		--show-error-codes \
 		--check-untyped-defs
 
-check: lint format type-check  ## Lint, format, and type-check the code
+check: lint format type-check
