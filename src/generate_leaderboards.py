@@ -41,19 +41,41 @@ def main(leaderboard_config: str | Path) -> None:
     with leaderboard_config.open(mode="r") as f:
         config: dict[str, list[str]] = safe_load(stream=f)
 
-    # Load the list of all datasets to be used in the leaderboard
+    # If the config consists of multiple languages, we extract a dictionary with config
+    # for each constituent language
+    configs: dict[str, dict[str, list[str]]] = dict()
+    if "languages" in config:
+        for language in config["languages"]:
+            with Path(f"leaderboard_configs/{language}.yaml").open(mode="r") as f:
+                configs[language] = safe_load(stream=f)
+    else:
+        configs = {leaderboard_config.stem: config}
+
+    del config
+
     datasets = [
-        dataset for task_datasets in config.values() for dataset in task_datasets
+        dataset
+        for config in configs.values()
+        for task_datasets in config.values()
+        for dataset in task_datasets
     ] + ["speed"]
 
     required_datasets_per_category = list()
-    categories = {task_config[task]["category"] for task in config}
+    categories = {
+        task_config[task]["category"] for config in configs.values() for task in config
+    }
     for category in categories:
         category_tasks = [
-            task for task in config if task_config[task]["category"] == category
+            task
+            for config in configs.values()
+            for task in config
+            if task_config[task]["category"] == category
         ]
         category_datasets = [
-            dataset for task in category_tasks for dataset in config[task]
+            dataset
+            for task in category_tasks
+            for config in configs.values()
+            for dataset in config[task]
         ] + ["speed"]
         required_datasets_per_category.append(category_datasets)
 
@@ -65,7 +87,7 @@ def main(leaderboard_config: str | Path) -> None:
         required_datasets_per_category=required_datasets_per_category,
     )
     ranks = compute_ranks(
-        model_results=model_results, task_config=task_config, config=config
+        model_results=model_results, task_config=task_config, configs=configs
     )
     metadata_dict = extract_model_metadata(results=results)
 
@@ -179,7 +201,7 @@ def group_results_by_model(
 def compute_ranks(
     model_results: dict[str, dict[str, tuple[list[float], float]]],
     task_config: dict[str, dict[str, str]],
-    config: dict[str, list[str]],
+    configs: dict[str, dict[str, list[str]]],
 ) -> dict[str, dict[str, float]]:
     """Compute the ranks of the models.
 
@@ -188,71 +210,86 @@ def compute_ranks(
             The model results.
         task_config:
             The task configuration.
-        config:
-            The leaderboard configuration.
+        configs:
+            The leaderboard configurations for each language.
 
     Returns:
         The ranks of the models, per task category.
     """
-    datasets = [
-        dataset for task_datasets in config.values() for dataset in task_datasets
-    ]
+    all_datasets = {
+        language: [
+            dataset for task_datasets in config.values() for dataset in task_datasets
+        ]
+        for language, config in configs.items()
+    }
 
     model_dataset_ranks: dict[str, dict[str, float]] = defaultdict(dict)
-    for dataset in datasets:
-        dummy_scores: tuple[list[float], float] = ([], float("nan"))
-        model_dataset_scores = sorted(
-            [
-                (
-                    model_id,
-                    scores.get(dataset, dummy_scores)[0],
-                    scores.get(dataset, dummy_scores)[1],
-                )
-                for model_id, scores in model_results.items()
-            ],
-            key=lambda x: x[2],
-            reverse=True,
-        )
-        stddev = np.std(
-            [score for _, _, score in model_dataset_scores if not np.isnan(score)]
-        )
+    for _, datasets in all_datasets.items():
+        for dataset in datasets:
+            dummy_scores: tuple[list[float], float] = ([], float("nan"))
+            model_dataset_scores = sorted(
+                [
+                    (
+                        model_id,
+                        scores.get(dataset, dummy_scores)[0],
+                        scores.get(dataset, dummy_scores)[1],
+                    )
+                    for model_id, scores in model_results.items()
+                ],
+                key=lambda x: x[2],
+                reverse=True,
+            )
+            stddev = np.std(
+                [score for _, _, score in model_dataset_scores if not np.isnan(score)]
+            )
 
-        rank_score = 1.0
-        previous_scores: list[float] = list()
-        for model_id, raw_scores, _ in model_dataset_scores:
-            if raw_scores == []:
-                model_dataset_ranks[model_id][dataset] = math.inf
-                continue
-            elif previous_scores == []:
-                previous_scores = raw_scores
-            elif significantly_better(previous_scores, raw_scores):
-                difference = np.mean(previous_scores) - np.mean(raw_scores)
-                normalised_difference = difference / stddev
-                rank_score += normalised_difference.item()
-                previous_scores = raw_scores
-            model_dataset_ranks[model_id][dataset] = rank_score
+            rank_score = 1.0
+            previous_scores: list[float] = list()
+            for model_id, raw_scores, _ in model_dataset_scores:
+                if raw_scores == []:
+                    model_dataset_ranks[model_id][dataset] = math.inf
+                    continue
+                elif previous_scores == []:
+                    previous_scores = raw_scores
+                elif significantly_better(previous_scores, raw_scores):
+                    difference = np.mean(previous_scores) - np.mean(raw_scores)
+                    normalised_difference = difference / stddev
+                    rank_score += normalised_difference.item()
+                    previous_scores = raw_scores
+                model_dataset_ranks[model_id][dataset] = rank_score
 
-    model_task_ranks: dict[str, dict[str, float]] = defaultdict(dict)
+    model_task_ranks: dict[str, dict[str, dict[str, float]]] = defaultdict(
+        lambda: defaultdict(dict)
+    )
     for model_id, dataset_ranks in model_dataset_ranks.items():
-        for task, datasets in config.items():
-            model_task_ranks[model_id][task] = np.mean(
-                [
-                    dataset_ranks[dataset]
-                    for dataset in datasets
-                    if dataset in dataset_ranks
-                ]
-            ).item()
+        for language, config in configs.items():
+            for task, datasets in config.items():
+                model_task_ranks[model_id][language][task] = np.mean(
+                    [
+                        dataset_ranks[dataset]
+                        for dataset in datasets
+                        if dataset in dataset_ranks
+                    ]
+                ).item()
 
-    categories = {task_config[task]["category"] for task in config}
+    categories = {
+        task_config[task]["category"] for config in configs.values() for task in config
+    }
     model_task_category_ranks: dict[str, dict[str, float]] = defaultdict(dict)
-    for model_id, task_scores in model_task_ranks.items():
+    for model_id, score_dict in model_task_ranks.items():
         for category in categories:
+            language_scores = [
+                np.mean(
+                    [
+                        score_dict[language][task]
+                        for task in config
+                        if task_config[task]["category"] == category
+                    ]
+                ).item()
+                for language, config in configs.items()
+            ]
             model_task_category_ranks[model_id][category] = np.mean(
-                [
-                    task_scores[task]
-                    for task in config
-                    if task_config[task]["category"] == category
-                ]
+                language_scores
             ).item()
 
     return model_task_category_ranks
