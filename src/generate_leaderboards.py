@@ -227,18 +227,15 @@ def compute_ranks(
     for _, datasets in all_datasets.items():
         for dataset in datasets:
             dummy_scores: tuple[list[float], float] = ([], float("nan"))
+            model_dataset_scores = [
+                (model_id, *scores.get(dataset, dummy_scores))
+                for model_id, scores in model_results.items()
+            ]
             model_dataset_scores = sorted(
-                [
-                    (
-                        model_id,
-                        scores.get(dataset, dummy_scores)[0],
-                        scores.get(dataset, dummy_scores)[1],
-                    )
-                    for model_id, scores in model_results.items()
-                ],
-                key=lambda x: x[2],
+                [x for x in model_dataset_scores if not np.isnan(x[-1])],
+                key=lambda x: x[-1],
                 reverse=True,
-            )
+            ) + [x for x in model_dataset_scores if np.isnan(x[-1])]
             stddev = np.std(
                 [score for _, _, score in model_dataset_scores if not np.isnan(score)]
             )
