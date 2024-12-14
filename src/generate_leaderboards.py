@@ -402,6 +402,9 @@ def generate_dataframe(
     # Replace infinite values with a large number, to allow sorting in web UI
     df = df.replace(to_replace=math.inf, value=999.00)
 
+    # Replace dashes with underlines in all column names
+    df.columns = df.columns.str.replace("-", "_")
+
     # Reorder columns
     cols = [
         "model",
