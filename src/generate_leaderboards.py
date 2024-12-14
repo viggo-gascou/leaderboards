@@ -43,14 +43,29 @@ def main(leaderboard_config: str | Path) -> None:
     # Load the list of all datasets to be used in the leaderboard
     datasets = [
         dataset for task_datasets in config.values() for dataset in task_datasets
-    ]
+    ] + ["speed"]
+
+    required_datasets_per_category = list()
+    categories = {task_config[task]["category"] for task in config}
+    for category in categories:
+        category_tasks = [
+            task for task in config if task_config[task]["category"] == category
+        ]
+        category_datasets = [
+            dataset for task in category_tasks for dataset in config[task]
+        ] + ["speed"]
+        required_datasets_per_category.append(category_datasets)
 
     # Load results and set them up for the leaderboard
     results = load_results(allowed_datasets=datasets)
     model_results = group_results_by_model(
-        results=results, task_config=task_config, required_datasets=datasets
+        results=results,
+        task_config=task_config,
+        required_datasets_per_category=required_datasets_per_category,
     )
-    ranks = compute_ranks(model_results=model_results, config=config)
+    ranks = compute_ranks(
+        model_results=model_results, task_config=task_config, config=config
+    )
     metadata_dict = extract_model_metadata(results=results)
 
     # Generate the leaderboard and store it to disk
@@ -59,6 +74,7 @@ def main(leaderboard_config: str | Path) -> None:
         model_results=model_results,
         ranks=ranks,
         metadata_dict=metadata_dict,
+        datasets=datasets,
     )
     df.to_csv(leaderboard_path, index=False)
 
@@ -103,7 +119,7 @@ def load_results(allowed_datasets: list[str]) -> list[dict]:
 def group_results_by_model(
     results: list[dict],
     task_config: dict[str, dict[str, str]],
-    required_datasets: list[str],
+    required_datasets_per_category: list[list[str]],
 ) -> dict[str, dict[str, tuple[list[float], float]]]:
     """Group results by model ID.
 
@@ -112,9 +128,10 @@ def group_results_by_model(
             The processed results.
         task_config:
             The task configuration.
-        required_datasets:
-            The list of datasets to include in the leaderboard, which every model must
-            have been evaluated on.
+        required_datasets_per_category:
+            A list of required datasets per task category. For a model to be included
+            in the leaderboard, it needs to have scores for all datasets in at least one
+            of the task categories.
 
     Returns:
         The results grouped by model ID.
@@ -145,11 +162,14 @@ def group_results_by_model(
 
         model_scores[model_id][dataset] = (raw_scores, total_score)
 
-    # Remove the models that don't have scores for all datasets
+    # Remove the models that don't have scores for all datasets in at least one category
     model_scores = {
         model_id: scores
         for model_id, scores in model_scores.items()
-        if set(scores.keys()) == set(required_datasets)
+        if any(
+            all(dataset in scores for dataset in datasets)
+            for datasets in required_datasets_per_category
+        )
     }
 
     return model_scores
@@ -157,18 +177,21 @@ def group_results_by_model(
 
 def compute_ranks(
     model_results: dict[str, dict[str, tuple[list[float], float]]],
+    task_config: dict[str, dict[str, str]],
     config: dict[str, list[str]],
-) -> dict[str, float]:
+) -> dict[str, dict[str, float]]:
     """Compute the ranks of the models.
 
     Args:
         model_results:
             The model results.
+        task_config:
+            The task configuration.
         config:
             The leaderboard configuration.
 
     Returns:
-        The ranks of the models.
+        The ranks of the models, per task category.
     """
     datasets = [
         dataset for task_datasets in config.values() for dataset in task_datasets
@@ -176,20 +199,30 @@ def compute_ranks(
 
     model_dataset_ranks: dict[str, dict[str, float]] = defaultdict(dict)
     for dataset in datasets:
+        dummy_scores: tuple[list[float], float] = ([], float("nan"))
         model_dataset_scores = sorted(
             [
-                (model_id, scores[dataset][0], scores[dataset][1])
+                (
+                    model_id,
+                    scores.get(dataset, dummy_scores)[0],
+                    scores.get(dataset, dummy_scores)[1],
+                )
                 for model_id, scores in model_results.items()
             ],
             key=lambda x: x[2],
             reverse=True,
         )
-        stddev = np.std([score for _, _, score in model_dataset_scores])
+        stddev = np.std(
+            [score for _, _, score in model_dataset_scores if not np.isnan(score)]
+        )
 
         rank_score = 1.0
         previous_scores: list[float] = list()
-        for idx, (model_id, raw_scores, _) in enumerate(model_dataset_scores):
-            if idx == 0:
+        for model_id, raw_scores, _ in model_dataset_scores:
+            if raw_scores == []:
+                model_dataset_ranks[model_id][dataset] = float("nan")
+                continue
+            elif previous_scores == []:
                 previous_scores = raw_scores
             elif significantly_better(previous_scores, raw_scores):
                 difference = np.mean(previous_scores) - np.mean(raw_scores)
@@ -202,13 +235,26 @@ def compute_ranks(
     for model_id, dataset_ranks in model_dataset_ranks.items():
         for task, datasets in config.items():
             model_task_ranks[model_id][task] = np.mean(
-                [dataset_ranks[dataset] for dataset in datasets]
+                [
+                    dataset_ranks[dataset]
+                    for dataset in datasets
+                    if dataset in dataset_ranks
+                ]
             ).item()
 
-    return {
-        model_id: np.mean(list(task_scores.values())).item()
-        for model_id, task_scores in model_task_ranks.items()
-    }
+    categories = {task_config[task]["category"] for task in config}
+    model_task_category_ranks: dict[str, dict[str, float]] = defaultdict(dict)
+    for model_id, task_scores in model_task_ranks.items():
+        for category in categories:
+            model_task_category_ranks[model_id][category] = np.mean(
+                [
+                    task_scores[task]
+                    for task in config
+                    if task_config[task]["category"] == category
+                ]
+            ).item()
+
+    return model_task_category_ranks
 
 
 def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
@@ -246,6 +292,8 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
             commercial=record.get("commercially_licensed", False),
             merge=record.get("merge", False),
         )
+        if record["dataset"] == "speed":
+            metadata_dict[model_id]["speed"] = record["results"]["total"]["test_speed"]
 
     return metadata_dict
 
@@ -280,8 +328,9 @@ def extract_model_id_from_record(record: dict) -> str:
 
 def generate_dataframe(
     model_results: dict[str, dict[str, tuple[list[float], float]]],
-    ranks: dict[str, float],
+    ranks: dict[str, dict[str, float]],
     metadata_dict: dict[str, dict],
+    datasets: list[str],
 ) -> pd.DataFrame:
     """Generate a DataFrame from the model results.
 
@@ -292,10 +341,13 @@ def generate_dataframe(
             The ranks of the models.
         metadata_dict:
             The metadata.
+        datasets:
+            All datasets to include in the leaderboard.
 
     Returns:
         The DataFrame.
     """
+    # Extract data
     data_dict: dict[str, list] = defaultdict(list)
     for model_id, results in model_results.items():
         total_results = {
@@ -304,15 +356,55 @@ def generate_dataframe(
         metadata = metadata_dict[model_id]
 
         data_dict["model"].append(model_id)
-        data_dict["rank"].append(ranks[model_id])
-        for key, value in (metadata | total_results).items():
+
+        for category, rank in ranks[model_id].items():
+            rank = round(rank, 2)
+            data_dict[f"{category}_rank"].append(rank)
+
+        model_values = {ds: float("nan") for ds in datasets} | total_results | metadata
+        for key, value in model_values.items():
+            if isinstance(value, float):
+                value = round(value, 2)
             data_dict[key].append(value)
 
-    return (
+        assert len({len(values) for values in data_dict.values()}) == 1, (
+            f"Length of data_dict values must be equal, but got "
+            f"{dict([(key, len(values)) for key, values in data_dict.items()])}."
+        )
+
+    # Sort categories, ensure that "nlu" is always first if present
+    unique_categories = {
+        category for model_ranks in ranks.values() for category in model_ranks.keys()
+    }
+    sorted_categories = list()
+    if "nlu" in unique_categories:
+        sorted_categories.append("nlu")
+        unique_categories.remove("nlu")
+    sorted_categories.extend(sorted(unique_categories))
+
+    # Create dataframe and sort it
+    df = (
         pd.DataFrame(data_dict)
-        .sort_values(by="rank", ascending=True)
+        .sort_values(by=f"{sorted_categories[0]}_rank", ascending=True)
         .reset_index(drop=True)
     )
+
+    # Reorder columns
+    cols = [
+        "model",
+        *[f"{category}_rank" for category in sorted_categories],
+        "parameters",
+        "vocabulary_size",
+        "context",
+        "speed",
+        "commercial",
+        "merge",
+    ]
+    cols += [col for col in df.columns if col not in cols]
+    df = df[cols]
+
+    assert isinstance(df, pd.DataFrame)
+    return df
 
 
 def significantly_better(
@@ -331,7 +423,10 @@ def significantly_better(
         a positive t-statistic indicates that the first set of scores is
         statistically better than the second set of scores.
     """
-    assert len(score_values_1) == len(score_values_2)
+    assert len(score_values_1) == len(score_values_2), (
+        f"Length of score values must be equal, but got {len(score_values_1)} and "
+        f"{len(score_values_2)}."
+    )
     if score_values_1 == score_values_2:
         return 0
     with warnings.catch_warnings():
