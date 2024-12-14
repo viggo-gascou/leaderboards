@@ -2,6 +2,7 @@
 
 from collections import defaultdict
 import json
+import math
 from pathlib import Path
 import warnings
 import click
@@ -220,7 +221,7 @@ def compute_ranks(
         previous_scores: list[float] = list()
         for model_id, raw_scores, _ in model_dataset_scores:
             if raw_scores == []:
-                model_dataset_ranks[model_id][dataset] = 999.00
+                model_dataset_ranks[model_id][dataset] = math.inf
                 continue
             elif previous_scores == []:
                 previous_scores = raw_scores
@@ -388,6 +389,9 @@ def generate_dataframe(
         .sort_values(by=f"{sorted_categories[0]}_rank", ascending=True)
         .reset_index(drop=True)
     )
+
+    # Replace infinite values with a large number, to allow sorting in web UI
+    df = df.replace(to_replace=math.inf, value=999.00)
 
     # Reorder columns
     cols = [
