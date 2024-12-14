@@ -220,7 +220,7 @@ def compute_ranks(
         previous_scores: list[float] = list()
         for model_id, raw_scores, _ in model_dataset_scores:
             if raw_scores == []:
-                model_dataset_ranks[model_id][dataset] = float("nan")
+                model_dataset_ranks[model_id][dataset] = float("inf")
                 continue
             elif previous_scores == []:
                 previous_scores = raw_scores
