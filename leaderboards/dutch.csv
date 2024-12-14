@@ -1,4 +1,4 @@
-model,nlu_rank,nlg_rank,parameters,vocabulary_size,context,speed,commercial,merge,dutch-social,conll-nl,scala-nl,squad-nl,wiki-lingua-nl,mmlu-nl,hellaswag-nl,dutch-social_version,conll-nl_version,scala-nl_version,squad-nl_version,wiki-lingua-nl_version,mmlu-nl_version,hellaswag-nl_version,speed_version
+model,nlu_rank,nlg_rank,parameters,vocabulary_size,context,speed,commercial,merge,dutch_social,conll_nl,scala_nl,squad_nl,wiki_lingua_nl,mmlu_nl,hellaswag_nl,dutch_social_version,conll_nl_version,scala_nl_version,squad_nl_version,wiki_lingua_nl_version,mmlu_nl_version,hellaswag_nl_version,speed_version
 intfloat/multilingual-e5-large,1.39,999.0,560,250,512,6731.95,True,False,32.64,82.31,58.51,57.53,,,,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0
 setu4993/LaBSE,1.49,999.0,471,501,512,25417.61,True,False,33.99,82.02,60.77,51.73,,,,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,12.7.0
 "gpt-4-0613 (few-shot, val)",1.62,5.11,N/A,100,8444,597.21,True,False,18.92,73.35,76.7,76.47,69.97,70.71,90.07,12.10.0,12.10.0,12.10.0,12.10.0,12.10.0,12.10.0,12.10.0,12.5.3

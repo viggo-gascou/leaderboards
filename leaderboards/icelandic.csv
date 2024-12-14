@@ -1,4 +1,4 @@
-model,nlu_rank,nlg_rank,parameters,vocabulary_size,context,speed,commercial,merge,hotter-and-colder-sentiment,mim-gold-ner,scala-is,nqii,rrn,arc-is,winogrande-is,hotter-and-colder-sentiment_version,mim-gold-ner_version,scala-is_version,nqii_version,rrn_version,arc-is_version,winogrande-is_version,speed_version
+model,nlu_rank,nlg_rank,parameters,vocabulary_size,context,speed,commercial,merge,hotter_and_colder_sentiment,mim_gold_ner,scala_is,nqii,rrn,arc_is,winogrande_is,hotter_and_colder_sentiment_version,mim_gold_ner_version,scala_is_version,nqii_version,rrn_version,arc_is_version,winogrande_is_version,speed_version
 FacebookAI/xlm-roberta-large,1.78,999.0,561,250,512,17896.69,True,False,48.41,82.83,22.78,55.29,,,,13.3.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,12.7.0
 NbAiLab/nb-roberta-base-scandi-1e4,1.89,999.0,278,250,512,15073.66,True,False,48.91,81.83,51.09,33.95,,,,13.3.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0
 "gpt-4-1106-preview (few-shot, val)",1.96,3.41,N/A,100,128000,575.52,True,False,49.59,86.37,43.03,66.04,69.61,89.09,72.03,13.2.0,12.5.1,12.10.2,12.5.1,12.5.1,12.10.8,12.10.2,12.5.3

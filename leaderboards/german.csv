@@ -1,4 +1,4 @@
-model,nlu_rank,nlg_rank,parameters,vocabulary_size,context,speed,commercial,merge,sb10k,germeval,scala-de,germanquad,mlsum,mmlu-de,hellaswag-de,sb10k_version,germeval_version,scala-de_version,germanquad_version,mlsum_version,mmlu-de_version,hellaswag-de_version,speed_version
+model,nlu_rank,nlg_rank,parameters,vocabulary_size,context,speed,commercial,merge,sb10k,germeval,scala_de,germanquad,mlsum,mmlu_de,hellaswag_de,sb10k_version,germeval_version,scala_de_version,germanquad_version,mlsum_version,mmlu_de_version,hellaswag_de_version,speed_version
 deepset/gbert-large,1.13,999.0,337,31,512,19109.06,True,False,65.12,80.3,75.12,56.61,,,,12.8.0,12.8.0,12.8.0,12.7.0,0.0.0,0.0.0,0.0.0,12.7.0
 FacebookAI/xlm-roberta-large,1.35,999.0,561,250,512,17896.69,True,False,63.02,80.64,54.83,55.68,,,,12.7.0,12.7.0,12.7.0,12.7.0,0.0.0,0.0.0,0.0.0,12.7.0
 google/rembert,1.38,999.0,576,250,512,11735.9,True,False,60.65,77.62,62.6,60.41,,,,12.7.0,12.7.0,12.7.0,12.7.0,0.0.0,0.0.0,0.0.0,12.7.0

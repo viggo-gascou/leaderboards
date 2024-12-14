@@ -1,4 +1,4 @@
-model,nlu_rank,nlg_rank,parameters,vocabulary_size,context,speed,commercial,merge,norec,norne-nb,norne-nn,scala-nb,scala-nn,norquad,no-sammendrag,mmlu-no,hellaswag-no,norec_version,norne-nb_version,norne-nn_version,scala-nb_version,scala-nn_version,norquad_version,no-sammendrag_version,mmlu-no_version,hellaswag-no_version,speed_version
+model,nlu_rank,nlg_rank,parameters,vocabulary_size,context,speed,commercial,merge,norec,norne_nb,norne_nn,scala_nb,scala_nn,norquad,no_sammendrag,mmlu_no,hellaswag_no,norec_version,norne_nb_version,norne_nn_version,scala_nb_version,scala_nn_version,norquad_version,no_sammendrag_version,mmlu_no_version,hellaswag_no_version,speed_version
 ltg/norbert3-large,1.13,999.0,354,50,512,5048.17,True,False,64.62,93.12,89.39,77.97,76.3,79.64,,,,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0
 NbAiLab/nb-bert-large,1.27,999.0,355,50,512,6343.25,True,False,63.4,91.32,87.29,78.43,79.59,73.8,,,,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0
 ltg/norbert3-base,1.37,999.0,124,50,512,11405.28,True,False,59.73,92.36,88.49,74.4,68.85,72.51,,,,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0,0.0.0
