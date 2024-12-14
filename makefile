@@ -4,7 +4,7 @@ export PATH := ${HOME}/.local/bin:${HOME}/.cargo/bin:$(PATH)
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' makefile | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-update: download process_results generate_leaderboards  ## Download and process the latest results
+update: download process_results generate_leaderboards publish  ## Download and process the latest results
 
 download:
 	@scp -o ConnectTimeout=5 percival:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl percival_results.jsonl || true
@@ -31,6 +31,17 @@ generate_leaderboards:
 	@for config in leaderboard_configs/*.yaml; do \
 		uv run src/generate_leaderboards.py $${config}; \
 	done
+
+publish:
+	@for leaderboard in leaderboards/*.csv; do \
+		git add $${leaderboard}; \
+	done
+	@for results in results/*.jsonl; do \
+		git add $${results}; \
+	done
+	@git commit -m "feat: Update leaderboards" || true
+	@git push
+	@echo "Published leaderboards!"
 
 install: ## Install dependencies
 	@echo "Installing the 'leaderboards' project..."
