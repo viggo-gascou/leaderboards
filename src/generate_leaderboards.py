@@ -368,7 +368,10 @@ def generate_dataframe(
             rank = round(rank, 2)
             data_dict[f"{category}_rank"].append(rank)
 
-        model_values = {ds: float("nan") for ds in datasets} | total_results | metadata
+        default_dataset_values = {ds: float("nan") for ds in datasets} | {
+            f"{ds}_version": "0.0.0" for ds in datasets
+        }
+        model_values = default_dataset_values | total_results | metadata
         for key, value in model_values.items():
             if isinstance(value, float):
                 value = round(value, 2)
