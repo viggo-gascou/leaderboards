@@ -23,7 +23,7 @@ jonfd/electra-small-nordic,2.49,,22,96,128,5989.23,True,False,39.05,77.4,60.64,2
 Geotrend/bert-base-da-cased,2.55,,104,23,512,15432.35,True,False,34.81,73.81,6.23,42.39,,,
 Geotrend/bert-base-25lang-cased,2.6,,151,85,512,13908.28,True,False,34.09,74.65,2.89,41.76,,,
 intfloat/multilingual-e5-large,2.77,,560,250,512,6731.95,True,False,48.52,78.43,10.78,54.2,,,
-AI-Sweden-Models/gpt-sw3-6.7b-v2-instruct (few-shot),2.77,1.29,7111,64,2048,2383.14,True,False,44.79,19.41,1.93,52.41,61.9,6.02,-2.37
+AI-Sweden-Models/gpt-sw3-6.7b-v2-instruct (few-shot),2.77,1.29,7111,64,2048,2383.14,True,False,44.79,19.41,1.93,52.41,61.9,4.05,-2.37
 cardiffnlp/twitter-xlm-roberta-base,2.81,,278,250,512,34475.2,True,False,35.62,72.69,28.72,31.01,,,
 KBLab/megatron-bert-base-swedish-cased-600k,2.81,,135,64,512,15725.82,True,False,36.11,63.43,2.56,33.28,,,
 intfloat/multilingual-e5-large-instruct,2.83,,560,250,514,5947.27,True,False,50.1,78.32,8.11,53.59,,,
