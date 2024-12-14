@@ -298,9 +298,9 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
         if record["dataset"] == "speed":
             metadata_dict[model_id]["speed"] = record["results"]["total"]["test_speed"]
 
-        metadata_dict[model_id][f"{record['dataset']}_version"] = record[
-            "scandeval_version"
-        ]
+        metadata_dict[model_id][f"{record['dataset']}_version"] = record.get(
+            "scandeval_version", "0.0.0"
+        )
 
     return metadata_dict
 
