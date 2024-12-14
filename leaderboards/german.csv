@@ -176,4 +176,4 @@ NorwAI/NorwAI-Mistral-7B-pretrain (few-shot),4.48,4.43,7537,68,4065,3023.95,True
 RJuro/kanelsnegl-v0.1 (few-shot),4.5,3.79,7242,32,510,5847.39,True,False,0.0,0.0,0.0,14.17,59.26,1.16,0.31
 ai-forever/mGPT (few-shot),4.64,4.67,N/A,100,2046,11734.33,True,False,0.19,0.0,-0.12,1.29,29.43,-0.69,0.15
 ssmits/Falcon2-5.5B-multilingual (few-shot),4.65,5.48,5465,65,8192,7691.9,True,False,0.0,0.0,0.0,0.02,37.66,0.87,1.95
-01-ai/Yi-6B-Chat (few-shot),251.69,2.74,6061,64,4096,2278.2,False,False,50.38,,12.35,56.58,67.09,30.38,21.32
+01-ai/Yi-6B-Chat (few-shot),999.0,2.74,6061,64,4096,2278.2,False,False,50.38,,12.35,56.58,67.09,30.38,21.32

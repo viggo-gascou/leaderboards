@@ -285,6 +285,6 @@ sentence-transformers/stsb-xlm-r-multilingual,4.75,999.0,278,250,512,15039.9,Tru
 meta-llama/Meta-Llama-3-8B-Instruct (zero-shot),4.75,5.02,8030,128,8192,2362.69,True,False,0.0,42.66,42.28,0.0,0.0,0.0,0.0,0.0,0.0
 sentence-transformers/distilbert-multilingual-nli-stsb-quora-ranking,4.75,999.0,135,120,512,33753.4,True,False,44.59,77.81,72.22,8.98,5.72,0.0,,,
 sentence-transformers/quora-distilbert-multilingual,4.75,999.0,135,120,512,26458.45,True,False,44.59,77.81,72.22,8.98,5.72,0.0,,,
-01-ai/Yi-6B-Chat (few-shot),252.07,2.73,6061,64,4096,2278.2,False,False,34.7,,,1.07,4.15,66.09,62.58,23.57,19.8
-01-ai/Yi-6B (few-shot),500.62,2.42,6061,64,4094,6435.34,True,False,,43.44,46.33,,,62.78,61.98,23.14,16.5
+01-ai/Yi-6B (few-shot),999.0,2.42,6061,64,4094,6435.34,True,False,,43.44,46.33,,,62.78,61.98,23.14,16.5
+01-ai/Yi-6B-Chat (few-shot),999.0,2.73,6061,64,4096,2278.2,False,False,34.7,,,1.07,4.15,66.09,62.58,23.57,19.8
 norallm/normistral-7b-scratch (few-shot),999.0,5.02,7248,33,2048,3191.78,True,False,,,,,,,60.36,0.99,-0.16
