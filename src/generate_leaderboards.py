@@ -286,15 +286,21 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
             if record["max_sequence_length"] >= 0
             else "N/A"
         )
-        metadata_dict[model_id] = dict(
-            parameters=num_params,
-            vocabulary_size=vocab_size,
-            context=context,
-            commercial=record.get("commercially_licensed", False),
-            merge=record.get("merge", False),
+        metadata_dict[model_id].update(
+            dict(
+                parameters=num_params,
+                vocabulary_size=vocab_size,
+                context=context,
+                commercial=record.get("commercially_licensed", False),
+                merge=record.get("merge", False),
+            )
         )
         if record["dataset"] == "speed":
             metadata_dict[model_id]["speed"] = record["results"]["total"]["test_speed"]
+
+        metadata_dict[model_id][f"{record['dataset']}_version"] = record[
+            "scandeval_version"
+        ]
 
     return metadata_dict
 
@@ -404,7 +410,10 @@ def generate_dataframe(
         "commercial",
         "merge",
     ]
-    cols += [col for col in df.columns if col not in cols]
+    cols += [
+        col for col in df.columns if col not in cols and not col.endswith("_version")
+    ]
+    cols += [col for col in df.columns if col not in cols and col.endswith("_version")]
     df = df[cols]
 
     assert isinstance(df, pd.DataFrame)
