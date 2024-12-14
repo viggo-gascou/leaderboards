@@ -65,17 +65,17 @@ def main(leaderboard_config: str | Path) -> None:
         task_config[task]["category"] for config in configs.values() for task in config
     }
     for category in categories:
-        category_tasks = [
+        category_tasks = {
             task
             for config in configs.values()
             for task in config
             if task_config[task]["category"] == category
-        ]
+        }
         category_datasets = [
             dataset
-            for task in category_tasks
             for config in configs.values()
-            for dataset in config[task]
+            for task in category_tasks
+            for dataset in config.get(task, [])
         ] + ["speed"]
         required_datasets_per_category.append(category_datasets)
 
@@ -287,6 +287,7 @@ def compute_ranks(
                     ]
                 ).item()
                 for language, config in configs.items()
+                if any(task_config[task]["category"] == category for task in config)
             ]
             model_task_category_ranks[model_id][category] = np.mean(
                 language_scores
