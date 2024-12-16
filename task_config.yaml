@@ -1,31 +1,39 @@
 sentiment-classification:
   category: nlu
-  metric: mcc
+  primary_metric: mcc
+  secondary_metric: macro_f1
 
 named-entity-recognition:
   category: nlu
-  metric: micro_f1_no_misc
+  primary_metric: micro_f1_no_misc
+  secondary_metric: micro_f1
 
 linguistic-acceptability:
   category: nlu
-  metric: mcc
+  primary_metric: mcc
+  secondary_metric: macro_f1
 
 reading-comprehension:
   category: nlu
-  metric: f1
+  primary_metric: f1
+  secondary_metric: em
 
 knowledge:
   category: nlg
-  metric: mcc
+  primary_metric: mcc
+  secondary_metric: accuracy
 
 common-sense-reasoning:
   category: nlg
-  metric: mcc
+  primary_metric: mcc
+  secondary_metric: accuracy
 
 summarization:
   category: nlg
-  metric: bertscore
+  primary_metric: bertscore
+  secondary_metric: rouge_l
 
 speed:
   category: null
-  metric: speed
+  primary_metric: speed
+  secondary_metric: speed_short
