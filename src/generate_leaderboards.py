@@ -101,7 +101,26 @@ def main(leaderboard_config: str | Path) -> None:
         metadata_dict=metadata_dict,
         datasets=datasets,
     )
-    df.to_csv(leaderboard_path, index=False)
+
+    # Check if anything got updated
+    new_records: list[str] = list()
+    if leaderboard_path.exists():
+        old_df = pd.read_csv(leaderboard_path)
+        for model_id in df["model"]:
+            if model_id not in old_df.model.values:
+                new_records.append(model_id)
+            elif not old_df.query("model == @model_id").equals(
+                df.query("model == @model_id")
+            ):
+                new_records.append(model_id)
+
+    if new_records:
+        df.to_csv(leaderboard_path, index=False)
+        logger.info(
+            f"Updated the following models in the leaderboard: {', '.join(new_records)}"
+        )
+    else:
+        logger.info("No updates to the leaderboard.")
 
 
 def load_results(allowed_datasets: list[str]) -> list[dict]:
