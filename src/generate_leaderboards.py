@@ -334,17 +334,17 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
         num_params = (
             round(record["num_model_parameters"] / 1_000_000)
             if record["num_model_parameters"] >= 0
-            else "N/A"
+            else float("nan")
         )
         vocab_size = (
             round(record["vocabulary_size"] / 1_000)
             if record["vocabulary_size"] >= 0
-            else "N/A"
+            else float("nan")
         )
         context = (
             record["max_sequence_length"]
             if record["max_sequence_length"] >= 0
-            else "N/A"
+            else float("nan")
         )
         metadata_dict[model_id].update(
             dict(
