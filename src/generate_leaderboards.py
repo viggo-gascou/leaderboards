@@ -127,11 +127,15 @@ def main(leaderboard_config: str | Path, force: bool) -> None:
         df.to_csv(leaderboard_path, index=False)
         notes = dict(last_updated=dt.datetime.now().strftime("%Y-%m-%d"))
         with leaderboard_path.with_suffix(".json").open(mode="w") as f:
-            json.dump(notes, f, indent=2)
-        logger.info(
-            f"Updated the following {len(new_records):,} models in the "
-            f"{leaderboard_title} leaderboard: {', '.join(new_records)}"
-        )
+            json.dump(notes, f)
+            f.write("\n")
+        if not new_records and force:
+            logger.info(f"Updated the {leaderboard_title} leaderboard with no changes.")
+        else:
+            logger.info(
+                f"Updated the following {len(new_records):,} models in the "
+                f"{leaderboard_title} leaderboard: {', '.join(new_records)}"
+            )
     else:
         logger.info(f"No updates to the {leaderboard_title} leaderboard.")
 
