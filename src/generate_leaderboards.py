@@ -449,6 +449,10 @@ def generate_dataframe(
     # Replace dashes with underlines in all column names
     df.columns = df.columns.str.replace("-", "_")
 
+    # Only keep `speed_primary`, and rename it to `speed`
+    df["speed"] = df["speed_primary"]
+    df = df.drop(columns=["speed_primary", "speed_secondary"])
+
     # Reorder columns
     cols = [
         "model",
