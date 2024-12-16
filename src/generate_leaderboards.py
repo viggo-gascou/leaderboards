@@ -33,7 +33,9 @@ def main(leaderboard_config: str | Path) -> None:
     """
     leaderboard_config = Path(leaderboard_config)
 
-    logger.info(f"Generating {leaderboard_config.stem.title()} leaderboard...")
+    logger.info(
+        f"Generating {leaderboard_config.stem.replace('_', ' ').title()} leaderboard..."
+    )
 
     # Load configs
     with Path("task_config.yaml").open(mode="r") as f:
@@ -143,7 +145,7 @@ def group_results_by_model(
     results: list[dict],
     task_config: dict[str, dict[str, str]],
     required_datasets_per_category: list[list[str]],
-) -> dict[str, dict[str, tuple[list[float], float]]]:
+) -> dict[str, dict[str, list[tuple[list[float], float]]]]:
     """Group results by model ID.
 
     Args:
@@ -159,31 +161,35 @@ def group_results_by_model(
     Returns:
         The results grouped by model ID.
     """
-    model_scores: dict[str, dict[str, tuple[list[float], float]]] = defaultdict(dict)
+    model_scores: dict[str, dict[str, list[tuple[list[float], float]]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
     for record in results:
         model_id = extract_model_id_from_record(record=record)
         dataset: str = record["dataset"]
-        metric = task_config[record["task"]]["metric"]
 
-        # Get the metrics for the dataset
-        total_score: float = record["results"]["total"][f"test_{metric}"]
-        if "test" in record["results"]["raw"]:
-            raw_scores = [
-                result_dict.get(f"test_{metric}", result_dict.get(metric, -1))
-                for result_dict in record["results"]["raw"]["test"]
-            ]
-        else:
-            raw_scores = [
-                result_dict.get(f"test_{metric}", result_dict.get(metric, -1))
-                for result_dict in record["results"]["raw"]
-            ]
+        for metric_type in ["primary", "secondary"]:
+            metric = task_config[record["task"]][f"{metric_type}_metric"]
 
-        # Sometimes the raw scores are normalised to [0, 1], so we need to scale them
-        # back to [0, 100]
-        if max(raw_scores) <= 1:
-            raw_scores = [score * 100 for score in raw_scores]
+            # Get the metrics for the dataset
+            total_score: float = record["results"]["total"][f"test_{metric}"]
+            if "test" in record["results"]["raw"]:
+                raw_scores = [
+                    result_dict.get(f"test_{metric}", result_dict.get(metric, -1))
+                    for result_dict in record["results"]["raw"]["test"]
+                ]
+            else:
+                raw_scores = [
+                    result_dict.get(f"test_{metric}", result_dict.get(metric, -1))
+                    for result_dict in record["results"]["raw"]
+                ]
 
-        model_scores[model_id][dataset] = (raw_scores, total_score)
+            # Sometimes the raw scores are normalised to [0, 1], so we need to scale them
+            # back to [0, 100]
+            if max(raw_scores) <= 1:
+                raw_scores = [score * 100 for score in raw_scores]
+
+            model_scores[model_id][dataset].append((raw_scores, total_score))
 
     # Remove the models that don't have scores for all datasets in at least one category
     model_scores = {
@@ -199,7 +205,7 @@ def group_results_by_model(
 
 
 def compute_ranks(
-    model_results: dict[str, dict[str, tuple[list[float], float]]],
+    model_results: dict[str, dict[str, list[tuple[list[float], float]]]],
     task_config: dict[str, dict[str, str]],
     configs: dict[str, dict[str, list[str]]],
 ) -> dict[str, dict[str, float]]:
@@ -226,9 +232,9 @@ def compute_ranks(
     model_dataset_ranks: dict[str, dict[str, float]] = defaultdict(dict)
     for _, datasets in all_datasets.items():
         for dataset in datasets:
-            dummy_scores: tuple[list[float], float] = ([], float("nan"))
+            dummy_scores: list[tuple[list[float], float]] = [([], float("nan"))]
             model_dataset_scores = [
-                (model_id, *scores.get(dataset, dummy_scores))
+                (model_id, *scores.get(dataset, dummy_scores)[0])
                 for model_id, scores in model_results.items()
             ]
             model_dataset_scores = sorted(
@@ -369,7 +375,7 @@ def extract_model_id_from_record(record: dict) -> str:
 
 
 def generate_dataframe(
-    model_results: dict[str, dict[str, tuple[list[float], float]]],
+    model_results: dict[str, dict[str, list[tuple[list[float], float]]]],
     ranks: dict[str, dict[str, float]],
     metadata_dict: dict[str, dict],
     datasets: list[str],
@@ -392,9 +398,10 @@ def generate_dataframe(
     # Extract data
     data_dict: dict[str, list] = defaultdict(list)
     for model_id, results in model_results.items():
-        total_results = {
-            dataset: total_score for dataset, (_, total_score) in results.items()
-        }
+        total_results = dict()
+        for dataset, scores in results.items():
+            for metric_type, (_, total_score) in zip(["primary", "secondary"], scores):
+                total_results[f"{dataset}_{metric_type}"] = total_score
         metadata = metadata_dict[model_id]
 
         data_dict["model"].append(model_id)
@@ -403,9 +410,11 @@ def generate_dataframe(
             rank = round(rank, 2)
             data_dict[f"{category}_rank"].append(rank)
 
-        default_dataset_values = {ds: float("nan") for ds in datasets} | {
-            f"{ds}_version": "0.0.0" for ds in datasets
-        }
+        default_dataset_values = {
+            f"{ds}_{metric_type}": float("nan")
+            for ds in datasets
+            for metric_type in ["primary", "secondary"]
+        } | {f"{ds}_version": "0.0.0" for ds in datasets}
         model_values = default_dataset_values | total_results | metadata
         for key, value in model_values.items():
             if isinstance(value, float):
