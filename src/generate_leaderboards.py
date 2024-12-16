@@ -11,6 +11,7 @@ import logging
 import pandas as pd
 import scipy.stats as stats
 import numpy as np
+import datetime as dt
 
 
 logging.basicConfig(
@@ -24,12 +25,21 @@ logger = logging.getLogger(__name__)
 
 @click.command()
 @click.argument("leaderboard_config")
-def main(leaderboard_config: str | Path) -> None:
+@click.option(
+    "--force",
+    "-f",
+    default=False,
+    show_default=True,
+    help="Force the generation of the leaderboard, even if no updates are found.",
+)
+def main(leaderboard_config: str | Path, force: bool) -> None:
     """Generate leaderboard CSV files from the ScandEval results.
 
     Args:
         leaderboard_config:
             The path to the leaderboard configuration file.
+        force:
+            Force the generation of the leaderboard, even if no updates are found.
     """
     leaderboard_config = Path(leaderboard_config)
     leaderboard_title = leaderboard_config.stem.replace("_", " ").title()
@@ -113,8 +123,11 @@ def main(leaderboard_config: str | Path) -> None:
             ):
                 new_records.append(model_id)
 
-    if new_records:
+    if new_records or force:
         df.to_csv(leaderboard_path, index=False)
+        notes = dict(last_updated=dt.datetime.now().strftime("%Y-%m-%d"))
+        with leaderboard_path.with_suffix(".json").open(mode="w") as f:
+            json.dump(notes, f, indent=2)
         logger.info(
             f"Updated the following {len(new_records):,} models in the "
             f"{leaderboard_title} leaderboard: {', '.join(new_records)}"
