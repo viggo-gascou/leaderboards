@@ -32,10 +32,9 @@ def main(leaderboard_config: str | Path) -> None:
             The path to the leaderboard configuration file.
     """
     leaderboard_config = Path(leaderboard_config)
+    leaderboard_title = leaderboard_config.stem.replace("_", " ").title()
 
-    logger.info(
-        f"Generating {leaderboard_config.stem.replace('_', ' ').title()} leaderboard..."
-    )
+    logger.info(f"Generating {leaderboard_title} leaderboard...")
 
     # Load configs
     with Path("task_config.yaml").open(mode="r") as f:
@@ -117,10 +116,11 @@ def main(leaderboard_config: str | Path) -> None:
     if new_records:
         df.to_csv(leaderboard_path, index=False)
         logger.info(
-            f"Updated the following models in the leaderboard: {', '.join(new_records)}"
+            f"Updated the following {len(new_records):,} models in the "
+            f"{leaderboard_title} leaderboard: {', '.join(new_records)}"
         )
     else:
-        logger.info("No updates to the leaderboard.")
+        logger.info(f"No updates to the {leaderboard_title} leaderboard.")
 
 
 def load_results(allowed_datasets: list[str]) -> list[dict]:
