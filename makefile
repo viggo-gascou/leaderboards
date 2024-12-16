@@ -33,6 +33,9 @@ publish:
 	@for leaderboard in leaderboards/*.csv; do \
 		git add $${leaderboard}; \
 	done
+	@for leaderboard in leaderboards/*.json; do \
+		git add $${leaderboard}; \
+	done
 	@for results in results/*.jsonl; do \
 		git add $${results}; \
 	done
