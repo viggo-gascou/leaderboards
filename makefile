@@ -1,7 +1,7 @@
 # Set the PATH env var used by cargo and uv
 export PATH := ${HOME}/.local/bin:${HOME}/.cargo/bin:$(PATH)
 
-update: download process_results generate_leaderboards publish
+update: check download process_results generate_leaderboards publish
 
 download:
 	@scp -o ConnectTimeout=5 percival:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl percival_results.jsonl || true
