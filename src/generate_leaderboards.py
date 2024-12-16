@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 @click.command()
 @click.argument("leaderboard_config")
 @click.option(
-    "--force",
+    "--force/--no-force",
     "-f",
     default=False,
     show_default=True,
