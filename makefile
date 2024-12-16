@@ -3,6 +3,8 @@ export PATH := ${HOME}/.local/bin:${HOME}/.cargo/bin:$(PATH)
 
 update: check download process_results generate_leaderboards publish
 
+force-update: check download process_results force_generate_leaderboards publish
+
 download:
 	@scp -o ConnectTimeout=5 percival:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl percival_results.jsonl || true
 	@scp -o ConnectTimeout=5 lancelot:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl lancelot_results.jsonl || true
@@ -27,6 +29,11 @@ process_results:
 generate_leaderboards:
 	@for config in leaderboard_configs/*.yaml; do \
 		uv run src/generate_leaderboards.py $${config}; \
+	done
+
+force_generate_leaderboards:
+	@for config in leaderboard_configs/*.yaml; do \
+		uv run src/generate_leaderboards.py --force $${config}; \
 	done
 
 publish:
