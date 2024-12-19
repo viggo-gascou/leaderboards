@@ -113,13 +113,18 @@ def main(leaderboard_config: str | Path, force: bool) -> None:
 
     # Check if anything got updated
     new_records: list[str] = list()
+    comparison_columns = [col for col in df.columns if not col.endswith("_rank")]
     if leaderboard_path.exists():
         old_df = pd.read_csv(leaderboard_path)
         for model_id in df["model"]:
-            if model_id not in old_df.model.values:
+            if model_id not in old_df.model.values or any(
+                col not in old_df.columns for col in comparison_columns
+            ):
                 new_records.append(model_id)
-            elif not old_df.query("model == @model_id").equals(
-                df.query("model == @model_id")
+            elif (
+                not old_df[comparison_columns]
+                .query("model == @model_id")
+                .equals(df[comparison_columns].query("model == @model_id"))
             ):
                 new_records.append(model_id)
 
