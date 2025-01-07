@@ -121,10 +121,9 @@ def main(leaderboard_config: str | Path, force: bool) -> None:
                 col not in old_df.columns for col in comparison_columns
             ):
                 new_records.append(model_id)
-            elif (
-                not old_df[comparison_columns]
-                .query("model == @model_id")
-                .equals(df[comparison_columns].query("model == @model_id"))
+            elif not np.all(
+                old_df[comparison_columns].query("model == @model_id").dropna().values
+                == df[comparison_columns].query("model == @model_id").dropna().values
             ):
                 new_records.append(model_id)
 
@@ -145,6 +144,7 @@ def main(leaderboard_config: str | Path, force: bool) -> None:
                 f"Updated the following {len(new_records):,} models in the "
                 f"{leaderboard_title} leaderboard: {', '.join(new_records)}"
             )
+            pass
     else:
         logger.info(f"No updates to the {leaderboard_title} leaderboard.")
 
