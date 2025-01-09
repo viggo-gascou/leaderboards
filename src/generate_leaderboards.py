@@ -32,7 +32,15 @@ logger = logging.getLogger(__name__)
     show_default=True,
     help="Force the generation of the leaderboard, even if no updates are found.",
 )
-def main(leaderboard_config: str | Path, force: bool) -> None:
+@click.option(
+    "--categories",
+    "-t",
+    multiple=True,
+    default=["all", "nlu"],
+    show_default=True,
+    help="The categories of leaderboards to generate.",
+)
+def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) -> None:
     """Generate leaderboard CSV files from the ScandEval results.
 
     Args:
@@ -40,6 +48,8 @@ def main(leaderboard_config: str | Path, force: bool) -> None:
             The path to the leaderboard configuration file.
         force:
             Force the generation of the leaderboard, even if no updates are found.
+        leaderboard_types:
+            The leaderboard types to generate.
     """
     leaderboard_config = Path(leaderboard_config)
     leaderboard_title = leaderboard_config.stem.replace("_", " ").title()
@@ -69,33 +79,12 @@ def main(leaderboard_config: str | Path, force: bool) -> None:
         for config in configs.values()
         for task_datasets in config.values()
         for dataset in task_datasets
-    ] + ["speed"]
-
-    required_datasets_per_category = list()
-    categories = {
-        task_config[task]["category"] for config in configs.values() for task in config
-    }
-    for category in categories:
-        category_tasks = {
-            task
-            for config in configs.values()
-            for task in config
-            if task_config[task]["category"] == category
-        }
-        category_datasets = [
-            dataset
-            for config in configs.values()
-            for task in category_tasks
-            for dataset in config.get(task, [])
-        ] + ["speed"]
-        required_datasets_per_category.append(category_datasets)
+    ]
 
     # Load results and set them up for the leaderboard
-    results = load_results(allowed_datasets=datasets)
+    results = load_results(allowed_datasets=datasets + ["speed"])
     model_results = group_results_by_model(
-        results=results,
-        task_config=task_config,
-        required_datasets_per_category=required_datasets_per_category,
+        results=results, task_config=task_config, leaderboard_configs=configs
     )
     ranks = compute_ranks(
         model_results=model_results, task_config=task_config, configs=configs
@@ -103,50 +92,73 @@ def main(leaderboard_config: str | Path, force: bool) -> None:
     metadata_dict = extract_model_metadata(results=results)
 
     # Generate the leaderboard and store it to disk
-    leaderboard_path = Path("leaderboards") / f"{leaderboard_config.stem}.csv"
-    df = generate_dataframe(
+    dfs = generate_dataframe(
         model_results=model_results,
         ranks=ranks,
         metadata_dict=metadata_dict,
         datasets=datasets,
+        categories=categories,
+        task_config=task_config,
+        leaderboard_configs=configs,
     )
 
-    # Check if anything got updated
-    new_records: list[str] = list()
-    comparison_columns = [col for col in df.columns if not col.endswith("_rank")]
-    if leaderboard_path.exists():
-        old_df = pd.read_csv(leaderboard_path)
-        for model_id in df["model"]:
-            if model_id not in old_df.model.values or any(
-                col not in old_df.columns for col in comparison_columns
-            ):
-                new_records.append(model_id)
-            elif not np.all(
-                old_df[comparison_columns].query("model == @model_id").dropna().values
-                == df[comparison_columns].query("model == @model_id").dropna().values
-            ):
-                new_records.append(model_id)
-
-    if new_records or force:
-        df.to_csv(leaderboard_path, index=False)
-        notes = dict(
-            annotate=dict(
-                notes=f"Last updated: {dt.datetime.now().strftime('%Y-%m-%d')} CET",
-            ),
+    for category, df in zip(categories, dfs):
+        leaderboard_path = (
+            Path("leaderboards") / f"{leaderboard_config.stem}_{category}.csv"
         )
-        with leaderboard_path.with_suffix(".json").open(mode="w") as f:
-            json.dump(notes, f, indent=2)
-            f.write("\n")
-        if not new_records and force:
-            logger.info(f"Updated the {leaderboard_title} leaderboard with no changes.")
+
+        # Check if anything got updated
+        new_records: list[str] = list()
+        comparison_columns = [col for col in df.columns if col != "rank"]
+        if leaderboard_path.exists():
+            old_df = pd.read_csv(leaderboard_path)
+            for model_id in df["model"]:
+                model_is_new = model_id not in old_df.model.values or any(
+                    col not in old_df.columns for col in comparison_columns
+                )
+                old_model_results = (
+                    old_df[comparison_columns].query("model == @model_id").dropna()
+                )
+                new_model_results = (
+                    df[comparison_columns].query("model == @model_id").dropna()
+                )
+                model_has_new_results = not np.all(
+                    old_model_results.values == new_model_results.values
+                )
+                if model_is_new:
+                    new_records.append(model_id)
+                elif model_has_new_results:
+                    new_records.append(model_id)
+        else:
+            new_records = df["model"].tolist()
+
+        if new_records or force:
+            df.to_csv(leaderboard_path, index=False)
+            notes = dict(
+                annotate=dict(
+                    notes=f"Last updated: {dt.datetime.now().strftime('%Y-%m-%d')} CET",
+                ),
+            )
+            with leaderboard_path.with_suffix(".json").open(mode="w") as f:
+                json.dump(notes, f, indent=2)
+                f.write("\n")
+            if not new_records and force:
+                logger.info(
+                    f"Updated the {category!r} category of the {leaderboard_title} "
+                    "leaderboard with no changes."
+                )
+            else:
+                logger.info(
+                    f"Updated the following {len(new_records):,} models in the "
+                    f"{category!r} category of the {leaderboard_title} leaderboard: "
+                    f"{', '.join(new_records)}"
+                )
+                pass
         else:
             logger.info(
-                f"Updated the following {len(new_records):,} models in the "
-                f"{leaderboard_title} leaderboard: {', '.join(new_records)}"
+                f"No updates to the {category!r} category of the {leaderboard_title} "
+                "leaderboard."
             )
-            pass
-    else:
-        logger.info(f"No updates to the {leaderboard_title} leaderboard.")
 
 
 def load_results(allowed_datasets: list[str]) -> list[dict]:
@@ -189,7 +201,7 @@ def load_results(allowed_datasets: list[str]) -> list[dict]:
 def group_results_by_model(
     results: list[dict],
     task_config: dict[str, dict[str, str]],
-    required_datasets_per_category: list[list[str]],
+    leaderboard_configs: dict[str, dict[str, list[str]]],
 ) -> dict[str, dict[str, list[tuple[list[float], float]]]]:
     """Group results by model ID.
 
@@ -198,14 +210,34 @@ def group_results_by_model(
             The processed results.
         task_config:
             The task configuration.
-        required_datasets_per_category:
-            A list of required datasets per task category. For a model to be included
-            in the leaderboard, it needs to have scores for all datasets in at least one
-            of the task categories.
+        leaderboard_configs:
+            The leaderboard configurations.
 
     Returns:
         The results grouped by model ID.
     """
+    # Create list of the datasets belonging to each category
+    required_datasets_per_category = list()
+    available_categories = {
+        task_config[task]["category"]
+        for config in leaderboard_configs.values()
+        for task in config
+    }
+    for category in available_categories:
+        category_tasks = {
+            task
+            for config in leaderboard_configs.values()
+            for task in config
+            if task_config[task]["category"] == category
+        }
+        category_datasets = [
+            dataset
+            for config in leaderboard_configs.values()
+            for task in category_tasks
+            for dataset in config.get(task, [])
+        ] + ["speed"]
+        required_datasets_per_category.append(category_datasets)
+
     model_scores: dict[str, dict[str, list[tuple[list[float], float]]]] = defaultdict(
         lambda: defaultdict(list)
     )
@@ -322,7 +354,7 @@ def compute_ranks(
 
     categories = {
         task_config[task]["category"] for config in configs.values() for task in config
-    }
+    } | {"all"}
     model_task_category_ranks: dict[str, dict[str, float]] = defaultdict(dict)
     for model_id, score_dict in model_task_ranks.items():
         for category in categories:
@@ -332,10 +364,14 @@ def compute_ranks(
                         score_dict[language][task]
                         for task in config
                         if task_config[task]["category"] == category
+                        or category == "all"
                     ]
                 ).item()
                 for language, config in configs.items()
-                if any(task_config[task]["category"] == category for task in config)
+                if any(
+                    task_config[task]["category"] == category or category == "all"
+                    for task in config
+                )
             ]
             model_task_category_ranks[model_id][category] = np.mean(
                 language_scores
@@ -424,8 +460,11 @@ def generate_dataframe(
     ranks: dict[str, dict[str, float]],
     metadata_dict: dict[str, dict],
     datasets: list[str],
-) -> pd.DataFrame:
-    """Generate a DataFrame from the model results.
+    categories: tuple[str],
+    task_config: dict[str, dict[str, str]],
+    leaderboard_configs: dict[str, dict[str, list[str]]],
+) -> list[pd.DataFrame]:
+    """Generate DataFrames from the model results.
 
     Args:
         model_results:
@@ -436,87 +475,142 @@ def generate_dataframe(
             The metadata.
         datasets:
             All datasets to include in the leaderboard.
+        categories:
+            The categories of leaderboards to generate.
+        task_config:
+            The task configuration.
+        leaderboard_configs:
+            The leaderboard configurations.
 
     Returns:
-        The DataFrame.
+        The DataFrames.
     """
-    # Extract data
-    data_dict: dict[str, list] = defaultdict(list)
-    for model_id, results in model_results.items():
-        total_results = dict()
-        for dataset, scores in results.items():
-            for metric_type, (_, total_score) in zip(["primary", "secondary"], scores):
-                total_results[f"{dataset}_{metric_type}"] = total_score
-        metadata = metadata_dict[model_id]
+    # Mapping from dataset name to names of primary and secondary metrics
+    dataset_to_task = {
+        dataset: task
+        for leaderboard_config in leaderboard_configs.values()
+        for task, task_datasets in leaderboard_config.items()
+        for dataset in task_datasets
+    }
+    dataset_to_metrics = {
+        dataset: (
+            task_config[dataset_to_task[dataset]]["primary_metric"],
+            task_config[dataset_to_task[dataset]]["secondary_metric"],
+        )
+        for dataset in datasets
+    }
 
-        data_dict["model"].append(model_id)
+    # Mapping from category to dataset names
+    category_to_datasets = {
+        category: [
+            dataset
+            for config in leaderboard_configs.values()
+            for task, task_datasets in config.items()
+            for dataset in task_datasets
+            if task_config[task]["category"] == category or category == "all"
+        ]
+        for category in categories
+    }
 
-        for category, rank in ranks[model_id].items():
-            rank = round(rank, 2)
-            data_dict[f"{category}_rank"].append(rank)
+    dfs: list[pd.DataFrame] = list()
+    for category in categories:
+        data_dict: dict[str, list] = defaultdict(list)
+        for model_id, results in model_results.items():
+            # Skip models that don't have scores for the category
+            if category not in ranks[model_id] or math.isinf(ranks[model_id][category]):
+                continue
 
-        default_dataset_values = {
-            f"{ds}_{metric_type}": float("nan")
-            for ds in datasets
-            for metric_type in ["primary", "secondary"]
-        } | {f"{ds}_version": "0.0.0" for ds in datasets}
-        model_values = default_dataset_values | total_results | metadata
-        for key, value in model_values.items():
-            if isinstance(value, float):
-                value = round(value, 2)
-            data_dict[key].append(value)
+            # Get the overall rank for the model
+            rank = round(ranks[model_id][category], 2)
 
-        assert len({len(values) for values in data_dict.values()}) == 1, (
-            f"Length of data_dict values must be equal, but got "
-            f"{dict([(key, len(values)) for key, values in data_dict.items()])}."
+            # Get the default values for the dataset columns
+            default_dataset_values = {
+                f"{ds}_{metric_name}": float("nan")
+                for ds in category_to_datasets[category]
+                for metric_name in dataset_to_metrics[ds]
+            } | {f"{ds}_version": "0.0.0" for ds in category_to_datasets[category]}
+
+            # Get individual dataset scores for the model
+            total_results = dict()
+            for dataset, scores in results.items():
+                if dataset not in category_to_datasets[category]:
+                    continue
+                metrics = dataset_to_metrics.get(dataset)
+                if metrics is None:
+                    continue
+                for metric_name, (_, total_score) in zip(metrics, scores):
+                    total_results[f"{dataset}_{metric_name}"] = total_score
+
+            # Filter metadata dict to only keep the dataset versions belonging to the
+            # category
+            metadata = {
+                key: value
+                for key, value in metadata_dict[model_id].items()
+                if not key.endswith("_version")
+                or key.replace("_version", "") in category_to_datasets[category]
+            }
+
+            # Add all the model values to the data dictionary
+            model_values = (
+                dict(model=model_id, rank=rank)
+                | default_dataset_values
+                | total_results
+                | metadata
+            )
+            for key, value in model_values.items():
+                if isinstance(value, float):
+                    value = round(value, 2)
+                data_dict[key].append(value)
+
+            # Sanity check that all values have the same length
+            assert len({len(values) for values in data_dict.values()}) == 1, (
+                f"Length of data_dict values must be equal, but got "
+                f"{dict([(key, len(values)) for key, values in data_dict.items()])}."
+            )
+
+            # Sanity check that there is no infinite values
+            assert not any(
+                math.isinf(value)
+                for values in data_dict.values()
+                for value in values
+                if isinstance(value, (int, float))
+            ), "There are infinite values in the data dictionary."
+
+        # Create dataframe and sort it
+        df = (
+            pd.DataFrame(data_dict)
+            .sort_values(by="rank", ascending=True)
+            .reset_index(drop=True)
         )
 
-    # Sort categories, ensure that "nlu" is always first if present
-    unique_categories = {
-        category for model_ranks in ranks.values() for category in model_ranks.keys()
-    }
-    sorted_categories = list()
-    if "nlu" in unique_categories:
-        sorted_categories.append("nlu")
-        unique_categories.remove("nlu")
-    sorted_categories.extend(sorted(unique_categories))
+        # Replace dashes with underlines in all column names
+        df.columns = df.columns.str.replace("-", "_")
 
-    # Create dataframe and sort it
-    df = (
-        pd.DataFrame(data_dict)
-        .sort_values(by=f"{sorted_categories[0]}_rank", ascending=True)
-        .reset_index(drop=True)
-    )
+        # Reorder columns
+        cols = [
+            "model",
+            "rank",
+            "parameters",
+            "vocabulary_size",
+            "context",
+            "speed",
+            "commercial",
+            "merge",
+        ]
+        cols += [
+            col
+            for col in df.columns
+            if col not in cols and not col.endswith("_version")
+        ]
+        cols += [
+            col for col in df.columns if col not in cols and col.endswith("_version")
+        ]
+        df = df[cols]
 
-    # Replace infinite values with a large number, to allow sorting in web UI
-    df = df.replace(to_replace=math.inf, value=999.00)
+        assert isinstance(df, pd.DataFrame)
+        dfs.append(df)
 
-    # Replace dashes with underlines in all column names
-    df.columns = df.columns.str.replace("-", "_")
-
-    # Only keep `speed_primary`, and rename it to `speed`
-    df["speed"] = df["speed_primary"]
-    df = df.drop(columns=["speed_primary", "speed_secondary"])
-
-    # Reorder columns
-    cols = [
-        "model",
-        *[f"{category}_rank" for category in sorted_categories],
-        "parameters",
-        "vocabulary_size",
-        "context",
-        "speed",
-        "commercial",
-        "merge",
-    ]
-    cols += [
-        col for col in df.columns if col not in cols and not col.endswith("_version")
-    ]
-    cols += [col for col in df.columns if col not in cols and col.endswith("_version")]
-    df = df[cols]
-
-    assert isinstance(df, pd.DataFrame)
-    return df
+    return dfs
 
 
 def significantly_better(
