@@ -81,7 +81,7 @@ def main(filename: str) -> None:
             if hash_value == unique_hash_value
         ]
         versions = [
-            list(map(int, match.get("scandeval_version", "0.0.0").split(".")))
+            list(map(int, match.get("scandeval_version", "<9.2.0").split(".")))
             for match in matches
         ]
         newest_version = max(versions)

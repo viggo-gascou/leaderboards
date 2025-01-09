@@ -421,7 +421,7 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
             metadata_dict[model_id]["speed"] = record["results"]["total"]["test_speed"]
 
         metadata_dict[model_id][f"{record['dataset']}_version"] = record.get(
-            "scandeval_version", "0.0.0"
+            "scandeval_version", "<9.2.0"
         )
 
     return metadata_dict
@@ -528,7 +528,7 @@ def generate_dataframe(
                 f"{ds}_{metric_name}": float("nan")
                 for ds in category_to_datasets[category]
                 for metric_name in dataset_to_metrics[ds]
-            } | {f"{ds}_version": "0.0.0" for ds in category_to_datasets[category]}
+            } | {f"{ds}_version": "<9.2.0" for ds in category_to_datasets[category]}
 
             # Get individual dataset scores for the model
             total_results = dict()
