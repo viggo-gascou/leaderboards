@@ -115,7 +115,7 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
                 new_records = df.Model.tolist()
             else:
                 for model_id in df.Model:
-                    model_is_new = model_id not in old_df.model.values or any(
+                    model_is_new = model_id not in old_df.Model.values or any(
                         col not in old_df.columns for col in comparison_columns
                     )
                     old_model_results = (
