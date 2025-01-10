@@ -202,7 +202,7 @@ def group_results_by_model(
     results: list[dict],
     task_config: dict[str, dict[str, str]],
     leaderboard_configs: dict[str, dict[str, list[str]]],
-) -> dict[str, dict[str, list[tuple[list[float], float]]]]:
+) -> dict[str, dict[str, list[tuple[list[float], float, float]]]]:
     """Group results by model ID.
 
     Args:
@@ -238,8 +238,8 @@ def group_results_by_model(
         ] + ["speed"]
         required_datasets_per_category.append(category_datasets)
 
-    model_scores: dict[str, dict[str, list[tuple[list[float], float]]]] = defaultdict(
-        lambda: defaultdict(list)
+    model_scores: dict[str, dict[str, list[tuple[list[float], float, float]]]] = (
+        defaultdict(lambda: defaultdict(list))
     )
     for record in results:
         model_id = extract_model_id_from_record(record=record)
@@ -249,7 +249,6 @@ def group_results_by_model(
             metric = task_config[record["task"]][f"{metric_type}_metric"]
 
             # Get the metrics for the dataset
-            total_score: float = record["results"]["total"][f"test_{metric}"]
             if "test" in record["results"]["raw"]:
                 raw_scores = [
                     result_dict.get(f"test_{metric}", result_dict.get(metric, -1))
@@ -261,12 +260,16 @@ def group_results_by_model(
                     for result_dict in record["results"]["raw"]
                 ]
 
+            # Get the aggregated scores for the dataset
+            total_score: float = record["results"]["total"][f"test_{metric}"]
+            std_err: float = record["results"]["total"][f"test_{metric}_se"]
+
             # Sometimes the raw scores are normalised to [0, 1], so we need to scale them
             # back to [0, 100]
             if max(raw_scores) <= 1:
                 raw_scores = [score * 100 for score in raw_scores]
 
-            model_scores[model_id][dataset].append((raw_scores, total_score))
+            model_scores[model_id][dataset].append((raw_scores, total_score, std_err))
 
     # Remove the models that don't have scores for all datasets in at least one category
     model_scores = {
@@ -282,7 +285,7 @@ def group_results_by_model(
 
 
 def compute_ranks(
-    model_results: dict[str, dict[str, list[tuple[list[float], float]]]],
+    model_results: dict[str, dict[str, list[tuple[list[float], float, float]]]],
     task_config: dict[str, dict[str, str]],
     configs: dict[str, dict[str, list[str]]],
 ) -> dict[str, dict[str, float]]:
@@ -309,7 +312,9 @@ def compute_ranks(
     model_dataset_ranks: dict[str, dict[str, float]] = defaultdict(dict)
     for _, datasets in all_datasets.items():
         for dataset in datasets:
-            dummy_scores: list[tuple[list[float], float]] = [([], float("nan"))]
+            dummy_scores: list[tuple[list[float], float, float]] = [
+                ([], float("nan"), 0)
+            ]
             model_dataset_scores = [
                 (model_id, *scores.get(dataset, dummy_scores)[0])
                 for model_id, scores in model_results.items()
@@ -320,12 +325,16 @@ def compute_ranks(
                 reverse=True,
             ) + [x for x in model_dataset_scores if np.isnan(x[-1])]
             stddev = np.std(
-                [score for _, _, score in model_dataset_scores if not np.isnan(score)]
+                [
+                    score
+                    for _, _, score, _ in model_dataset_scores
+                    if not np.isnan(score)
+                ]
             )
 
             rank_score = 1.0
             previous_scores: list[float] = list()
-            for model_id, raw_scores, _ in model_dataset_scores:
+            for model_id, raw_scores, _, _ in model_dataset_scores:
                 if raw_scores == []:
                     model_dataset_ranks[model_id][dataset] = math.inf
                     continue
@@ -456,7 +465,7 @@ def extract_model_id_from_record(record: dict) -> str:
 
 
 def generate_dataframe(
-    model_results: dict[str, dict[str, list[tuple[list[float], float]]]],
+    model_results: dict[str, dict[str, list[tuple[list[float], float, float]]]],
     ranks: dict[str, dict[str, float]],
     metadata_dict: dict[str, dict],
     datasets: list[str],
@@ -485,21 +494,6 @@ def generate_dataframe(
     Returns:
         The DataFrames.
     """
-    # Mapping from dataset name to names of primary and secondary metrics
-    dataset_to_task = {
-        dataset: task
-        for leaderboard_config in leaderboard_configs.values()
-        for task, task_datasets in leaderboard_config.items()
-        for dataset in task_datasets
-    }
-    dataset_to_metrics = {
-        dataset: (
-            task_config[dataset_to_task[dataset]]["primary_metric"],
-            task_config[dataset_to_task[dataset]]["secondary_metric"],
-        )
-        for dataset in datasets
-    }
-
     # Mapping from category to dataset names
     category_to_datasets = {
         category: [
@@ -525,9 +519,7 @@ def generate_dataframe(
 
             # Get the default values for the dataset columns
             default_dataset_values = {
-                f"{ds}_{metric_name}": float("nan")
-                for ds in category_to_datasets[category]
-                for metric_name in dataset_to_metrics[ds]
+                ds: float("nan") for ds in category_to_datasets[category]
             } | {f"{ds}_version": "<9.2.0" for ds in category_to_datasets[category]}
 
             # Get individual dataset scores for the model
@@ -535,11 +527,14 @@ def generate_dataframe(
             for dataset, scores in results.items():
                 if dataset not in category_to_datasets[category]:
                     continue
-                metrics = dataset_to_metrics.get(dataset)
-                if metrics is None:
-                    continue
-                for metric_name, (_, total_score) in zip(metrics, scores):
-                    total_results[f"{dataset}_{metric_name}"] = total_score
+                main_score = scores[0][1]
+                total_results[dataset] = (
+                    " / ".join(
+                        f"{total_score:,.2f} ± {std_err:,.2f}"
+                        for _, total_score, std_err in scores
+                    )
+                    + f"@@{main_score}"
+                )
 
             # Filter metadata dict to only keep the dataset versions belonging to the
             # category
