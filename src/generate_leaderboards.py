@@ -429,12 +429,12 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
         if record["dataset"] == "speed":
             metadata_dict[model_id]["speed"] = record["results"]["total"]["test_speed"]
 
-        version = record.get("scandeval_version", "<9.2.0@0")
+        version = record.get("scandeval_version", "<9.2.0@@0")
         if "@" not in version:
             version_sort_value = int(
                 "".join([f"{version_part:0>2}" for version_part in version.split(".")])
             )
-            version += f"@{version_sort_value}"
+            version += f"@@{version_sort_value}"
         metadata_dict[model_id][f"{record['dataset']}_version"] = version
 
     return metadata_dict
