@@ -394,12 +394,12 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
     for record in results:
         model_id = extract_model_id_from_record(record=record)
         num_params = (
-            round(record["num_model_parameters"] / 1_000_000)
+            record["num_model_parameters"]
             if record["num_model_parameters"] >= 0
             else float("nan")
         )
         vocab_size = (
-            round(record["vocabulary_size"] / 1_000)
+            record["vocabulary_size"]
             if record["vocabulary_size"] >= 0
             else float("nan")
         )
@@ -606,6 +606,11 @@ def generate_dataframe(
             col for col in df.columns if col not in cols and col.endswith("_version")
         ]
         df = df[cols]
+
+        # Replace Boolean values by ✓ and ✗
+        boolean_columns = ["commercial", "merge"]
+        for col in boolean_columns:
+            df[col] = df[col].apply(lambda x: "✓" if x else "✗")
 
         assert isinstance(df, pd.DataFrame)
         dfs.append(df)
