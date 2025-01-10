@@ -108,21 +108,21 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
 
         # Check if anything got updated
         new_records: list[str] = list()
-        comparison_columns = [col for col in df.columns if col != "Rank"]
+        comparison_columns = [col for col in df.columns if col != "rank"]
         if leaderboard_path.exists():
             old_df = pd.read_csv(leaderboard_path)
             if any(col not in old_df.columns for col in comparison_columns):
-                new_records = df.Model.tolist()
+                new_records = df.model.tolist()
             else:
-                for model_id in df.Model:
-                    model_is_new = model_id not in old_df.Model.values or any(
+                for model_id in df.model:
+                    model_is_new = model_id not in old_df.model.values or any(
                         col not in old_df.columns for col in comparison_columns
                     )
                     old_model_results = (
-                        old_df[comparison_columns].query("Model == @model_id").dropna()
+                        old_df[comparison_columns].query("model == @model_id").dropna()
                     )
                     new_model_results = (
-                        df[comparison_columns].query("Model == @model_id").dropna()
+                        df[comparison_columns].query("model == @model_id").dropna()
                     )
                     model_has_new_results = not np.all(
                         old_model_results.values == new_model_results.values
@@ -132,7 +132,7 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
                     elif model_has_new_results:
                         new_records.append(model_id)
         else:
-            new_records = df.Model.tolist()
+            new_records = df.model.tolist()
 
         if new_records or force:
             df.to_csv(leaderboard_path, index=False)
@@ -621,9 +621,6 @@ def generate_dataframe(
         boolean_columns = ["commercial", "merge"]
         for col in boolean_columns:
             df[col] = df[col].apply(lambda x: "✓" if x else "✗")
-
-        # Make all columns Title Case and replace underscores with spaces
-        df.columns = df.columns.str.replace("_", " ").str.title()
 
         assert isinstance(df, pd.DataFrame)
         dfs.append(df)
