@@ -108,28 +108,31 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
 
         # Check if anything got updated
         new_records: list[str] = list()
-        comparison_columns = [col for col in df.columns if col != "rank"]
+        comparison_columns = [col for col in df.columns if col != "Rank"]
         if leaderboard_path.exists():
             old_df = pd.read_csv(leaderboard_path)
-            for model_id in df["model"]:
-                model_is_new = model_id not in old_df.model.values or any(
-                    col not in old_df.columns for col in comparison_columns
-                )
-                old_model_results = (
-                    old_df[comparison_columns].query("model == @model_id").dropna()
-                )
-                new_model_results = (
-                    df[comparison_columns].query("model == @model_id").dropna()
-                )
-                model_has_new_results = not np.all(
-                    old_model_results.values == new_model_results.values
-                )
-                if model_is_new:
-                    new_records.append(model_id)
-                elif model_has_new_results:
-                    new_records.append(model_id)
+            if any(col not in old_df.columns for col in comparison_columns):
+                new_records = df.Model.tolist()
+            else:
+                for model_id in df.Model:
+                    model_is_new = model_id not in old_df.model.values or any(
+                        col not in old_df.columns for col in comparison_columns
+                    )
+                    old_model_results = (
+                        old_df[comparison_columns].query("Model == @model_id").dropna()
+                    )
+                    new_model_results = (
+                        df[comparison_columns].query("Model == @model_id").dropna()
+                    )
+                    model_has_new_results = not np.all(
+                        old_model_results.values == new_model_results.values
+                    )
+                    if model_is_new:
+                        new_records.append(model_id)
+                    elif model_has_new_results:
+                        new_records.append(model_id)
         else:
-            new_records = df["model"].tolist()
+            new_records = df.Model.tolist()
 
         if new_records or force:
             df.to_csv(leaderboard_path, index=False)
@@ -422,7 +425,7 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
         metadata_dict[model_id].update(
             dict(
                 parameters=num_params,
-                vocabulary_size=vocab_size,
+                vocabulary=vocab_size,
                 context=context,
                 commercial=record.get("commercially_licensed", False),
                 merge=record.get("merge", False),
@@ -598,7 +601,7 @@ def generate_dataframe(
             cols += list(leaderboard_configs.keys())
         cols += [
             "parameters",
-            "vocabulary_size",
+            "vocabulary",
             "context",
             "speed",
             "commercial",
@@ -618,6 +621,9 @@ def generate_dataframe(
         boolean_columns = ["commercial", "merge"]
         for col in boolean_columns:
             df[col] = df[col].apply(lambda x: "✓" if x else "✗")
+
+        # Make all columns Title Case and replace underscores with spaces
+        df.columns = df.columns.str.replace("_", " ").str.title()
 
         assert isinstance(df, pd.DataFrame)
         dfs.append(df)
