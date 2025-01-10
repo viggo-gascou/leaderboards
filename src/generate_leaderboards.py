@@ -320,10 +320,10 @@ def compute_ranks(
                 for model_id, scores in model_results.items()
             ]
             model_dataset_scores = sorted(
-                [x for x in model_dataset_scores if not np.isnan(x[-1])],
-                key=lambda x: x[-1],
+                [x for x in model_dataset_scores if not np.isnan(x[-2])],
+                key=lambda x: x[-2],
                 reverse=True,
-            ) + [x for x in model_dataset_scores if np.isnan(x[-1])]
+            ) + [x for x in model_dataset_scores if np.isnan(x[-2])]
             stddev = np.std(
                 [
                     score
