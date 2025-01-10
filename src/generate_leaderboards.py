@@ -425,7 +425,7 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
         metadata_dict[model_id].update(
             dict(
                 parameters=num_params,
-                vocabulary=vocab_size,
+                vocabulary_size=vocab_size,
                 context=context,
                 commercial=record.get("commercially_licensed", False),
                 merge=record.get("merge", False),
@@ -601,7 +601,7 @@ def generate_dataframe(
             cols += list(leaderboard_configs.keys())
         cols += [
             "parameters",
-            "vocabulary",
+            "vocabulary_size",
             "context",
             "speed",
             "commercial",
