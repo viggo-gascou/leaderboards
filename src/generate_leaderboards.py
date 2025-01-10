@@ -96,7 +96,6 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
         model_results=model_results,
         ranks=ranks,
         metadata_dict=metadata_dict,
-        datasets=datasets,
         categories=categories,
         task_config=task_config,
         leaderboard_configs=configs,
@@ -288,7 +287,7 @@ def compute_ranks(
     model_results: dict[str, dict[str, list[tuple[list[float], float, float]]]],
     task_config: dict[str, dict[str, str]],
     configs: dict[str, dict[str, list[str]]],
-) -> dict[str, dict[str, float]]:
+) -> dict[str, dict[str, dict[str, float]]]:
     """Compute the ranks of the models.
 
     Args:
@@ -300,7 +299,7 @@ def compute_ranks(
             The leaderboard configurations for each language.
 
     Returns:
-        The ranks of the models, per task category.
+        The ranks of the models, per task category and per language.
     """
     all_datasets = {
         language: [
@@ -364,7 +363,9 @@ def compute_ranks(
     categories = {
         task_config[task]["category"] for config in configs.values() for task in config
     } | {"all"}
-    model_task_category_ranks: dict[str, dict[str, float]] = defaultdict(dict)
+    model_task_category_ranks: dict[str, dict[str, dict[str, float]]] = defaultdict(
+        dict
+    )
     for model_id, score_dict in model_task_ranks.items():
         for category in categories:
             language_scores = [
@@ -382,9 +383,10 @@ def compute_ranks(
                     for task in config
                 )
             ]
-            model_task_category_ranks[model_id][category] = np.mean(
-                language_scores
-            ).item()
+            model_rank_scores = dict(overall=np.mean(language_scores).item())
+            if len(language_scores) > 1:
+                model_rank_scores |= dict(zip(configs.keys(), language_scores))
+            model_task_category_ranks[model_id][category] = model_rank_scores
 
     return model_task_category_ranks
 
@@ -470,9 +472,8 @@ def extract_model_id_from_record(record: dict) -> str:
 
 def generate_dataframe(
     model_results: dict[str, dict[str, list[tuple[list[float], float, float]]]],
-    ranks: dict[str, dict[str, float]],
+    ranks: dict[str, dict[str, dict[str, float]]],
     metadata_dict: dict[str, dict],
-    datasets: list[str],
     categories: tuple[str],
     task_config: dict[str, dict[str, str]],
     leaderboard_configs: dict[str, dict[str, list[str]]],
@@ -486,8 +487,6 @@ def generate_dataframe(
             The ranks of the models.
         metadata_dict:
             The metadata.
-        datasets:
-            All datasets to include in the leaderboard.
         categories:
             The categories of leaderboards to generate.
         task_config:
@@ -515,11 +514,15 @@ def generate_dataframe(
         data_dict: dict[str, list] = defaultdict(list)
         for model_id, results in model_results.items():
             # Skip models that don't have scores for the category
-            if category not in ranks[model_id] or math.isinf(ranks[model_id][category]):
+            if category not in ranks[model_id] or math.isinf(
+                ranks[model_id][category]["overall"]
+            ):
                 continue
 
             # Get the overall rank for the model
-            rank = round(ranks[model_id][category], 2)
+            rank = round(ranks[model_id][category]["overall"], 2)
+            language_ranks = ranks[model_id][category]
+            language_ranks.pop("overall")
 
             # Get the default values for the dataset columns
             default_dataset_values = {
@@ -552,6 +555,7 @@ def generate_dataframe(
             # Add all the model values to the data dictionary
             model_values = (
                 dict(model=model_id, rank=rank)
+                | language_ranks
                 | default_dataset_values
                 | total_results
                 | metadata
@@ -589,6 +593,10 @@ def generate_dataframe(
         cols = [
             "model",
             "rank",
+        ]
+        if len(leaderboard_configs) > 1:
+            cols += list(leaderboard_configs.keys())
+        cols += [
             "parameters",
             "vocabulary_size",
             "context",
