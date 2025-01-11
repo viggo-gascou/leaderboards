@@ -108,7 +108,10 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
 
         # Check if anything got updated
         new_records: list[str] = list()
-        comparison_columns = [col for col in df.columns if col != "rank"]
+        not_comparison_columns = ["rank"] + list(configs.keys())
+        comparison_columns = [
+            col for col in df.columns if col not in not_comparison_columns
+        ]
         if leaderboard_path.exists():
             old_df = pd.read_csv(leaderboard_path)
             if any(col not in old_df.columns for col in comparison_columns):
