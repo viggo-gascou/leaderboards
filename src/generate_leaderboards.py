@@ -3,6 +3,7 @@
 from collections import defaultdict
 import json
 import math
+import re
 from pathlib import Path
 import warnings
 import click
@@ -440,7 +441,14 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
         version = record.get("scandeval_version", "<9.2.0@@0")
         if "@" not in version:
             version_sort_value = int(
-                "".join([f"{version_part:0>2}" for version_part in version.split(".")])
+                "".join(
+                    [
+                        f"{version_part:0>2}"
+                        for version_part in re.sub(
+                            pattern=r"\.dev[0-9]+", repl="", string=version
+                        ).split(".")
+                    ]
+                )
             )
             version += f"@@{version_sort_value}"
         metadata_dict[model_id][f"{record['dataset']}_version"] = version

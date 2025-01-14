@@ -9,6 +9,7 @@ from huggingface_hub import HfApi
 from huggingface_hub.hf_api import RepositoryNotFoundError
 from tqdm.auto import tqdm
 import typing as t
+import re
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
@@ -81,7 +82,16 @@ def main(filename: str) -> None:
             if hash_value == unique_hash_value
         ]
         versions = [
-            list(map(int, match.get("scandeval_version", "0.0.0").split(".")))
+            list(
+                map(
+                    int,
+                    re.sub(
+                        pattern=r"\.dev[0-9]+",
+                        repl="",
+                        string=match.get("scandeval_version", "0.0.0"),
+                    ).split("."),
+                )
+            )
             for match in matches
         ]
         newest_version = max(versions)
