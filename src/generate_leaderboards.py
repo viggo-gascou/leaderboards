@@ -24,6 +24,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+warnings.simplefilter(action="ignore", category=RuntimeWarning)
+
+
 @click.command()
 @click.argument("leaderboard_config")
 @click.option(
@@ -511,6 +514,10 @@ def generate_dataframe(
     Returns:
         The DataFrames.
     """
+    if model_results == {}:
+        logger.error("No model results found, skipping leaderboard generation.")
+        return list()
+
     # Mapping from category to dataset names
     category_to_datasets = {
         category: [
@@ -593,7 +600,7 @@ def generate_dataframe(
                 if isinstance(value, (int, float))
             ), "There are infinite values in the data dictionary."
 
-        # Create dataframe and sort it
+        # Create dataframe and sort by rank
         df = (
             pd.DataFrame(data_dict)
             .sort_values(by="rank", ascending=True)
