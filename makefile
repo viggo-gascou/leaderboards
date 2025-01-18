@@ -9,7 +9,8 @@ download:
 	@scp -o ConnectTimeout=5 percival:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl percival_results.jsonl || true
 	@scp -o ConnectTimeout=5 lancelot:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl lancelot_results.jsonl || true
 	@scp -o ConnectTimeout=5 blackknight:/home/alex-admin/scandeval/scandeval_benchmark_results.jsonl blackknight_results.jsonl || true
-	@scp -o ConnectTimeout=5 scandeval:/home/ubuntu/scandeval/scandeval_benchmark_results.jsonl scandeval_results.jsonl || true
+	@scp -o ConnectTimeout=5 runpod-large:/root/scandeval/scandeval_benchmark_results.jsonl runpod_large_results.jsonl || true
+	@scp -o ConnectTimeout=5 runpod-small:/root/scandeval/scandeval_benchmark_results.jsonl runpod_small_results.jsonl || true
 	@touch results/results.jsonl
 	@if [ -f percival_results.jsonl ]; then \
 		cat percival_results.jsonl >> results/results.jsonl; \
@@ -23,9 +24,13 @@ download:
 		cat blackknight_results.jsonl >> results/results.jsonl; \
 		rm blackknight_results.jsonl; \
 	fi
-	@if [ -f scandeval_results.jsonl ]; then \
-		cat scandeval_results.jsonl >> results/results.jsonl; \
-		rm scandeval_results.jsonl; \
+	@if [ -f runpod_large_results.jsonl ]; then \
+		cat runpod_large_results.jsonl >> results/results.jsonl; \
+		rm runpod_large_results.jsonl; \
+	fi
+	@if [ -f runpod_small_results.jsonl ]; then \
+		cat runpod_small_results.jsonl >> results/results.jsonl; \
+		rm runpod_small_results.jsonl; \
 	fi
 
 process_results:
