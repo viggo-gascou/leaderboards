@@ -143,11 +143,8 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
 
         if new_records or force:
             df.to_csv(leaderboard_path, index=False)
-            notes = dict(
-                annotate=dict(
-                    notes=f"Last updated: {dt.datetime.now().strftime('%Y-%m-%d')} CET",
-                ),
-            )
+            timestamp = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            notes = dict(annotate=dict(notes=f"Last updated: {timestamp} CET"))
             with leaderboard_path.with_suffix(".json").open(mode="w") as f:
                 json.dump(notes, f, indent=2)
                 f.write("\n")
