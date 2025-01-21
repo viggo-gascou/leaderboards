@@ -121,10 +121,26 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
             if any(col not in old_df.columns for col in comparison_columns):
                 new_records = df.model.tolist()
             else:
-                for model_id in df.model:
-                    model_is_new = model_id not in old_df.model.values or any(
+                for model_id in set(df.model.tolist() + old_df.model.tolist()):
+                    old_df_is_missing_columns = any(
                         col not in old_df.columns for col in comparison_columns
                     )
+                    if old_df_is_missing_columns:
+                        new_records.append(model_id)
+                        continue
+
+                    model_is_new = (
+                        model_id in df.model.values
+                        and model_id not in old_df.model.values
+                    )
+                    model_is_removed = (
+                        model_id in old_df.model.values
+                        and model_id not in df.model.values
+                    )
+                    if model_is_new or model_is_removed:
+                        new_records.append(model_id)
+                        continue
+
                     old_model_results = (
                         old_df[comparison_columns].query("model == @model_id").dropna()
                     )
@@ -134,9 +150,7 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
                     model_has_new_results = not np.all(
                         old_model_results.values == new_model_results.values
                     )
-                    if model_is_new:
-                        new_records.append(model_id)
-                    elif model_has_new_results:
+                    if model_has_new_results:
                         new_records.append(model_id)
         else:
             new_records = df.model.tolist()
