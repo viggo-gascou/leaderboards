@@ -18,6 +18,9 @@ logger = logging.getLogger(__name__)
 
 
 BANNED_VERSIONS: list[str] = ["9.3.0", "10.0.0"]
+BANNED_MODELS: list[re.Pattern] = [
+    re.compile(pattern=r"deepseek-r1", flags=re.IGNORECASE)
+]
 MERGE_CACHE: dict[str, bool] = dict()
 COMMERCIALLY_LICENSED_CACHE: dict[str, bool] = dict()
 
@@ -278,6 +281,10 @@ def record_is_valid(record: dict) -> bool:
         True if the record is valid, False otherwise.
     """
     if record.get("scandeval_version") in BANNED_VERSIONS:
+        return False
+    if any(
+        re.search(pattern=pattern, string=record["model"]) for pattern in BANNED_MODELS
+    ):
         return False
     return True
 
