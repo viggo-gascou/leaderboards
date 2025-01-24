@@ -1,9 +1,10 @@
 languages:
   - danish
-  - swedish
-  - norwegian
-  - icelandic
-  - faroese
   - dutch
-  - german
   - english
+  - faroese
+  - french
+  - german
+  - icelandic
+  - norwegian
+  - swedish
