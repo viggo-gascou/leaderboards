@@ -21,7 +21,7 @@ BANNED_VERSIONS: list[str] = ["9.3.0", "10.0.0"]
 BANNED_MODELS: list[re.Pattern] = [
     re.compile(pattern=r"deepseek-r1", flags=re.IGNORECASE)
 ]
-GENERATIVE_TYPE_CACHE: dict[str, bool] = dict()
+GENERATIVE_TYPE_CACHE: dict[str, str | None] = dict()
 MERGE_CACHE: dict[str, bool] = dict()
 COMMERCIALLY_LICENSED_CACHE: dict[str, bool] = dict()
 
@@ -178,7 +178,7 @@ def fix_metadata(record: dict) -> dict:
     return record
 
 
-def get_generative_type(record: dict) -> bool:
+def get_generative_type(record: dict) -> str | None:
     """Asks for the generative type of a model.
 
     Args:
@@ -197,15 +197,42 @@ def get_generative_type(record: dict) -> bool:
         if model_id in GENERATIVE_TYPE_CACHE:
             return GENERATIVE_TYPE_CACHE[model_id]
 
+        # Pre-fill based on keywords in model name
+        null_keywords = ["bert", "xlm-r"]
+        instruct_keywords = ["-instruct", "-it$", "-chat"]
+        reasoning_keywords = ["^o[1-9]$", "^o[1-9]-", "deepseek-r1"]
+        if any(
+            re.search(pattern=keyword, string=model_id, flags=re.IGNORECASE)
+            for keyword in null_keywords
+        ):
+            GENERATIVE_TYPE_CACHE[model_id] = None
+            return None
+        if any(
+            re.search(pattern=keyword, string=model_id, flags=re.IGNORECASE)
+            for keyword in instruct_keywords
+        ):
+            GENERATIVE_TYPE_CACHE[model_id] = "instruction_tuned"
+            return "instruction_tuned"
+        if any(
+            re.search(pattern=keyword, string=model_id, flags=re.IGNORECASE)
+            for keyword in reasoning_keywords
+        ):
+            GENERATIVE_TYPE_CACHE[model_id] = "reasoning"
+            return "reasoning"
+
         msg = f"What is the generative type of {model_id!r}?"
         if "/" in model_id:
             msg += f" (https://huggingface.co/{model_id})"
-        msg += " [y/n] "
+        msg += " [0=null, 1=base, 2=instruction_tuned, 3=reasoning] "
         user_input = input(msg)
-        if user_input.lower() in {"y", "yes"}:
-            GENERATIVE_TYPE_CACHE[model_id] = True
-        elif user_input.lower() in {"n", "no"}:
-            GENERATIVE_TYPE_CACHE[model_id] = False
+        if user_input.lower() in {"0", "null"}:
+            GENERATIVE_TYPE_CACHE[model_id] = None
+        elif user_input.lower() in {"1", "base"}:
+            GENERATIVE_TYPE_CACHE[model_id] = "base"
+        elif user_input.lower() in {"2", "instruction_tuned"}:
+            GENERATIVE_TYPE_CACHE[model_id] = "instruction_tuned"
+        elif user_input.lower() in {"3", "reasoning"}:
+            GENERATIVE_TYPE_CACHE[model_id] = "reasoning"
         else:
             print("Invalid input. Please try again.")
 

@@ -445,6 +445,7 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
                 parameters=num_params,
                 vocabulary_size=vocab_size,
                 context=context,
+                generative_type=record.get("generative_type", None),
                 commercial=record.get("commercially_licensed", False),
                 merge=record.get("merge", False),
             )
@@ -633,6 +634,7 @@ def generate_dataframe(
             "vocabulary_size",
             "context",
             "speed",
+            "generative_type",
             "commercial",
             "merge",
         ]
@@ -650,6 +652,16 @@ def generate_dataframe(
         boolean_columns = ["commercial", "merge"]
         for col in boolean_columns:
             df[col] = df[col].apply(lambda x: "✓" if x else "✗")
+
+        # Replace generative_type with emojis
+        generative_type_emoji_mapping = {
+            "base": "🧠",
+            "instruction_tuned": "📝",
+            "reasoning": "🤔",
+        }
+        df["generative_type"] = df.generative_type.map(
+            lambda x: generative_type_emoji_mapping.get(x, "🔍")
+        )
 
         assert isinstance(df, pd.DataFrame)
         dfs.append(df)
