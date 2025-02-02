@@ -21,6 +21,7 @@ BANNED_VERSIONS: list[str] = ["9.3.0", "10.0.0"]
 BANNED_MODELS: list[re.Pattern] = [
     re.compile(pattern=r"deepseek-r1", flags=re.IGNORECASE)
 ]
+GENERATIVE_TYPE_CACHE: dict[str, bool] = dict()
 MERGE_CACHE: dict[str, bool] = dict()
 COMMERCIALLY_LICENSED_CACHE: dict[str, bool] = dict()
 
@@ -35,6 +36,7 @@ def main(filename: str) -> None:
             The path to the JSONL file.
     """
     # Build caches
+    global GENERATIVE_TYPE_CACHE
     global MERGE_CACHE
     global COMMERCIALLY_LICENSED_CACHE
     old_records: list[dict[str, t.Any]] = list()
@@ -53,6 +55,8 @@ def main(filename: str) -> None:
     for record in tqdm(old_records, desc="Building caches"):
         model_id: str = record["model"]
         model_id = model_id.split("@")[0]
+        if "generative_type" in record:
+            GENERATIVE_TYPE_CACHE[model_id] = record["generative_type"]
         if "merge" in record:
             MERGE_CACHE[model_id] = record["merge"]
         if "commercially_licensed" in record:
@@ -153,6 +157,7 @@ def add_missing_entries(record: dict) -> dict:
         record["few_shot"] = True
     if "generative" not in record:
         record["generative"] = False
+    record["generative_type"] = get_generative_type(record=record)
     record["merge"] = is_merge(record=record)
     record["commercially_licensed"] = is_commercially_licensed(record=record)
     return record
@@ -171,6 +176,38 @@ def fix_metadata(record: dict) -> dict:
     if record["task"] == "question-answering":
         record["task"] = "reading-comprehension"
     return record
+
+
+def get_generative_type(record: dict) -> bool:
+    """Asks for the generative type of a model.
+
+    Args:
+        record:
+            A record from the JSONL file.
+
+    Returns:
+        The generative type of the model.
+    """
+    global GENERATIVE_TYPE_CACHE
+
+    # Remove revisions from model ID
+    model_id = record["model"].split("@")[0]
+
+    while True:
+        if model_id in GENERATIVE_TYPE_CACHE:
+            return GENERATIVE_TYPE_CACHE[model_id]
+
+        msg = f"What is the generative type of {model_id!r}?"
+        if "/" in model_id:
+            msg += f" (https://huggingface.co/{model_id})"
+        msg += " [y/n] "
+        user_input = input(msg)
+        if user_input.lower() in {"y", "yes"}:
+            GENERATIVE_TYPE_CACHE[model_id] = True
+        elif user_input.lower() in {"n", "no"}:
+            GENERATIVE_TYPE_CACHE[model_id] = False
+        else:
+            print("Invalid input. Please try again.")
 
 
 def is_commercially_licensed(record: dict) -> bool:
