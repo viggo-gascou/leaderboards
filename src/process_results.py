@@ -18,9 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 BANNED_VERSIONS: list[str] = ["9.3.0", "10.0.0"]
-BANNED_MODELS: list[re.Pattern] = [
-    re.compile(pattern=r"deepseek-r1", flags=re.IGNORECASE)
-]
+BANNED_MODELS: list[re.Pattern] = []
 GENERATIVE_TYPE_CACHE: dict[str, str | None] = dict()
 MERGE_CACHE: dict[str, bool] = dict()
 COMMERCIALLY_LICENSED_CACHE: dict[str, bool] = dict()
