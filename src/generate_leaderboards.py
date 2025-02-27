@@ -1,4 +1,4 @@
-"""Generate leaderboard CSV files from the ScandEval results."""
+"""Generate leaderboard CSV files from the EuroEval results."""
 
 from collections import defaultdict
 import json
@@ -45,7 +45,7 @@ warnings.simplefilter(action="ignore", category=RuntimeWarning)
     help="The categories of leaderboards to generate.",
 )
 def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) -> None:
-    """Generate leaderboard CSV files from the ScandEval results.
+    """Generate leaderboard CSV files from the EuroEval results.
 
     Args:
         leaderboard_config:
@@ -453,7 +453,7 @@ def extract_model_metadata(results: list[dict]) -> dict[str, dict]:
         if record["dataset"] == "speed":
             metadata_dict[model_id]["speed"] = record["results"]["total"]["test_speed"]
 
-        version = record.get("scandeval_version", "<9.2.0@@0")
+        version = record.get("euroeval_version", "<9.2.0@@0")
         if "@" not in version:
             version_sort_value = int(
                 "".join(
