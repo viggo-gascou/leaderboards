@@ -599,12 +599,11 @@ def generate_dataframe(
         df.columns = df.columns.str.replace("-", "_")
 
         # Reorder columns
-        cols = ["model"] + rank_cols
+        cols = ["generative_type", "model"] + rank_cols
         cols += [
             "parameters",
             "vocabulary_size",
             "context",
-            "generative_type",
             "commercial",
             "merge",
         ]
