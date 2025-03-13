@@ -533,9 +533,6 @@ def generate_dataframe(
                     scores = results[dataset]
                 else:
                     scores = [(list(), float("nan"), 0)]
-                    logger.info(
-                        f"Model {model_id!r} is missing scores for dataset {dataset!r}."
-                    )
                 main_score = scores[0][1]
                 if not math.isnan(main_score):
                     score_str = " / ".join(
