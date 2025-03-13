@@ -535,13 +535,16 @@ def generate_dataframe(
                     scores = [(list(), float("nan"), 0)]
                 main_score = scores[0][1]
                 if not math.isnan(main_score):
-                    score_str = " / ".join(
-                        f"{total_score:,.2f} ± {std_err:,.2f}"
-                        for _, total_score, std_err in scores
+                    score_str = (
+                        " / ".join(
+                            f"{total_score:,.2f} ± {std_err:,.2f}"
+                            for _, total_score, std_err in scores
+                        )
+                        + f"@@{main_score}"
                     )
                 else:
                     score_str = "-@@-1"
-                total_results[dataset] = score_str + f"@@{main_score}"
+                total_results[dataset] = score_str
 
             # Filter metadata dict to only keep the dataset versions belonging to the
             # category
@@ -583,7 +586,8 @@ def generate_dataframe(
         if len(leaderboard_configs) > 1:
             rank_cols += list(leaderboard_configs.keys())
 
-        # Convert rank to string, where {shown value}@@{sort value} to ensures that NaN values appear at the bottom.
+        # Convert rank to string, where {shown value}@@{sort value} to ensures that NaN
+        # values appear at the bottom.
         for col in rank_cols:
             df[col] = [
                 f"{value:.2f}@@{value:.2f}"
