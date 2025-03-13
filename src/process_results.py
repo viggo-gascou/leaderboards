@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import logging
 from huggingface_hub import HfApi
+from huggingface_hub.errors import HFValidationError
 from huggingface_hub.hf_api import RepositoryNotFoundError
 from tqdm.auto import tqdm
 import typing as t
@@ -326,7 +327,7 @@ def is_merge(record: dict) -> bool:
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", category=UserWarning)
             model_info = api.model_info(repo_id=model_id)
-    except RepositoryNotFoundError:
+    except (RepositoryNotFoundError, HFValidationError):
         MERGE_CACHE[model_id] = False
         return False
 
