@@ -1,14 +1,14 @@
 sentiment-classification:
-  - hotter-and-colder-sentiment
+  - sentipolc16
 named-entity-recognition:
-  - mim-gold-ner
+  - multinerd-it
 linguistic-acceptability:
-  - scala-is
+  - scala-it
 reading-comprehension:
-  - nqii
+  - squad-it
 summarization:
-  - rrn
+  - ilpost-sum
 knowledge:
-  - icelandic-knowledge
+  - mmlu-it
 common-sense-reasoning:
-  - winogrande-is
+  - hellaswag-it
