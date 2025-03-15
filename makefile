@@ -1,9 +1,12 @@
 # Set the PATH env var used by cargo and uv
 export PATH := ${HOME}/.local/bin:${HOME}/.cargo/bin:$(PATH)
 
-update: check download process_results generate_leaderboards publish
+update: pull check download process_results generate_leaderboards publish
 
-force-update: check download process_results force_generate_leaderboards publish
+force-update: pull check download process_results force_generate_leaderboards publish
+
+pull:
+	@git pull
 
 download:
 	@scp -o ConnectTimeout=5 lancelot:/home/alex-admin/euroeval/euroeval_benchmark_results.jsonl lancelot_results.jsonl || true
