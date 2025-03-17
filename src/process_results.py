@@ -74,7 +74,9 @@ def main(filename: str) -> None:
             if inner_model_id_match:
                 inner_model_id = inner_model_id_match.group(1)
                 inner_model_id = re.sub(r" *\(.*?\)", "", inner_model_id)
-                ANCHOR_TAG_CACHE[inner_model_id] = record["model"]
+
+                if not inner_model_id.startswith("ollama_chat/"):
+                    ANCHOR_TAG_CACHE[inner_model_id] = record["model"]
     del old_records
 
     records = list()
