@@ -109,6 +109,30 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
         leaderboard_path = (
             Path("leaderboards") / f"{leaderboard_config.stem}_{category}.csv"
         )
+        simplified_leaderboard_path = (
+            Path("leaderboards")
+            / f"{leaderboard_config.stem}_{category}_simplified.csv"
+        )
+
+        # Create the simplified leaderboard
+        df_simplified = df.copy()
+        df_simplified = df[
+            [
+                "model",
+                "generative_type",
+                "rank",
+                "parameters",
+                "vocabulary_size",
+                "context",
+                "commercial",
+                "merge",
+            ]
+        ]
+        df_simplified = df_simplified.map(
+            lambda x: x.split("@@")[0] if isinstance(x, str) else x
+        )
+        df_simplified = df_simplified.query("rank != '-'")
+        df_simplified = df_simplified.convert_dtypes()
 
         # Check if anything got updated
         new_records: list[str] = list()
@@ -162,6 +186,7 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
 
         if new_records or force:
             df.to_csv(leaderboard_path, index=False)
+            df_simplified.to_csv(simplified_leaderboard_path, index=False)
             timestamp = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             notes = dict(annotate=dict(notes=f"Last updated: {timestamp} CET"))
             with leaderboard_path.with_suffix(".json").open(mode="w") as f:
