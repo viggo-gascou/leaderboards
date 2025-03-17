@@ -155,6 +155,6 @@ def generate_ollama_url(model_id: str) -> str | None:
         The URL for the model on Ollama, or None if the model does not exist on Ollama.
     """
     if model_id.startswith("ollama/") or model_id.startswith("ollama_chat/"):
-        model_id_without_prefix_and_suffix = re.sub(":.+$", "", model_id.split("/")[1])
-        return f"https://ollama.com/library/{model_id_without_prefix_and_suffix}"
+        model_id_without_prefix = model_id.split("/")[1]
+        return f"https://ollama.com/library/{model_id_without_prefix}"
     return None
