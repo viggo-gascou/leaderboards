@@ -24,6 +24,16 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+KNOWN_MODELS_WITHOUT_URLS = [
+    "fresh-electra-small",
+    "fresh-xlm-roberta-base",
+    "skole-gpt-mixtral",
+    "danish-foundation-models/munin-7b-v0.1dev0",
+    "mhenrichsen/danskgpt-chat-v2.1",
+    "syvai/danskgpt-chat-llama3-70b",
+]
+
+
 def generate_anchor_tag(model_id: str) -> str:
     """Generate an anchor tag for a model.
 
@@ -38,6 +48,10 @@ def generate_anchor_tag(model_id: str) -> str:
     logging.getLogger("huggingface_hub").setLevel(logging.CRITICAL)
 
     model_id_without_revision = model_id.split("@")[0]
+
+    # Skip models that are known to not have URLs
+    if model_id_without_revision in KNOWN_MODELS_WITHOUT_URLS:
+        return model_id
 
     url = generate_ollama_url(model_id=model_id_without_revision)
     if url is None:
