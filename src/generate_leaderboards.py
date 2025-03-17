@@ -155,6 +155,11 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
         else:
             new_records = df.model.tolist()
 
+        # Remove anchor tags from model names
+        new_records = [
+            re.sub(r"<a href=.*?>(.*?)</a>", r"\1", model) for model in new_records
+        ]
+
         if new_records or force:
             df.to_csv(leaderboard_path, index=False)
             timestamp = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
