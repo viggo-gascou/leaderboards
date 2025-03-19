@@ -65,7 +65,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/Twitter/twhin-bert-base'>Twitter/twhin-bert-base</a>,🔍,2.79,279080594,250002,512,✓,✗
 <a href='https://huggingface.co/Geotrend/bert-base-25lang-cased'>Geotrend/bert-base-25lang-cased</a>,🔍,2.80,151311362,84985,512,✓,✗
 <a href='https://huggingface.co/upstage/SOLAR-10.7B-v1.0'>upstage/SOLAR-10.7B-v1.0 (few-shot)</a>,🧠,2.80,10731524096,32000,4096,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.85,,,,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.85,4299915632,,8192,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B-instruct'>NorwAI/NorwAI-Mixtral-8x7B-instruct (few-shot)</a>,📝,2.87,46997647360,67993,32768,✓,✗
 <a href='https://huggingface.co/microsoft/infoxlm-base'>microsoft/infoxlm-base</a>,🔍,2.88,278045186,250002,512,✓,✗
 <a href='https://huggingface.co/senseable/WestLake-7B-v2'>senseable/WestLake-7B-v2 (few-shot)</a>,🧠,2.91,7241732096,32000,4096,✗,✗
