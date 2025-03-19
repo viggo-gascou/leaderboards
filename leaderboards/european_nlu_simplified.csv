@@ -7,8 +7,8 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.86,27400000000,262144,8192,✓,✗
 "<a href='https://ollama.com/library/phi4:14b-q4_K_M'>ollama_chat/phi4:14b-q4_K_M (few-shot, val)</a>",📝,1.87,14700000000,100352,16384,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,1.89,70553706496,128256,131072,✓,✗
-<a href='https://huggingface.co/intfloat/multilingual-e5-large'>intfloat/multilingual-e5-large</a>,🔍,1.96,559893507,250002,512,✓,✗
 <a href='https://huggingface.co/google/gemma-2-27b-it'>google/gemma-2-27b-it (few-shot)</a>,📝,1.96,27227128320,256000,4096,✓,✗
+<a href='https://huggingface.co/intfloat/multilingual-e5-large'>intfloat/multilingual-e5-large</a>,🔍,1.97,559893507,250002,512,✓,✗
 <a href='https://huggingface.co/ThatsGroes/gemma-2-27b-it-FP8-Dynamic'>ThatsGroes/gemma-2-27b-it-FP8-Dynamic (few-shot)</a>,📝,1.98,28410968576,256000,4096,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,1.98,12200000000,262144,8192,✓,✗
 <a href='https://huggingface.co/setu4993/LaBSE'>setu4993/LaBSE</a>,🔍,2.03,470929155,501153,512,✓,✗
@@ -50,7 +50,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k'>ibm-granite/granite-8b-code-instruct-4k (few-shot)</a>,📝,2.88,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/occiglot/occiglot-7b-eu5'>occiglot/occiglot-7b-eu5 (few-shot)</a>,🧠,2.88,7241732096,32000,4096,✓,✗
 <a href='https://huggingface.co/Twitter/twhin-bert-base'>Twitter/twhin-bert-base</a>,🔍,2.88,278830851,250002,512,✓,✗
-<a href='https://huggingface.co/microsoft/xlm-align-base'>microsoft/xlm-align-base</a>,🔍,2.88,278045955,250002,512,✓,✗
+<a href='https://huggingface.co/microsoft/xlm-align-base'>microsoft/xlm-align-base</a>,🔍,2.89,278045955,250002,512,✓,✗
 <a href='https://huggingface.co/sentence-transformers/paraphrase-xlm-r-multilingual-v1'>sentence-transformers/paraphrase-xlm-r-multilingual-v1</a>,🔍,2.90,278045955,250002,512,✓,✗
 <a href='https://huggingface.co/Twitter/twhin-bert-large'>Twitter/twhin-bert-large</a>,🔍,2.93,561463811,250002,512,✓,✗
 <a href='https://huggingface.co/sentence-transformers/stsb-xlm-r-multilingual'>sentence-transformers/stsb-xlm-r-multilingual</a>,🔍,2.94,278045955,250002,512,✓,✗
@@ -63,7 +63,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/LumiOpen/Viking-13B'>LumiOpen/Viking-13B (few-shot)</a>,🧠,3.29,14030361600,131072,4096,✓,✗
 <a href='https://huggingface.co/dbmdz/bert-base-historic-multilingual-cased'>dbmdz/bert-base-historic-multilingual-cased</a>,🔍,3.30,110619651,32000,512,✓,✗
 <a href='https://huggingface.co/sentence-transformers/distilbert-multilingual-nli-stsb-quora-ranking'>sentence-transformers/distilbert-multilingual-nli-stsb-quora-ranking</a>,🔍,3.31,135326979,119547,512,✓,✗
-<a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-research-v0.4'>openGPT-X/Teuken-7B-instruct-research-v0.4 (few-shot)</a>,📝,3.32,7452725248,250680,4096,✗,✗
+<a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-research-v0.4'>openGPT-X/Teuken-7B-instruct-research-v0.4 (few-shot)</a>,📝,3.33,7452725248,250680,4096,✗,✗
 <a href='https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2'>sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</a>,🔍,3.33,117654915,250037,512,✓,✗
 <a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,3.41,1000000000,262144,32768,✓,✗
 <a href='https://huggingface.co/EuropeanParliament/EUBERT'>EuropeanParliament/EUBERT</a>,🔍,3.44,93990500,65636,512,✓,✗
@@ -75,7 +75,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v1'>sentence-transformers/distiluse-base-multilingual-cased-v1</a>,🔍,3.65,135326979,119547,512,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B'>HuggingFaceTB/SmolLM2-1.7B (few-shot)</a>,🧠,3.67,1711376384,49152,8192,✓,✗
 <a href='https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2'>sentence-transformers/distiluse-base-multilingual-cased-v2</a>,🔍,3.68,134734080,119547,512,✓,✗
-<a href='https://huggingface.co/google/gemma-7b-it'>google/gemma-7b-it (few-shot)</a>,📝,3.70,8537680896,256000,8192,✗,✗
+<a href='https://huggingface.co/google/gemma-7b-it'>google/gemma-7b-it (few-shot)</a>,📝,3.71,8537680896,256000,8192,✗,✗
 <a href='https://huggingface.co/microsoft/phi-2'>microsoft/phi-2 (few-shot)</a>,🧠,3.80,2779683840,51200,2048,✓,✗
 <a href='https://huggingface.co/dbmdz/bert-tiny-historic-multilingual-cased'>dbmdz/bert-tiny-historic-multilingual-cased</a>,🔍,4.16,4575491,32000,512,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-350m-Preview'>PleIAs/Pleias-350m-Preview (few-shot)</a>,🧠,4.26,353424384,65536,2048,✓,✗
