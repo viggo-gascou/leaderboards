@@ -132,7 +132,7 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.46,7241732096,3
 <a href='https://huggingface.co/microsoft/Phi-3-mini-4k-instruct'>microsoft/Phi-3-mini-4k-instruct (few-shot)</a>,📝,2.86,3821079552,32064,4096,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-4B-Chat'>Qwen/Qwen1.5-4B-Chat (few-shot)</a>,📝,2.87,3950369280,151936,32768,✗,✗
 <a href='https://huggingface.co/BSC-LT/salamandra-7b'>BSC-LT/salamandra-7b (few-shot)</a>,🧠,2.88,7768117248,256000,8192,✓,✗
-<a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,2.89,8054910976,49152,4096,✓,✗
+<a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,2.88,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/emillykkejensen/Phi-3-mini-4k-instruct-dansk'>emillykkejensen/Phi-3-mini-4k-instruct-dansk (few-shot)</a>,📝,2.89,3821079552,32064,4096,✗,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-40b'>AI-Sweden-Models/gpt-sw3-40b (few-shot)</a>,🧠,2.89,39926513664,64000,2048,✓,✗
 <a href='https://huggingface.co/google/gemma-2-2b'>google/gemma-2-2b (few-shot)</a>,🧠,2.90,2614341888,256000,8193,✓,✗

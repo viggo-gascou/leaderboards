@@ -183,8 +183,8 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.91,,32000,32768,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mistral-7B'>NorwAI/NorwAI-Mistral-7B (few-shot)</a>,🧠,3.94,7536586752,67993,4224,✓,✗
 <a href='https://huggingface.co/Tweeties/tweety-7b-dutch-v24a'>Tweeties/tweety-7b-dutch-v24a (few-shot)</a>,📝,3.95,7391293440,50257,1024,✓,✗
 <a href='https://huggingface.co/Rijgersberg/GEITje-7B'>Rijgersberg/GEITje-7B (few-shot)</a>,🧠,3.96,7241732096,32000,32768,✓,✗
+<a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4'>openGPT-X/Teuken-7B-instruct-commercial-v0.4 (few-shot)</a>,📝,3.97,7452725248,250680,4096,✓,✗
 <a href='https://huggingface.co/RuterNorway/Llama-2-7b-chat-norwegian'>RuterNorway/Llama-2-7b-chat-norwegian (few-shot)</a>,📝,3.97,,32000,4096,✗,✗
-<a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4'>openGPT-X/Teuken-7B-instruct-commercial-v0.4 (few-shot)</a>,📝,3.98,7452725248,250680,4096,✓,✗
 <a href='https://huggingface.co/microsoft/phi-2'>microsoft/phi-2 (few-shot)</a>,🧠,3.98,2779683840,51200,2048,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct'>HuggingFaceTB/SmolLM2-1.7B-Instruct (few-shot)</a>,📝,4.01,1711376384,49152,8192,✓,✗
 <a href='https://huggingface.co/google/gemma-2b-it'>google/gemma-2b-it (few-shot)</a>,📝,4.02,2506172416,256000,8192,✗,✗

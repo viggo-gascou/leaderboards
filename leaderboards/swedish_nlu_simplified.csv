@@ -165,11 +165,11 @@ mhenrichsen/danskgpt-chat-v2.1 (few-shot)</a>,📝,2.16,,32002,32768,✓,✗
 <a href='https://huggingface.co/bineric/NorskGPT-Llama-13B-v0.1'>bineric/NorskGPT-Llama-13B-v0.1 (few-shot)</a>,📝,2.35,13015864320,32000,4096,✗,✗
 <a href='https://huggingface.co/distilbert/distilbert-base-multilingual-cased'>distilbert/distilbert-base-multilingual-cased</a>,🔍,2.36,135326979,119547,512,✓,✗
 <a href='https://huggingface.co/Twitter/twhin-bert-large'>Twitter/twhin-bert-large</a>,🔍,2.36,561463811,250002,512,✓,✗
+<a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,2.36,8054910976,49152,4096,✓,✗
 "<a href='https://huggingface.co/mlabonne/AlphaMonarch-7B'>mlabonne/AlphaMonarch-7B (few-shot, val)</a>",📝,2.37,7241732096,32000,8192,✗,✓
 <a href='https://huggingface.co/microsoft/infoxlm-base'>microsoft/infoxlm-base</a>,🔍,2.37,278045955,250002,512,✓,✗
 <a href='https://huggingface.co/occiglot/occiglot-7b-eu5'>occiglot/occiglot-7b-eu5 (few-shot)</a>,🧠,2.38,7241732096,32000,4096,✓,✗
 <a href='https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2'>sentence-transformers/paraphrase-multilingual-mpnet-base-v2</a>,🔍,2.38,278045955,250002,512,✓,✗
-<a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,2.38,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/clips/mfaq'>clips/mfaq</a>,🔍,2.39,278048259,250005,128,✓,✗
 <a href='https://huggingface.co/Geotrend/distilbert-base-25lang-cased'>Geotrend/distilbert-base-25lang-cased</a>,🔍,2.40,108783363,84985,512,✓,✗
 <a href='https://huggingface.co/dbmdz/bert-base-historic-multilingual-cased'>dbmdz/bert-base-historic-multilingual-cased</a>,🔍,2.41,110619651,32000,512,✓,✗

@@ -59,7 +59,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/occiglot/occiglot-7b-eu5-instruct'>occiglot/occiglot-7b-eu5-instruct (few-shot)</a>,📝,2.56,7241748480,32002,4096,✗,✗
 <a href='https://huggingface.co/BSC-LT/salamandra-7b'>BSC-LT/salamandra-7b (few-shot)</a>,🧠,2.58,7768117248,256000,8192,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-3b-a800m-instruct'>ibm-granite/granite-3.0-3b-a800m-instruct (few-shot)</a>,📝,2.62,3374295552,49155,4096,✓,✗
-<a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,2.65,8054910976,49152,4096,✓,✗
+<a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,2.66,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k'>ibm-granite/granite-8b-code-instruct-4k (few-shot)</a>,📝,2.67,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/norallm/normistral-11b-warm'>norallm/normistral-11b-warm (few-shot)</a>,🧠,2.69,11429893120,51200,1024000,✓,✗
 <a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-research-v0.4'>openGPT-X/Teuken-7B-instruct-research-v0.4 (few-shot)</a>,📝,2.71,7452725248,250680,4096,✗,✗
