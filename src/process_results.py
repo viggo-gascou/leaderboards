@@ -225,7 +225,8 @@ def get_generative_type(record: dict) -> str | None:
             return GENERATIVE_TYPE_CACHE[model_id]
 
         # Pre-fill based on keywords in model name
-        null_keywords = ["bert", "xlm-r"]
+        null_keywords = ["bert", "xlm-r", "encoder"]
+        base_keywords = ["-base", "-pt"]
         instruct_keywords = ["-instruct", "-it$", "-chat"]
         reasoning_keywords = ["^o[1-9]$", "^o[1-9]-", "deepseek-r1"]
         if any(
@@ -234,6 +235,12 @@ def get_generative_type(record: dict) -> str | None:
         ):
             GENERATIVE_TYPE_CACHE[model_id] = None
             return None
+        if any(
+            re.search(pattern=keyword, string=model_id, flags=re.IGNORECASE)
+            for keyword in base_keywords
+        ):
+            GENERATIVE_TYPE_CACHE[model_id] = "base"
+            return "base"
         if any(
             re.search(pattern=keyword, string=model_id, flags=re.IGNORECASE)
             for keyword in instruct_keywords
