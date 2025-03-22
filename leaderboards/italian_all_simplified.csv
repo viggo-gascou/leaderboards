@@ -45,7 +45,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-hf'>meta-llama/Llama-2-13b-hf (few-shot)</a>,🧠,2.76,13015866880,32000,4096,✓,✗
 <a href='https://huggingface.co/neuralmagic/Sparse-Llama-3.1-8B-2of4'>neuralmagic/Sparse-Llama-3.1-8B-2of4 (few-shot)</a>,🧠,2.76,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1'>mistralai/Mistral-7B-Instruct-v0.1 (few-shot)</a>,📝,2.77,7241732096,32000,4096,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct'>meta-llama/Llama-3.2-3B-Instruct (few-shot)</a>,📝,2.79,3212749824,128256,131072,✗,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct'>meta-llama/Llama-3.2-3B-Instruct (few-shot)</a>,📝,2.79,3212749824,128256,131072,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2'>mistralai/Mistral-7B-Instruct-v0.2 (few-shot)</a>,📝,2.89,7241732096,32000,32768,✗,✗
 <a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-research-v0.4'>openGPT-X/Teuken-7B-instruct-research-v0.4 (few-shot)</a>,📝,3.06,7452725248,250680,4096,✗,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,3.08,8054910976,49152,4096,✓,✗

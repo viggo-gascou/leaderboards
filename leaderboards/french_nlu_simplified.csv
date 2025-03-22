@@ -71,7 +71,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/google/gemma-7b'>google/gemma-7b (few-shot)</a>,🧠,2.41,8537680896,256000,8192,✓,✗
 <a href='https://huggingface.co/norallm/normistral-11b-warm'>norallm/normistral-11b-warm (few-shot)</a>,🧠,2.41,11429893120,51200,1024000,✓,✗
 <a href='https://huggingface.co/nvidia/mistral-nemo-minitron-8b-instruct'>nvidia/mistral-nemo-minitron-8b-instruct (few-shot)</a>,📝,2.43,8414105600,131072,8192,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct'>meta-llama/Llama-3.2-3B-Instruct (few-shot)</a>,📝,2.46,3212749824,128256,131072,✗,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct'>meta-llama/Llama-3.2-3B-Instruct (few-shot)</a>,📝,2.46,3212749824,128256,131072,✓,✗
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-haiku-20241022 (zero-shot, val)</a>",📝,2.47,,,200000,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2'>mistralai/Mistral-7B-Instruct-v0.2 (few-shot)</a>,📝,2.52,7241732096,32000,32768,✗,✗
 <a href='https://huggingface.co/MaLA-LM/emma-500-llama2-7b'>MaLA-LM/emma-500-llama2-7b (few-shot)</a>,🧠,2.52,6738415616,32000,4096,✓,✗

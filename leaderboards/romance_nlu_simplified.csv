@@ -53,7 +53,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-hf'>meta-llama/Llama-2-13b-hf (few-shot)</a>,🧠,2.52,13015866880,32000,4096,✓,✗
 <a href='https://huggingface.co/nvidia/mistral-nemo-minitron-8b-instruct'>nvidia/mistral-nemo-minitron-8b-instruct (few-shot)</a>,📝,2.55,8414105600,131072,8192,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2'>mistralai/Mistral-7B-Instruct-v0.2 (few-shot)</a>,📝,2.58,7241732096,32000,32768,✗,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct'>meta-llama/Llama-3.2-3B-Instruct (few-shot)</a>,📝,2.62,3212749824,128256,131072,✗,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct'>meta-llama/Llama-3.2-3B-Instruct (few-shot)</a>,📝,2.62,3212749824,128256,131072,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,2.62,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k'>ibm-granite/granite-8b-code-instruct-4k (few-shot)</a>,📝,2.62,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/norallm/normistral-11b-warm'>norallm/normistral-11b-warm (few-shot)</a>,🧠,2.65,11429893120,51200,1024000,✓,✗
