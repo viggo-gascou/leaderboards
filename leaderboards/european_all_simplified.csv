@@ -34,7 +34,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.64,4299915632,,8192,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-9B'>utter-project/EuroLLM-9B (few-shot)</a>,🧠,2.66,9152319488,128000,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-instruct'>ibm-granite/granite-3.0-8b-instruct (few-shot)</a>,📝,2.71,8170848256,49155,4096,✓,✗
-<a href='https://huggingface.co/utter-project/EuroLLM-9B-Instruct'>utter-project/EuroLLM-9B-Instruct (few-shot)</a>,📝,2.71,9152319488,128000,4096,✗,✗
+<a href='https://huggingface.co/utter-project/EuroLLM-9B-Instruct'>utter-project/EuroLLM-9B-Instruct (few-shot)</a>,📝,2.72,9152319488,128000,4096,✗,✗
 <a href='https://huggingface.co/google/gemma-7b'>google/gemma-7b (few-shot)</a>,🧠,2.72,8537680896,256000,8192,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-base'>ibm-granite/granite-3.0-8b-base (few-shot)</a>,🧠,2.77,8170835968,49152,4096,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-v0.1'>mistralai/Mistral-7B-v0.1 (few-shot)</a>,🧠,2.81,7241732096,32000,4096,✓,✗
