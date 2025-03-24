@@ -35,7 +35,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-sonnet-20241022 (zero-shot, val)</a>",📝,1.87,,,200000,✓,✗
 <a href='https://huggingface.co/upstage/SOLAR-10.7B-v1.0'>upstage/SOLAR-10.7B-v1.0 (few-shot)</a>,🧠,1.87,10731524096,32000,4096,✓,✗
 <a href='https://huggingface.co/deepset/gbert-base'>deepset/gbert-base</a>,🔍,1.88,110552448,31102,512,✓,✗
-<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.89,27432406640,262144,5000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.89,27432406640,262144,128000,✓,✗
 <a href='https://huggingface.co/google/gemma-2-9b'>google/gemma-2-9b (few-shot)</a>,🧠,1.89,9241705984,256000,4096,✓,✗
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B-DPO'>allenai/Llama-3.1-Tulu-3-8B-DPO (few-shot)</a>,📝,1.90,8030326784,128264,131072,✓,✗
 <a href='https://huggingface.co/google/gemma-2-9b-it'>google/gemma-2-9b-it (few-shot)</a>,📝,1.91,9241705984,256000,4096,✓,✗
@@ -43,13 +43,13 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 skole-gpt-mixtral (few-shot)</a>,🧠,1.91,,32000,32768,✓,✗
 <a href='https://huggingface.co/mistralai/Mixtral-8x7B-v0.1'>mistralai/Mixtral-8x7B-v0.1 (few-shot)</a>,🧠,1.92,46702792704,32000,32768,✓,✗
 <a href='https://huggingface.co/speakleash/Bielik-11B-v2.3-Instruct'>speakleash/Bielik-11B-v2.3-Instruct (few-shot)</a>,📝,1.92,11168796672,32128,32768,✓,✓
-<a href='https://huggingface.co/google/gemma-3-12b-it'>google/gemma-3-12b-it (few-shot)</a>,📝,1.92,12187325040,262144,5000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-12b-it'>google/gemma-3-12b-it (few-shot)</a>,📝,1.92,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/intfloat/multilingual-e5-base'>intfloat/multilingual-e5-base</a>,🔍,1.93,278044162,250002,512,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.94,,200019,8191,✓,✗
 <a href='https://huggingface.co/google-bert/bert-base-multilingual-uncased'>google-bert/bert-base-multilingual-uncased</a>,🔍,1.98,168055961,105879,512,✓,✗
 "<a href='https://huggingface.co/cstr/Spaetzle-v8-7b'>cstr/Spaetzle-v8-7b (few-shot, val)</a>",📝,1.98,7241732096,32000,32768,✗,✓
 "<a href='https://platform.openai.com/docs/models/gpt-3.5-turbo'>gpt-3.5-turbo-0613 (few-shot, val)</a>",📝,1.98,,100256,4095,✓,✗
-"<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.99,27400000000,262144,8192,✓,✗
+"<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.99,27400000000,262144,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct'>meta-llama/Meta-Llama-3-8B-Instruct (few-shot)</a>,📝,1.99,8030261248,128256,8192,✓,✗
 "<a href='https://huggingface.co/mlabonne/NeuralBeagle14-7B'>mlabonne/NeuralBeagle14-7B (few-shot, val)</a>",📝,1.99,7241732096,32000,8192,✗,✓
 <a href='https://huggingface.co/VAGOsolutions/FC-SauerkrautLM-7b-beta'>VAGOsolutions/FC-SauerkrautLM-7b-beta (few-shot)</a>,📝,2.02,,32002,8192,✗,✗
@@ -76,10 +76,10 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.91,,32000,32768,✓,✗
 <a href='https://huggingface.co/mistralai/Ministral-8B-Instruct-2410'>mistralai/Ministral-8B-Instruct-2410 (few-shot)</a>,📝,2.15,8019808256,131072,32768,✓,✗
 <a href='https://huggingface.co/senseable/WestLake-7B-v2'>senseable/WestLake-7B-v2 (few-shot)</a>,🧠,2.15,7241732096,32000,4096,✗,✗
 <a href='https://huggingface.co/CohereForAI/aya-expanse-8b'>CohereForAI/aya-expanse-8b (few-shot)</a>,🧠,2.15,8028033024,256000,8192,✗,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,2.16,,,,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,2.16,,,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B'>meta-llama/Llama-3.1-8B (few-shot)</a>,🧠,2.16,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/google-bert/bert-base-multilingual-cased'>google-bert/bert-base-multilingual-cased</a>,🔍,2.16,178566653,119547,512,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,2.16,12200000000,262144,8192,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,2.16,12200000000,262144,128000,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-instruct'>ibm-granite/granite-3.0-8b-instruct (few-shot)</a>,📝,2.20,8170848256,49155,4096,✓,✗
 <a href='https://huggingface.co/microsoft/Phi-3-mini-4k-instruct'>microsoft/Phi-3-mini-4k-instruct (few-shot)</a>,📝,2.21,3821079552,32064,2047,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-9B'>utter-project/EuroLLM-9B (few-shot)</a>,🧠,2.23,9152319488,128000,4096,✓,✗
@@ -103,7 +103,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.91,,32000,32768,✓,✗
 "<a href='https://huggingface.co/mayflowergmbh/Wiedervereinigung-7b-dpo'>mayflowergmbh/Wiedervereinigung-7b-dpo (few-shot, val)</a>",📝,2.37,7241732096,32000,32768,✗,✓
 <a href='https://huggingface.co/seedboxai/KafkaLM-7B-German-V0.1'>seedboxai/KafkaLM-7B-German-V0.1 (few-shot)</a>,🧠,2.38,7241732096,32000,32768,✓,✗
 <a href='https://huggingface.co/Twitter/twhin-bert-base'>Twitter/twhin-bert-base</a>,🔍,2.38,279080594,250002,512,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.39,,,,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.39,4299915632,262144,128000,✓,✗
 <a href='https://huggingface.co/seedboxai/KafkaLM-13B-German-V0.1-DPO'>seedboxai/KafkaLM-13B-German-V0.1-DPO (few-shot)</a>,📝,2.40,13015864320,32000,8192,✗,✗
 <a href='https://huggingface.co/RuterNorway/Llama-2-13b-chat-norwegian'>RuterNorway/Llama-2-13b-chat-norwegian (few-shot)</a>,📝,2.41,,32000,4096,✗,✗
 <a href='https://huggingface.co/VAGOsolutions/SauerkrautLM-Gemma-7b'>VAGOsolutions/SauerkrautLM-Gemma-7b (few-shot)</a>,🧠,2.43,8537680896,256000,8192,✗,✗
@@ -170,7 +170,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.91,,32000,32768,✓,✗
 <a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-research-v0.4'>openGPT-X/Teuken-7B-instruct-research-v0.4 (few-shot)</a>,📝,3.21,7452725248,250680,4096,✗,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-1b-a400m-instruct'>ibm-granite/granite-3.0-1b-a400m-instruct (few-shot)</a>,📝,3.22,1334628352,49155,4096,✓,✗
 <a href='https://huggingface.co/BSC-LT/salamandra-2b'>BSC-LT/salamandra-2b (few-shot)</a>,🧠,3.24,2253490176,256000,8192,✓,✗
-<a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,3.26,1000000000,262144,32768,✓,✗
+<a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,3.26,1000000000,262144,32000,✓,✗
 <a href='https://huggingface.co/sentence-transformers/distilbert-multilingual-nli-stsb-quora-ranking'>sentence-transformers/distilbert-multilingual-nli-stsb-quora-ranking</a>,🔍,3.28,134734080,119547,512,✓,✗
 <a href='https://huggingface.co/01-ai/Yi-6B'>01-ai/Yi-6B (few-shot)</a>,🧠,3.28,6061035520,64000,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-3b-a800m-base'>ibm-granite/granite-3.0-3b-a800m-base (few-shot)</a>,🧠,3.29,3374286336,49152,4096,✓,✗

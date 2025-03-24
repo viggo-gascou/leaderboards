@@ -4,12 +4,12 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501'>mistralai/Mistral-Small-24B-Instruct-2501 (few-shot)</a>,📝,1.70,23572403200,131072,32768,✓,✗
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-sonnet-20241022 (zero-shot, val)</a>",📝,1.70,,,200000,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-72B-Instruct'>Qwen/Qwen2.5-72B-Instruct (few-shot)</a>,📝,1.71,72706203648,152064,32768,✓,✗
-<a href='https://huggingface.co/google/gemma-3-12b-it'>google/gemma-3-12b-it (few-shot)</a>,📝,1.72,12187325040,262144,5000,✓,✗
-<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.72,27432406640,262144,5000,✓,✗
-"<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.73,27400000000,262144,8192,✓,✗
+<a href='https://huggingface.co/google/gemma-3-12b-it'>google/gemma-3-12b-it (few-shot)</a>,📝,1.72,12187325040,262144,128000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.72,27432406640,262144,128000,✓,✗
+"<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.73,27400000000,262144,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct'>meta-llama/Llama-3.1-70B-Instruct (few-shot)</a>,📝,1.80,70553706496,128256,131072,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,1.81,12200000000,262144,8192,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.82,,,,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,1.81,12200000000,262144,128000,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.82,,,128000,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.83,,200019,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,1.86,70553706496,128256,131072,✓,✗
 <a href='https://huggingface.co/speakleash/Bielik-11B-v2.3-Instruct'>speakleash/Bielik-11B-v2.3-Instruct (few-shot)</a>,📝,1.90,11168796672,32128,32768,✓,✓
@@ -34,7 +34,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct'>meta-llama/Llama-3.1-8B-Instruct (few-shot)</a>,📝,2.20,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-9B'>utter-project/EuroLLM-9B (few-shot)</a>,🧠,2.20,9152319488,128000,4096,✓,✗
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-haiku-20241022 (zero-shot, val)</a>",📝,2.22,,,200000,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.22,,,,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.22,4299915632,262144,128000,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-v0.1'>mistralai/Mistral-7B-v0.1 (few-shot)</a>,🧠,2.22,7241732096,32000,4096,✓,✗
 <a href='https://huggingface.co/FacebookAI/xlm-roberta-large'>FacebookAI/xlm-roberta-large</a>,🔍,2.22,561192082,250002,512,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct'>meta-llama/Meta-Llama-3-8B-Instruct (few-shot)</a>,📝,2.23,8030261248,128256,8192,✓,✗
@@ -72,7 +72,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/dbmdz/bert-base-historic-multilingual-cased'>dbmdz/bert-base-historic-multilingual-cased</a>,🔍,3.11,111243522,32000,512,✓,✗
 <a href='https://huggingface.co/sentence-transformers/stsb-xlm-r-multilingual'>sentence-transformers/stsb-xlm-r-multilingual</a>,🔍,3.12,278044162,250002,512,✓,✗
 <a href='https://huggingface.co/cardiffnlp/twitter-xlm-roberta-base'>cardiffnlp/twitter-xlm-roberta-base</a>,🔍,3.13,277455362,250002,514,✓,✗
-<a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,3.13,1000000000,262144,32768,✓,✗
+<a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,3.13,1000000000,262144,32000,✓,✗
 <a href='https://huggingface.co/sentence-transformers/paraphrase-xlm-r-multilingual-v1'>sentence-transformers/paraphrase-xlm-r-multilingual-v1</a>,🔍,3.14,278044162,250002,512,✓,✗
 <a href='https://huggingface.co/sentence-transformers/distilbert-multilingual-nli-stsb-quora-ranking'>sentence-transformers/distilbert-multilingual-nli-stsb-quora-ranking</a>,🔍,3.22,134734080,119547,512,✓,✗
 <a href='https://huggingface.co/sentence-transformers/quora-distilbert-multilingual'>sentence-transformers/quora-distilbert-multilingual</a>,🔍,3.22,134734080,119547,512,✓,✗
