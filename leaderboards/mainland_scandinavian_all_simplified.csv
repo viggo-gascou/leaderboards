@@ -175,4 +175,4 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/PleIAs/Pleias-350m-Preview'>PleIAs/Pleias-350m-Preview (few-shot)</a>,🧠,4.39,353424384,65536,2048,✓,✗
 <a href='https://huggingface.co/infly/OpenCoder-1.5B-Base'>infly/OpenCoder-1.5B-Base (few-shot)</a>,🧠,4.52,1905650960,96640,4096,✓,✗
 <a href='https://huggingface.co/NorGLM/NorGPT-369M'>NorGLM/NorGPT-369M (few-shot)</a>,🧠,4.61,,64000,1024,✓,✗
-<a href='https://huggingface.co/ssmits/Falcon2-5.5B-multilingual'>ssmits/Falcon2-5.5B-multilingual (few-shot)</a>,🧠,4.79,5465415680,65024,8192,✓,✓
+<a href='https://huggingface.co/ssmits/Falcon2-5.5B-multilingual'>ssmits/Falcon2-5.5B-multilingual (few-shot)</a>,🧠,4.80,5465415680,65024,8192,✓,✓

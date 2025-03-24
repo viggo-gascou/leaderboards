@@ -98,7 +98,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-chat-hf'>meta-llama/Llama-2-13b-chat-hf (few-shot)</a>,📝,3.08,13015866880,32000,4096,✓,✗
 <a href='https://huggingface.co/tiiuae/falcon-11B'>tiiuae/falcon-11B (few-shot)</a>,🧠,3.09,11102822400,65024,8192,✓,✗
 <a href='https://huggingface.co/MaLA-LM/emma-500-llama2-7b'>MaLA-LM/emma-500-llama2-7b (few-shot)</a>,🧠,3.22,6738415616,32000,4096,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-2-7b-chat-hf'>meta-llama/Llama-2-7b-chat-hf (few-shot)</a>,📝,3.22,6738417664,32000,4096,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-2-7b-chat-hf'>meta-llama/Llama-2-7b-chat-hf (few-shot)</a>,📝,3.23,6738417664,32000,4096,✓,✗
 <a href='https://huggingface.co/sentence-transformers/quora-distilbert-multilingual'>sentence-transformers/quora-distilbert-multilingual</a>,🔍,3.24,135326979,119547,512,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-3b-a800m-instruct'>ibm-granite/granite-3.0-3b-a800m-instruct (few-shot)</a>,📝,3.25,3374295552,49155,4096,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-20b'>AI-Sweden-Models/gpt-sw3-20b (few-shot)</a>,🧠,3.27,20918423552,64000,2048,✓,✗

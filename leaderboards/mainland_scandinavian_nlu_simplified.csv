@@ -187,11 +187,11 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.52,7241732096,3
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-chat-hf'>meta-llama/Llama-2-13b-chat-hf (few-shot)</a>,📝,2.80,13015866880,32000,4096,✓,✗
 <a href='https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2'>sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</a>,🔍,2.80,117654915,250037,512,✓,✗
 <a href='https://huggingface.co/norallm/normistral-7b-warm-instruct'>norallm/normistral-7b-warm-instruct (few-shot)</a>,📝,2.80,,32768,2048,✓,✗
-<a href='https://huggingface.co/occiglot/occiglot-7b-eu5'>occiglot/occiglot-7b-eu5 (few-shot)</a>,🧠,2.82,7241732096,32000,4096,✓,✗
-<a href='https://huggingface.co/jannikskytt/MeDa-Bert'>jannikskytt/MeDa-Bert</a>,🔍,2.82,110619651,32000,511,✓,✗
 <a href='https://huggingface.co/emillykkejensen/Phi-3-mini-4k-instruct-dansk'>emillykkejensen/Phi-3-mini-4k-instruct-dansk (few-shot)</a>,📝,2.82,3821079552,32064,4096,✗,✗
-<a href='https://huggingface.co/KennethEnevoldsen/dfm-sentence-encoder-small'>KennethEnevoldsen/dfm-sentence-encoder-small</a>,🔍,2.83,21944195,96105,128,✓,✗
+<a href='https://huggingface.co/jannikskytt/MeDa-Bert'>jannikskytt/MeDa-Bert</a>,🔍,2.82,110619651,32000,511,✓,✗
 <a href='https://huggingface.co/Addedk/kbbert-distilled-cased'>Addedk/kbbert-distilled-cased</a>,🔍,2.83,82166019,50325,512,✓,✗
+<a href='https://huggingface.co/KennethEnevoldsen/dfm-sentence-encoder-small'>KennethEnevoldsen/dfm-sentence-encoder-small</a>,🔍,2.83,21944195,96105,128,✓,✗
+<a href='https://huggingface.co/occiglot/occiglot-7b-eu5'>occiglot/occiglot-7b-eu5 (few-shot)</a>,🧠,2.83,7241732096,32000,4096,✓,✗
 <a href='https://huggingface.co/mideind/IceBERT-xlmr-ic3'>mideind/IceBERT-xlmr-ic3</a>,🔍,2.84,278045955,250002,512,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mistral-7B'>NorwAI/NorwAI-Mistral-7B (few-shot)</a>,🧠,2.84,7536586752,67993,4096,✓,✗
 <a href='https://huggingface.co/danish-foundation-models/encoder-medium-v1'>danish-foundation-models/encoder-medium-v1</a>,🔍,2.84,110619651,32000,512,✓,✗
