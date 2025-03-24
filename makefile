@@ -11,7 +11,7 @@ pull:
 download:
 	@scp -o ConnectTimeout=5 lancelot:/home/alex-admin/euroeval/euroeval_benchmark_results.jsonl lancelot_results.jsonl || true
 	@scp -o ConnectTimeout=5 blackknight:/home/alex-admin/euroeval/euroeval_benchmark_results.jsonl blackknight_results.jsonl || true
-	@scp -o ConnectTimeout=5 ucloud:/root/euroeval_benchmark_results.jsonl ucloud_results.jsonl || true
+	@scp -o ConnectTimeout=5 ucloud:/home/ucloud/euroeval_benchmark_results.jsonl ucloud_results.jsonl || true
 	@touch results/results.jsonl
 	@if [ -f lancelot_results.jsonl ]; then \
 		cat lancelot_results.jsonl >> results/results.jsonl; \
