@@ -109,7 +109,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.73,,32000,32768,✓,✗
 <a href='https://huggingface.co/robinsmits/Schaapje-2B-Chat-V1.0'>robinsmits/Schaapje-2B-Chat-V1.0 (few-shot)</a>,📝,3.35,2533531648,49155,4096,✗,✗
 <a href='https://huggingface.co/01-ai/Yi-1.5-6B'>01-ai/Yi-1.5-6B (few-shot)</a>,🧠,3.37,6061035520,64000,4352,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-7b-chat-hf'>meta-llama/Llama-2-7b-chat-hf (few-shot)</a>,📝,3.38,6738417664,32000,4096,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-3B'>meta-llama/Llama-3.2-3B (few-shot)</a>,🔍,3.39,3212749824,128256,131328,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-3B'>meta-llama/Llama-3.2-3B (few-shot)</a>,🧠,3.39,3212749824,128256,131328,✓,✗
 <a href='https://huggingface.co/BramVanroy/fietje-2b'>BramVanroy/fietje-2b (few-shot)</a>,🧠,3.42,2779683840,51200,2048,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-3b-a800m-instruct'>ibm-granite/granite-3.0-3b-a800m-instruct (few-shot)</a>,📝,3.43,3374295552,49155,4096,✓,✗
 <a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_2-3t-tokens_llama'>TrustLLMeu/baseline-7-8b_2-3t-tokens_llama (few-shot)</a>,🧠,3.44,7799574528,100096,4096,✓,✗
@@ -168,7 +168,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.73,,32000,32768,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-1.2b-Preview'>PleIAs/Pleias-1.2b-Preview (few-shot)</a>,🧠,4.24,1195468800,65536,2048,✓,✗
 <a href='https://huggingface.co/infly/OpenCoder-1.5B-Instruct'>infly/OpenCoder-1.5B-Instruct (few-shot)</a>,📝,4.24,1905650880,96640,4096,✗,✗
 <a href='https://huggingface.co/PleIAs/Pleias-Nano'>PleIAs/Pleias-Nano (few-shot)</a>,🧠,4.24,1195468800,65536,2048,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-1B'>meta-llama/Llama-3.2-1B (few-shot)</a>,🔍,4.24,1235814400,128256,131328,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-1B'>meta-llama/Llama-3.2-1B (few-shot)</a>,🧠,4.24,1235814400,128256,131328,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B'>Qwen/Qwen1.5-0.5B (few-shot)</a>,📝,4.26,619570176,151936,32768,✓,✗
 <a href='https://huggingface.co/microsoft/phi-2'>microsoft/phi-2 (few-shot)</a>,🧠,4.27,2779683840,51200,2048,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M'>HuggingFaceTB/SmolLM2-360M (few-shot)</a>,🧠,4.35,361821120,49152,8192,✓,✗

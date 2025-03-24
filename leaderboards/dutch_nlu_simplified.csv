@@ -144,7 +144,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.92,,32000,32768,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3b-code-base-2k'>ibm-granite/granite-3b-code-base-2k (few-shot)</a>,🧠,3.40,3482503680,49152,2048,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-7b-hf'>meta-llama/Llama-2-7b-hf (few-shot)</a>,📝,3.42,6738417664,32000,4096,✓,✗
 <a href='https://huggingface.co/MaLA-LM/emma-500-llama2-7b'>MaLA-LM/emma-500-llama2-7b (few-shot)</a>,🧠,3.43,6738415616,32000,4096,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-3B'>meta-llama/Llama-3.2-3B (few-shot)</a>,🔍,3.44,3212749824,128256,131328,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-3B'>meta-llama/Llama-3.2-3B (few-shot)</a>,🧠,3.44,3212749824,128256,131328,✓,✗
 <a href='https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v1'>sentence-transformers/distiluse-base-multilingual-cased-v1</a>,🔍,3.45,134734080,119547,512,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-7b-chat-hf'>meta-llama/Llama-2-7b-chat-hf (few-shot)</a>,📝,3.47,6738417664,32000,4096,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-chat-hf'>meta-llama/Llama-2-13b-chat-hf (few-shot)</a>,📝,3.48,13015866880,32000,4096,✓,✗
@@ -200,7 +200,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.92,,32000,32768,✓,✗
 <a href='https://huggingface.co/3ebdola/Dialectal-Arabic-XLM-R-Base'>3ebdola/Dialectal-Arabic-XLM-R-Base</a>,🔍,4.13,277455362,250002,512,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Llama2-7B'>NorwAI/NorwAI-Llama2-7B (few-shot)</a>,🧠,4.14,7033270272,67993,4224,✓,✗
 <a href='https://huggingface.co/google/gemma-7b-it'>google/gemma-7b-it (few-shot)</a>,📝,4.16,8537680896,256000,8192,✗,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-1B'>meta-llama/Llama-3.2-1B (few-shot)</a>,🔍,4.16,1235814400,128256,131328,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-1B'>meta-llama/Llama-3.2-1B (few-shot)</a>,🧠,4.16,1235814400,128256,131328,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-Nano'>PleIAs/Pleias-Nano (few-shot)</a>,🧠,4.20,1195468800,65536,2048,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat'>Qwen/Qwen1.5-0.5B-Chat (few-shot)</a>,📝,4.20,619570176,151936,32768,✗,✗
 <a href='https://huggingface.co/allenai/OLMo-7B-Twin-2T'>allenai/OLMo-7B-Twin-2T (few-shot)</a>,🧠,4.21,6888095744,50280,2304,✓,✗

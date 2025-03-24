@@ -166,7 +166,7 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.52,7241732096,3
 <a href='https://huggingface.co/BSC-LT/salamandra-7b'>BSC-LT/salamandra-7b (few-shot)</a>,🧠,2.69,7768117248,256000,8192,✓,✗
 <a href='https://huggingface.co/bineric/NorskGPT-Llama-13B-v0.1'>bineric/NorskGPT-Llama-13B-v0.1 (few-shot)</a>,📝,2.70,13015864320,32000,4096,✗,✗
 <a href='https://huggingface.co/bineric/NorskGPT-Mistral-7b'>bineric/NorskGPT-Mistral-7b (few-shot)</a>,📝,2.70,7241732096,32000,32768,✗,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-3B'>meta-llama/Llama-3.2-3B (few-shot)</a>,🔍,2.70,3212749824,128256,131073,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-3B'>meta-llama/Llama-3.2-3B (few-shot)</a>,🧠,2.70,3212749824,128256,131073,✓,✗
 <a href='https://huggingface.co/microsoft/xlm-align-base'>microsoft/xlm-align-base</a>,🔍,2.71,278045955,250002,512,✓,✗
 <a href='https://huggingface.co/Geotrend/distilbert-base-en-da-cased'>Geotrend/distilbert-base-en-da-cased</a>,🔍,2.71,68652291,32731,512,✓,✗
 <a href='https://huggingface.co/Geotrend/distilbert-base-da-cased'>Geotrend/distilbert-base-da-cased</a>,🔍,2.72,61294083,23150,512,✓,✗
@@ -256,7 +256,7 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.52,7241732096,3
 <a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-research-v0.4'>openGPT-X/Teuken-7B-instruct-research-v0.4 (few-shot)</a>,📝,3.28,7452725248,250680,4096,✗,✗
 <a href='https://huggingface.co/ibm-granite/granite-7b-base'>ibm-granite/granite-7b-base (few-shot)</a>,🧠,3.29,6738415616,32000,2048,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-7b-instruct'>ibm-granite/granite-7b-instruct (few-shot)</a>,📝,3.29,6738481152,32008,4096,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-1B'>meta-llama/Llama-3.2-1B (few-shot)</a>,🔍,3.30,1235814400,128256,131073,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-1B'>meta-llama/Llama-3.2-1B (few-shot)</a>,🧠,3.30,1235814400,128256,131073,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-1.7B'>utter-project/EuroLLM-1.7B (few-shot)</a>,🧠,3.35,,128000,4096,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-1.7B-Instruct'>utter-project/EuroLLM-1.7B-Instruct (few-shot)</a>,📝,3.36,1656850432,128000,4096,✓,✗
 <a href='https://huggingface.co/google/gemma-2b-it'>google/gemma-2b-it (few-shot)</a>,📝,3.37,2506172416,256000,8192,✗,✗

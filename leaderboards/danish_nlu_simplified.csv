@@ -198,7 +198,7 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.65,7241732096,3
 <a href='https://huggingface.co/Geotrend/distilbert-base-en-fr-de-no-da-cased'>Geotrend/distilbert-base-en-fr-de-no-da-cased</a>,🔍,2.79,74956802,41710,512,✓,✗
 <a href='https://huggingface.co/Twitter/twhin-bert-large'>Twitter/twhin-bert-large</a>,🔍,2.79,560413186,250002,512,✓,✗
 <a href='https://huggingface.co/DDSC/roberta-base-scandinavian'>DDSC/roberta-base-scandinavian</a>,🔍,2.79,124057346,50265,512,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-3B'>meta-llama/Llama-3.2-3B (few-shot)</a>,🔍,2.79,3212749824,128256,131104,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-3B'>meta-llama/Llama-3.2-3B (few-shot)</a>,🧠,2.79,3212749824,128256,131104,✓,✗
 <a href='https://huggingface.co/distilbert/distilbert-base-multilingual-cased'>distilbert/distilbert-base-multilingual-cased</a>,🔍,2.79,134735618,119547,512,✓,✗
 <a href='https://huggingface.co/Geotrend/distilbert-base-25lang-cased'>Geotrend/distilbert-base-25lang-cased</a>,🔍,2.79,108192002,84985,512,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,2.79,8054910976,49152,4096,✓,✗
@@ -264,7 +264,7 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.65,7241732096,3
 <a href='https://huggingface.co/ibm-granite/granite-7b-base'>ibm-granite/granite-7b-base (few-shot)</a>,🧠,3.32,6738415616,32000,2079,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-7b-instruct'>ibm-granite/granite-7b-instruct (few-shot)</a>,📝,3.33,6738481152,32008,4096,✓,✗
 <a href='https://huggingface.co/microsoft/Phi-3-mini-128k-instruct'>microsoft/Phi-3-mini-128k-instruct (few-shot)</a>,📝,3.33,3821079552,32064,130976,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-1B'>meta-llama/Llama-3.2-1B (few-shot)</a>,🔍,3.34,1235814400,128256,131104,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-1B'>meta-llama/Llama-3.2-1B (few-shot)</a>,🧠,3.34,1235814400,128256,131104,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-7B'>allenai/OLMo-7B (few-shot)</a>,🧠,3.37,6888095744,50280,2080,✓,✗
 <a href='https://huggingface.co/dbmdz/bert-medium-historic-multilingual-cased'>dbmdz/bert-medium-historic-multilingual-cased</a>,🔍,3.38,41868290,32000,512,✓,✗
 <a href='https://huggingface.co/01-ai/Yi-1.5-6B'>01-ai/Yi-1.5-6B (few-shot)</a>,🧠,3.39,6061035520,64000,4128,✓,✗
