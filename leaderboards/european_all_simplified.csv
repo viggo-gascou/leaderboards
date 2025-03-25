@@ -1,8 +1,8 @@
 model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.72,,200019,8191,✓,✗
+<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.74,27432406640,262144,5000,✓,✗
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-sonnet-20241022 (zero-shot, val)</a>",📝,1.74,,,200000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,1.74,70553706496,128256,131072,✓,✗
-<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.76,27432406640,262144,5000,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-72B-Instruct'>Qwen/Qwen2.5-72B-Instruct (few-shot)</a>,📝,1.78,72706203648,152064,32768,✓,✗
 <a href='https://huggingface.co/Qwen/QwQ-32B-Preview'>Qwen/QwQ-32B-Preview (few-shot)</a>,📝,1.80,32763876352,152064,32768,✓,✗
 "<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.85,27400000000,262144,128000,✓,✗
@@ -17,7 +17,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/google/gemma-2-9b-it'>google/gemma-2-9b-it (few-shot)</a>,📝,2.06,9241705984,256000,4096,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (zero-shot, val)</a>",📝,2.08,,200019,8191,✓,✗
 <a href='https://huggingface.co/google/gemma-2-9b'>google/gemma-2-9b (few-shot)</a>,🧠,2.19,9241705984,256000,4096,✓,✗
-<a href='https://huggingface.co/speakleash/Bielik-11B-v2.3-Instruct'>speakleash/Bielik-11B-v2.3-Instruct (few-shot)</a>,📝,2.30,11168796672,32128,32768,✓,✓
+<a href='https://huggingface.co/speakleash/Bielik-11B-v2.3-Instruct'>speakleash/Bielik-11B-v2.3-Instruct (few-shot)</a>,📝,2.29,11168796672,32128,32768,✓,✓
 <a href='https://huggingface.co/upstage/SOLAR-10.7B-v1.0'>upstage/SOLAR-10.7B-v1.0 (few-shot)</a>,🧠,2.32,10731524096,32000,4096,✓,✗
 <a href='https://huggingface.co/mistralai/Mixtral-8x7B-v0.1'>mistralai/Mixtral-8x7B-v0.1 (few-shot)</a>,🧠,2.33,46702792704,32000,32768,✓,✗
 <a href='https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1'>mistralai/Mixtral-8x7B-Instruct-v0.1 (few-shot)</a>,📝,2.39,46702792704,32000,32768,✓,✗
@@ -62,7 +62,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/utter-project/EuroLLM-1.7B-Instruct'>utter-project/EuroLLM-1.7B-Instruct (few-shot)</a>,📝,3.68,1656850432,128000,4096,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B'>HuggingFaceTB/SmolLM2-1.7B (few-shot)</a>,🧠,3.71,1711376384,49152,8192,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-1.7B'>utter-project/EuroLLM-1.7B (few-shot)</a>,🧠,3.73,,128000,4096,✓,✗
-<a href='https://huggingface.co/google/gemma-7b-it'>google/gemma-7b-it (few-shot)</a>,📝,3.75,8537680896,256000,8192,✗,✗
+<a href='https://huggingface.co/google/gemma-7b-it'>google/gemma-7b-it (few-shot)</a>,📝,3.74,8537680896,256000,8192,✗,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-Math-1.5B'>Qwen/Qwen2.5-Math-1.5B (few-shot)</a>,📝,4.25,1543714304,151936,4096,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-350m-Preview'>PleIAs/Pleias-350m-Preview (few-shot)</a>,🧠,4.38,353424384,65536,2048,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-Pico'>PleIAs/Pleias-Pico (few-shot)</a>,🧠,4.43,353424384,65536,2048,✓,✗

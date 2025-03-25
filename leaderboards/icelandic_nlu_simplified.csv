@@ -115,7 +115,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/sentence-transformers/distilbert-multilingual-nli-stsb-quora-ranking'>sentence-transformers/distilbert-multilingual-nli-stsb-quora-ranking</a>,🔍,3.24,134734080,119547,512,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-2-1124-13B'>allenai/OLMo-2-1124-13B (few-shot)</a>,🧠,3.25,13716198400,100352,4096,✓,✗
 <a href='https://huggingface.co/CohereForAI/aya-expanse-8b'>CohereForAI/aya-expanse-8b (few-shot)</a>,🧠,3.25,8028033024,256000,8192,✗,✗
-<a href='https://huggingface.co/DDSC/roberta-base-scandinavian'>DDSC/roberta-base-scandinavian</a>,🔍,3.25,124647170,50265,512,✓,✗
+<a href='https://huggingface.co/DDSC/roberta-base-scandinavian'>DDSC/roberta-base-scandinavian</a>,🔍,3.26,124647170,50265,512,✓,✗
 <a href='https://huggingface.co/KB/bert-base-swedish-cased'>KB/bert-base-swedish-cased</a>,🔍,3.27,124692482,50325,512,✓,✗
 <a href='https://huggingface.co/LumiOpen/Viking-7B'>LumiOpen/Viking-7B (few-shot)</a>,🧠,3.29,7550013440,131072,4096,✓,✗
 <a href='https://huggingface.co/vesteinn/DanskBERT'>vesteinn/DanskBERT</a>,🔍,3.29,124447490,50005,512,✓,✗

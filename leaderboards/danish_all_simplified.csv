@@ -9,14 +9,14 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "syvai/danskgpt-chat-llama3-70b (few-shot, val)</a>",📝,1.41,70553706496,128258,8221,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct'>meta-llama/Llama-3.1-70B-Instruct (few-shot)</a>,📝,1.43,70553706496,128256,131072,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,1.44,70553706496,128256,131072,✓,✗
+<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.47,27432406640,262144,5000,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (few-shot, val)</a>",📝,1.48,,200019,128000,✓,✗
 <a href='https://huggingface.co/google/gemma-2-27b-it'>google/gemma-2-27b-it (few-shot)</a>,📝,1.49,27227128320,256000,8224,✓,✗
-<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.49,27432406640,262144,5000,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.50,,200019,8191,✓,✗
-<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B'>meta-llama/Meta-Llama-3-70B (few-shot)</a>,🧠,1.51,70553706496,128256,8192,✓,✗
+<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B'>meta-llama/Meta-Llama-3-70B (few-shot)</a>,🧠,1.50,70553706496,128256,8192,✓,✗
 <a href='https://huggingface.co/ThatsGroes/gemma-2-27b-it-FP8-Dynamic'>ThatsGroes/gemma-2-27b-it-FP8-Dynamic (few-shot)</a>,📝,1.54,28410968576,256000,4096,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-72B-Instruct'>Qwen/Qwen2.5-72B-Instruct (few-shot)</a>,📝,1.54,72706203648,152064,32768,✓,✗
-<a href='https://huggingface.co/google/gemma-3-12b-it'>google/gemma-3-12b-it (few-shot)</a>,📝,1.60,12187325040,262144,5000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-12b-it'>google/gemma-3-12b-it (few-shot)</a>,📝,1.61,12187325040,262144,5000,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-instruct'>meta-llama/Meta-Llama-3-70B-instruct (few-shot)</a>,📝,1.61,70553706496,128256,8192,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-3.5-turbo'>gpt-3.5-turbo-0613 (few-shot, val)</a>",📝,1.63,,100256,4094,✓,✗
 "<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.63,27400000000,262144,128000,✓,✗

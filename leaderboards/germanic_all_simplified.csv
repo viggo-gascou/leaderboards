@@ -3,10 +3,10 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (few-shot, val)</a>",📝,1.47,,200019,128000,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.73,,200019,8191,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (few-shot, val)</a>",📝,1.74,,200019,8191,✓,✗
+<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.76,27432406640,262144,5000,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B'>meta-llama/Meta-Llama-3-70B (few-shot)</a>,🧠,1.77,70553706496,128256,8192,✓,✗
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-sonnet-20241022 (zero-shot, val)</a>",📝,1.77,,,200000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,1.78,70553706496,128256,131072,✓,✗
-<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.79,27432406640,262144,5000,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-72B-Instruct'>Qwen/Qwen2.5-72B-Instruct (few-shot)</a>,📝,1.83,72706203648,152064,32768,✓,✗
 "<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.89,27400000000,262144,128000,✓,✗
 <a href='https://huggingface.co/Qwen/QwQ-32B-Preview'>Qwen/QwQ-32B-Preview (few-shot)</a>,📝,1.89,32763876352,152064,32768,✓,✗
@@ -70,7 +70,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_1t-tokens_llama'>TrustLLMeu/baseline-7-8b_1t-tokens_llama (few-shot)</a>,🧠,3.25,7799574528,100096,4096,✓,✗
 <a href='https://huggingface.co/infly/OpenCoder-8B-Instruct'>infly/OpenCoder-8B-Instruct (few-shot)</a>,📝,3.27,7771262976,96640,8192,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-7b-chat-hf'>meta-llama/Llama-2-7b-chat-hf (few-shot)</a>,📝,3.33,6738417664,32000,4096,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-2-13b-chat-hf'>meta-llama/Llama-2-13b-chat-hf (few-shot)</a>,📝,3.34,13015866880,32000,4096,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-2-13b-chat-hf'>meta-llama/Llama-2-13b-chat-hf (few-shot)</a>,📝,3.33,13015866880,32000,4096,✓,✗
 <a href='https://huggingface.co/occiglot/occiglot-7b-eu5-instruct'>occiglot/occiglot-7b-eu5-instruct (few-shot)</a>,📝,3.35,7241748480,32002,4096,✗,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-Math-7B'>Qwen/Qwen2.5-Math-7B (few-shot)</a>,🧠,3.36,7615616512,152064,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-3b-a800m-instruct'>ibm-granite/granite-3.0-3b-a800m-instruct (few-shot)</a>,📝,3.39,3374295552,49155,4096,✓,✗

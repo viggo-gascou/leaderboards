@@ -78,10 +78,10 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.73,,32000,32768,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-2-1124-13B'>allenai/OLMo-2-1124-13B (few-shot)</a>,🧠,3.05,13716198400,100352,4096,✓,✗
 <a href='https://huggingface.co/tiiuae/falcon-11B'>tiiuae/falcon-11B (few-shot)</a>,🧠,3.06,11102822400,65024,8192,✓,✗
 <a href='https://huggingface.co/alpindale/Mistral-7B-v0.2-hf'>alpindale/Mistral-7B-v0.2-hf (few-shot)</a>,🧠,3.07,7241732096,32000,32768,✓,✗
+<a href='https://huggingface.co/tiiuae/Falcon3-10B-Base'>tiiuae/Falcon3-10B-Base (few-shot)</a>,🧠,3.07,10305653760,131072,32768,✓,✗
 <a href='https://huggingface.co/ChocoLlama/Llama-3-ChocoLlama-8B-instruct'>ChocoLlama/Llama-3-ChocoLlama-8B-instruct (few-shot)</a>,📝,3.08,8030261248,128256,8192,✗,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-2b-instruct'>ibm-granite/granite-3.0-2b-instruct (few-shot)</a>,📝,3.08,2634201088,49155,4352,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-2b-base'>ibm-granite/granite-3.0-2b-base (few-shot)</a>,🧠,3.08,2533525504,49152,4352,✓,✗
-<a href='https://huggingface.co/tiiuae/Falcon3-10B-Base'>tiiuae/Falcon3-10B-Base (few-shot)</a>,🧠,3.08,10305653760,131072,32768,✓,✗
 <a href='https://huggingface.co/nvidia/mistral-nemo-minitron-8b-instruct'>nvidia/mistral-nemo-minitron-8b-instruct (few-shot)</a>,📝,3.08,8414105600,131072,8192,✓,✗
 <a href='https://huggingface.co/google/gemma-2-2b-it'>google/gemma-2-2b-it (few-shot)</a>,📝,3.10,2614341888,256000,8448,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-v0.1'>mistralai/Mistral-7B-v0.1 (few-shot)</a>,🧠,3.11,7241732096,32000,4096,✓,✗

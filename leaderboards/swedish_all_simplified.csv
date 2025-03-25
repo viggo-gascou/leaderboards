@@ -12,7 +12,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.49,27432406640,262144,5000,✓,✗
 <a href='https://huggingface.co/Qwen/QwQ-32B-Preview'>Qwen/QwQ-32B-Preview (few-shot)</a>,📝,1.51,32763876352,152064,32768,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-instruct'>meta-llama/Meta-Llama-3-70B-instruct (few-shot)</a>,📝,1.53,70553706496,128256,8192,✓,✗
-<a href='https://huggingface.co/google/gemma-2-27b-it'>google/gemma-2-27b-it (few-shot)</a>,📝,1.55,27227128320,256000,8193,✓,✗
+<a href='https://huggingface.co/google/gemma-2-27b-it'>google/gemma-2-27b-it (few-shot)</a>,📝,1.56,27227128320,256000,8192,✓,✗
 "<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.59,27400000000,262144,128000,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4-turbo'>gpt-4-1106-preview (zero-shot, val)</a>",📝,1.59,,100256,8191,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (few-shot, val)</a>",📝,1.62,,200019,8191,✓,✗
