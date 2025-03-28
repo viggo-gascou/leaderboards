@@ -11,7 +11,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (few-shot, val)</a>",📝,1.49,,200019,128028,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (few-shot, val)</a>",📝,1.50,,200019,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B'>meta-llama/Meta-Llama-3-70B (few-shot)</a>,🧠,1.50,70553706496,128256,8192,✓,✗
-<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.52,27432406640,262144,5000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.52,27432406640,262144,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,1.52,70553706496,128256,131072,✓,✗
 <a href='https://huggingface.co/ThatsGroes/gemma-2-27b-it-FP8-Dynamic'>ThatsGroes/gemma-2-27b-it-FP8-Dynamic (few-shot)</a>,📝,1.55,28410968576,256000,4096,✓,✗
 <a href='https://huggingface.co/KennethEnevoldsen/dfm-sentence-encoder-large-1'>KennethEnevoldsen/dfm-sentence-encoder-large-1</a>,🔍,1.58,407389520,50000,512,✓,✗
@@ -20,13 +20,13 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.59,,200019,8191,✓,✗
 <a href='https://huggingface.co/danish-foundation-models/encoder-large-v1'>danish-foundation-models/encoder-large-v1</a>,🔍,1.62,355139920,50000,512,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-instruct'>meta-llama/Meta-Llama-3-70B-instruct (few-shot)</a>,📝,1.64,70553706496,128256,8192,✓,✗
-<a href='https://huggingface.co/google/gemma-3-27b-pt'>google/gemma-3-27b-pt (few-shot)</a>,🧠,1.64,27432406640,262144,5000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-27b-pt'>google/gemma-3-27b-pt (few-shot)</a>,🧠,1.64,27432406640,262144,128000,✓,✗
 <a href='https://huggingface.co/KennethEnevoldsen/dfm-sentence-encoder-large'>KennethEnevoldsen/dfm-sentence-encoder-large</a>,🔍,1.65,407389520,50000,512,✓,✗
-<a href='https://huggingface.co/google/gemma-3-12b-it'>google/gemma-3-12b-it (few-shot)</a>,📝,1.65,12187325040,262144,5000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-12b-it'>google/gemma-3-12b-it (few-shot)</a>,📝,1.65,12187325040,262144,128000,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-3.5-turbo'>gpt-3.5-turbo-0613 (few-shot, val)</a>",📝,1.66,,100256,4094,✓,✗
 <a href='https://huggingface.co/Qwen/QwQ-32B-Preview'>Qwen/QwQ-32B-Preview (few-shot)</a>,📝,1.68,32763876352,152064,32768,✓,✗
 "<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.70,27400000000,262144,128000,✓,✗
-<a href='https://huggingface.co/google/gemma-3-12b-pt'>google/gemma-3-12b-pt (few-shot)</a>,🧠,1.76,12187325040,262144,5000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-12b-pt'>google/gemma-3-12b-pt (few-shot)</a>,🧠,1.76,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/google/gemma-2-9b-it'>google/gemma-2-9b-it (few-shot)</a>,📝,1.78,9241705984,256000,4096,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,1.79,12200000000,262144,128000,✓,✗
 <a href='https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF'>nvidia/Llama-3.1-Nemotron-70B-Instruct-HF (few-shot)</a>,📝,1.79,70553706496,128256,131072,✓,✗
@@ -89,7 +89,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.16,,32000,32768,✓,✗
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B'>allenai/Llama-3.1-Tulu-3-8B (few-shot)</a>,📝,2.24,8030326784,128264,131072,✓,✗
 <a href='https://huggingface.co/cardiffnlp/twitter-xlm-roberta-base'>cardiffnlp/twitter-xlm-roberta-base</a>,🔍,2.24,277455362,250002,512,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/bert-large-nordic-pile-1M-steps'>AI-Sweden-Models/bert-large-nordic-pile-1M-steps</a>,🔍,2.25,368375810,64000,512,✓,✗
-<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.26,,262144,5000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.26,,262144,128000,✓,✗
 <a href='https://huggingface.co/setu4993/LaBSE'>setu4993/LaBSE</a>,🔍,2.26,470927360,501153,512,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B'>meta-llama/Meta-Llama-3-8B (few-shot)</a>,🧠,2.26,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-9B'>utter-project/EuroLLM-9B (few-shot)</a>,🧠,2.26,9152319488,128000,4096,✓,✗
@@ -141,7 +141,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.16,,32000,32768,✓,✗
 <a href='https://huggingface.co/neph1/bellman-7b-mistral-instruct-v0.2'>neph1/bellman-7b-mistral-instruct-v0.2 (few-shot)</a>,📝,2.48,7241732096,32000,32768,✗,✗
 <a href='https://huggingface.co/AI-Sweden-Models/Llama-3-8B'>AI-Sweden-Models/Llama-3-8B (few-shot)</a>,🧠,2.49,8030261248,128256,8192,✓,✗
 "<a href='https://huggingface.co/KennethEnevoldsen/munin_mistral-7b'>KennethEnevoldsen/munin_mistral-7b (few-shot, val)</a>",🧠,2.51,7241732096,32000,4096,✗,✓
-<a href='https://huggingface.co/google/gemma-3-4b-pt'>google/gemma-3-4b-pt (few-shot)</a>,🧠,2.52,4300079472,262144,5000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-4b-pt'>google/gemma-3-4b-pt (few-shot)</a>,🧠,2.52,4300079472,262144,128000,✓,✗
 <a href='https://huggingface.co/ZurichNLP/unsup-simcse-xlm-roberta-base'>ZurichNLP/unsup-simcse-xlm-roberta-base</a>,🔍,2.54,277455362,250002,512,✓,✗
 <a href='https://huggingface.co/ThatsGroes/munin-SkoleGPTOpenOrca-7b-16bit'>ThatsGroes/munin-SkoleGPTOpenOrca-7b-16bit (few-shot)</a>,📝,2.54,7241748480,32002,32768,✗,✗
 <a href='https://huggingface.co/sentence-transformers/paraphrase-xlm-r-multilingual-v1'>sentence-transformers/paraphrase-xlm-r-multilingual-v1</a>,🔍,2.54,277455362,250002,512,✓,✗
@@ -256,7 +256,7 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.65,7241732096,3
 <a href='https://huggingface.co/Addedk/kbbert-distilled-cased'>Addedk/kbbert-distilled-cased</a>,🔍,3.17,81574658,50325,512,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-3B-Instruct'>tiiuae/Falcon3-3B-Instruct (few-shot)</a>,📝,3.18,3227655168,131072,32768,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-2b-base'>ibm-granite/granite-3.0-2b-base (few-shot)</a>,🧠,3.18,2533525504,49152,4128,✓,✗
-<a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,3.19,1000000000,262144,32000,✓,✗
+<a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,3.19,1000000000,262144,32768,✓,✗
 <a href='https://huggingface.co/google/gemma-2b'>google/gemma-2b (few-shot)</a>,🧠,3.19,2506172416,256000,8192,✓,✗
 <a href='https://huggingface.co/birgermoell/roberta-swedish-scandi'>birgermoell/roberta-swedish-scandi</a>,🔍,3.19,124057346,50265,512,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-2-1124-13B'>allenai/OLMo-2-1124-13B (few-shot)</a>,🧠,3.19,13716198400,100352,4096,✓,✗
