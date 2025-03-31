@@ -77,7 +77,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.71,,32000,32768,✓,✗
 <a href='https://huggingface.co/ReBatch/Llama-3-8B-dutch'>ReBatch/Llama-3-8B-dutch (few-shot)</a>,🧠,2.95,8030277632,128258,8445,✗,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-instruct'>ibm-granite/granite-3.0-8b-instruct (few-shot)</a>,📝,2.96,8170848256,49155,4096,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-7B-Instruct'>tiiuae/Falcon3-7B-Instruct (few-shot)</a>,📝,2.97,7455550464,131072,32768,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.98,4299915632,262144,8192,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.98,4299915632,262144,128000,✓,✗
 <a href='https://huggingface.co/tiiuae/falcon-11B'>tiiuae/falcon-11B (few-shot)</a>,🧠,3.01,11102822400,65024,8192,✓,✗
 <a href='https://huggingface.co/Rijgersberg/Mistral-7B-v0.1-chat-nl'>Rijgersberg/Mistral-7B-v0.1-chat-nl (few-shot)</a>,📝,3.02,7241732096,32000,32768,✗,✗
 <a href='https://huggingface.co/nvidia/mistral-nemo-minitron-8b-instruct'>nvidia/mistral-nemo-minitron-8b-instruct (few-shot)</a>,📝,3.03,8414105600,131072,8192,✓,✗

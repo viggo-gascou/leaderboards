@@ -102,7 +102,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.89,,32000,32768,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-10B-Instruct'>tiiuae/Falcon3-10B-Instruct (few-shot)</a>,📝,3.01,10305653760,131072,32768,✓,✗
 <a href='https://huggingface.co/tiiuae/falcon-11B'>tiiuae/falcon-11B (few-shot)</a>,🧠,3.01,11102822400,65024,8192,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-instruct'>ibm-granite/granite-3.0-8b-instruct (few-shot)</a>,📝,3.02,8170848256,49155,4096,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,3.02,4299915632,262144,8192,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,3.02,4299915632,262144,128000,✓,✗
 <a href='https://huggingface.co/ChocoLlama/Llama-3-ChocoLlama-8B-instruct'>ChocoLlama/Llama-3-ChocoLlama-8B-instruct (few-shot)</a>,📝,3.02,8030261248,128256,8192,✗,✗
 <a href='https://huggingface.co/ReBatch/Llama-3-8B-dutch'>ReBatch/Llama-3-8B-dutch (few-shot)</a>,🧠,3.03,8030277632,128258,8445,✗,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-10B-Base'>tiiuae/Falcon3-10B-Base (few-shot)</a>,🧠,3.04,10305653760,131072,32768,✓,✗
