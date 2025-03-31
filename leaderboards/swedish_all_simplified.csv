@@ -65,7 +65,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.16,,32000,32768,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-7B'>Qwen/Qwen1.5-7B (few-shot)</a>,📝,2.28,7721324544,151936,32768,✓,✗
 "<a href='https://huggingface.co/merge-crew/da-sv-task-arithmetic'>merge-crew/da-sv-task-arithmetic (few-shot, val)</a>",🧠,2.28,7241732096,32000,32768,✓,✓
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B'>meta-llama/Meta-Llama-3-8B (few-shot)</a>,🧠,2.28,8030261248,128256,8192,✓,✗
-<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.28,,262144,128000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.28,4300079472,262144,128000,✓,✗
 "<a href='https://huggingface.co/RJuro/munin-neuralbeagle-SkoleGPTOpenOrca-7b'>RJuro/munin-neuralbeagle-SkoleGPTOpenOrca-7b (few-shot, val)</a>",📝,2.29,7241748480,32002,32768,✗,✓
 "<a href='https://huggingface.co/merge-crew/da-sv-slerp'>merge-crew/da-sv-slerp (few-shot, val)</a>",🧠,2.29,7241732096,32000,32768,✓,✓
 "<a href='https://huggingface.co/AI-Sweden-Models/tyr'>AI-Sweden-Models/tyr (few-shot, val)</a>",📝,2.29,7241732096,32000,32768,✗,✓

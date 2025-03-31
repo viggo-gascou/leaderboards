@@ -90,7 +90,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.92,,32000,32768,✓,✗
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-v01'>CohereForAI/c4ai-command-r-v01 (few-shot)</a>,📝,2.22,34980831232,256000,8192,✗,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-9B'>utter-project/EuroLLM-9B (few-shot)</a>,🧠,2.23,9152319488,128000,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-base'>ibm-granite/granite-3.0-8b-base (few-shot)</a>,🧠,2.24,8170835968,49152,4096,✓,✗
-<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.24,,262144,128000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.24,4300079472,262144,128000,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B-instruct'>NorwAI/NorwAI-Mixtral-8x7B-instruct (few-shot)</a>,📝,2.25,46997647360,67993,32768,✓,✗
 <a href='https://huggingface.co/microsoft/Phi-3-mini-128k-instruct'>microsoft/Phi-3-mini-128k-instruct (few-shot)</a>,📝,2.27,3821079552,32064,130947,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-2-1124-13B'>allenai/OLMo-2-1124-13B (few-shot)</a>,🧠,2.27,13716198400,100352,4096,✓,✗

@@ -54,7 +54,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.15,,32000,32768,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/Llama-3-8B-instruct'>AI-Sweden-Models/Llama-3-8B-instruct (few-shot)</a>,📝,2.22,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-14B-Chat'>Qwen/Qwen1.5-14B-Chat (few-shot)</a>,📝,2.25,14167290880,152064,32768,✗,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B-instruct'>NorwAI/NorwAI-Mixtral-8x7B-instruct (few-shot)</a>,📝,2.25,46997647360,67993,32768,✓,✗
-<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.26,,262144,128000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.26,4300079472,262144,128000,✓,✗
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B-DPO'>allenai/Llama-3.1-Tulu-3-8B-DPO (few-shot)</a>,📝,2.28,8030326784,128264,131072,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-9B-Instruct'>utter-project/EuroLLM-9B-Instruct (few-shot)</a>,📝,2.29,9152319488,128000,4096,✗,✗
 "<a href='https://huggingface.co/timpal0l/BeagleCatMunin'>timpal0l/BeagleCatMunin (few-shot, val)</a>",🧠,2.30,7241732096,32000,4096,✗,✓

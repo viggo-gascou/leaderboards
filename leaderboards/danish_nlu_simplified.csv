@@ -86,7 +86,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.16,,32000,32768,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B'>meta-llama/Llama-3.1-8B (few-shot)</a>,🧠,2.23,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/cardiffnlp/twitter-xlm-roberta-base'>cardiffnlp/twitter-xlm-roberta-base</a>,🔍,2.24,277455362,250002,512,✓,✗
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B'>allenai/Llama-3.1-Tulu-3-8B (few-shot)</a>,📝,2.24,8030326784,128264,131072,✓,✗
-<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.25,,262144,128000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.25,4300079472,262144,128000,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/bert-large-nordic-pile-1M-steps'>AI-Sweden-Models/bert-large-nordic-pile-1M-steps</a>,🔍,2.25,368375810,64000,512,✓,✗
 <a href='https://huggingface.co/ltg/norbert3-small'>ltg/norbert3-small</a>,🔍,2.26,40634882,50000,512,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B'>meta-llama/Meta-Llama-3-8B (few-shot)</a>,🧠,2.26,8030261248,128256,8192,✓,✗

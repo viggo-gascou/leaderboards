@@ -82,7 +82,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.86,,32000,32768,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B'>NorwAI/NorwAI-Mixtral-8x7B (few-shot)</a>,🧠,1.92,46997647360,67993,32768,✓,✗
 <a href='https://huggingface.co/robinsmits/Qwen1.5-7B-Dutch-Chat-Sft-Bf16'>robinsmits/Qwen1.5-7B-Dutch-Chat-Sft-Bf16 (few-shot)</a>,📝,1.94,7718948864,151646,32768,✗,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B-instruct'>NorwAI/NorwAI-Mixtral-8x7B-instruct (few-shot)</a>,📝,1.95,46997647360,67993,32768,✓,✗
-<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,1.95,,262144,128000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,1.95,4300079472,262144,128000,✓,✗
 <a href='https://huggingface.co/FacebookAI/xlm-roberta-large'>FacebookAI/xlm-roberta-large</a>,🔍,1.96,559893507,250002,512,✓,✗
 <a href='https://huggingface.co/google/gemma-3-12b-pt'>google/gemma-3-12b-pt (few-shot)</a>,🧠,1.96,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/CohereForAI/aya-expanse-8b'>CohereForAI/aya-expanse-8b (few-shot)</a>,🧠,1.96,8028033024,256000,8192,✗,✗

@@ -77,7 +77,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.01,,32000,32768,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-instruct'>ibm-granite/granite-3.0-8b-instruct (few-shot)</a>,📝,2.35,8170848256,49155,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-base'>ibm-granite/granite-3.0-8b-base (few-shot)</a>,🧠,2.37,8170835968,49152,4096,✓,✗
 <a href='https://huggingface.co/alpindale/Mistral-7B-v0.2-hf'>alpindale/Mistral-7B-v0.2-hf (few-shot)</a>,🧠,2.37,7241732096,32000,32768,✓,✗
-<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.38,,262144,128000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.38,4300079472,262144,128000,✓,✗
 <a href='https://huggingface.co/occiglot/occiglot-7b-de-en'>occiglot/occiglot-7b-de-en (few-shot)</a>,🧠,2.41,7241732096,32000,32768,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-9B'>utter-project/EuroLLM-9B (few-shot)</a>,🧠,2.41,9152319488,128000,4096,✓,✗
 <a href='https://huggingface.co/seedboxai/KafkaLM-7B-German-V0.1-DPO'>seedboxai/KafkaLM-7B-German-V0.1-DPO (few-shot)</a>,📝,2.43,7241732096,32000,4096,✗,✗

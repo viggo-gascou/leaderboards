@@ -41,7 +41,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B'>allenai/Llama-3.1-Tulu-3-8B (few-shot)</a>,📝,2.13,8030326784,128264,131072,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct'>meta-llama/Llama-3.1-8B-Instruct (few-shot)</a>,📝,2.14,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-14B-Chat'>Qwen/Qwen1.5-14B-Chat (few-shot)</a>,📝,2.19,14167290880,152064,32768,✗,✗
-<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.21,,262144,128000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.21,4300079472,262144,128000,✓,✗
 <a href='https://huggingface.co/nvidia/mistral-nemo-minitron-8b-base'>nvidia/mistral-nemo-minitron-8b-base (few-shot)</a>,🧠,2.24,8414105600,131072,8192,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct'>meta-llama/Meta-Llama-3-8B-Instruct (few-shot)</a>,📝,2.26,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/nvidia/Mistral-NeMo-Minitron-8B-Base'>nvidia/Mistral-NeMo-Minitron-8B-Base (few-shot)</a>,🧠,2.26,8414105600,131072,8192,✓,✗

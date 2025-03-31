@@ -75,7 +75,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.83,,32000,32768,✓,✗
 <a href='https://huggingface.co/microsoft/Phi-3-mini-128k-instruct'>microsoft/Phi-3-mini-128k-instruct (few-shot)</a>,📝,2.04,3821079552,32064,131072,✓,✗
 <a href='https://huggingface.co/mgoin/Nemotron-4-340B-Instruct-hf-FP8'>mgoin/Nemotron-4-340B-Instruct-hf-FP8 (few-shot)</a>,📝,2.04,341029195776,256000,4096,✓,✗
 <a href='https://huggingface.co/neuralmagic/Sparse-Llama-3.1-8B-2of4'>neuralmagic/Sparse-Llama-3.1-8B-2of4 (few-shot)</a>,🧠,2.06,8030261248,128256,131072,✓,✗
-<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.06,,262144,128000,✓,✗
+<a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.06,4300079472,262144,128000,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-base'>ibm-granite/granite-3.0-8b-base (few-shot)</a>,🧠,2.09,8170835968,49152,4096,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B'>meta-llama/Llama-3.1-8B (few-shot)</a>,🧠,2.10,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/alpindale/Mistral-7B-v0.2-hf'>alpindale/Mistral-7B-v0.2-hf (few-shot)</a>,🧠,2.11,7241732096,32000,32768,✓,✗
