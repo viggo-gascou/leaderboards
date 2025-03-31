@@ -605,7 +605,12 @@ def generate_dataframe(
         # Create dataframe and sort by rank
         df = (
             pd.DataFrame(data_dict)
-            .sort_values(by="rank", ascending=True)
+            .sort_values(
+                by="rank",
+                key=lambda series: series.map(
+                    lambda x: float(x.split("@@")[1]) if isinstance(x, str) else x
+                ),
+            )
             .reset_index(drop=True)
         )
 
