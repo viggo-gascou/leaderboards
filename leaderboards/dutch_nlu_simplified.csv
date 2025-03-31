@@ -17,7 +17,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://ollama.com/library/phi4:14b-q4_K_M'>ollama_chat/phi4:14b-q4_K_M (few-shot, val)</a>",📝,2.12,14700000000,100352,16384,✓,✗
 <a href='https://huggingface.co/DTAI-KULeuven/robbertje-1-gb-merged'>DTAI-KULeuven/robbertje-1-gb-merged</a>,🔍,2.13,73646594,40000,512,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,2.23,12200000000,262144,128000,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,2.26,,,128000,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,2.26,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct'>meta-llama/Llama-3.1-70B-Instruct (few-shot)</a>,📝,2.26,70553706496,128256,131072,✓,✗
 <a href='https://huggingface.co/DTAI-KULeuven/robbertje-1-gb-shuffled'>DTAI-KULeuven/robbertje-1-gb-shuffled</a>,🔍,2.27,74276930,40000,512,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct-FP8'>meta-llama/Llama-3.1-405B-Instruct-FP8 (few-shot)</a>,📝,2.27,405868625920,128256,131072,✓,✗
@@ -102,7 +102,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.89,,32000,32768,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-10B-Instruct'>tiiuae/Falcon3-10B-Instruct (few-shot)</a>,📝,3.01,10305653760,131072,32768,✓,✗
 <a href='https://huggingface.co/tiiuae/falcon-11B'>tiiuae/falcon-11B (few-shot)</a>,🧠,3.01,11102822400,65024,8192,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-instruct'>ibm-granite/granite-3.0-8b-instruct (few-shot)</a>,📝,3.02,8170848256,49155,4096,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,3.02,4299915632,,8192,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,3.02,4299915632,262144,8192,✓,✗
 <a href='https://huggingface.co/ChocoLlama/Llama-3-ChocoLlama-8B-instruct'>ChocoLlama/Llama-3-ChocoLlama-8B-instruct (few-shot)</a>,📝,3.02,8030261248,128256,8192,✗,✗
 <a href='https://huggingface.co/ReBatch/Llama-3-8B-dutch'>ReBatch/Llama-3-8B-dutch (few-shot)</a>,🧠,3.03,8030277632,128258,8445,✗,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-10B-Base'>tiiuae/Falcon3-10B-Base (few-shot)</a>,🧠,3.04,10305653760,131072,32768,✓,✗

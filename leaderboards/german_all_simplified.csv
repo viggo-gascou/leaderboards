@@ -33,7 +33,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/speakleash/Bielik-11B-v2.3-Instruct'>speakleash/Bielik-11B-v2.3-Instruct (few-shot)</a>,📝,2.01,11168796672,32128,32768,✓,✓
 <a href='https://huggingface.co/152334H/miqu-1-70b-sf'>152334H/miqu-1-70b-sf (few-shot)</a>,📝,2.01,68976648192,32000,32764,✓,✗
 skole-gpt-mixtral (few-shot)</a>,🧠,2.01,,32000,32768,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,2.02,,,128000,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,2.02,12187325040,262144,128000,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,2.03,12200000000,262144,128000,✓,✗
 <a href='https://huggingface.co/google/gemma-2-27b'>google/gemma-2-27b (few-shot)</a>,🧠,2.04,27227128320,256000,4096,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-70b-hf'>meta-llama/Llama-2-70b-hf (few-shot)</a>,🧠,2.05,68976653312,32000,4096,✓,✗
@@ -92,7 +92,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.01,,32000,32768,✓,✗
 <a href='https://huggingface.co/seedboxai/KafkaLM-13B-German-V0.1-DPO'>seedboxai/KafkaLM-13B-German-V0.1-DPO (few-shot)</a>,📝,2.53,13015864320,32000,8192,✗,✗
 <a href='https://huggingface.co/neuralmagic/Sparse-Llama-3.1-8B-2of4'>neuralmagic/Sparse-Llama-3.1-8B-2of4 (few-shot)</a>,🧠,2.54,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/google/gemma-7b'>google/gemma-7b (few-shot)</a>,🧠,2.54,8537680896,256000,8192,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.55,,,,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.55,4299915632,262144,128000,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-v0.1'>mistralai/Mistral-7B-v0.1 (few-shot)</a>,🧠,2.56,7241732096,32000,4096,✓,✗
 <a href='https://huggingface.co/tiiuae/falcon-11B'>tiiuae/falcon-11B (few-shot)</a>,🧠,2.56,11102822400,65024,8192,✓,✗
 <a href='https://huggingface.co/RuterNorway/Llama-2-13b-chat-norwegian'>RuterNorway/Llama-2-13b-chat-norwegian (few-shot)</a>,📝,2.56,,32000,4096,✗,✗

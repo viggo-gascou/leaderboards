@@ -76,7 +76,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.92,,32000,32768,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct'>meta-llama/Llama-3.1-8B-Instruct (few-shot)</a>,📝,2.13,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B'>meta-llama/Llama-3.1-8B (few-shot)</a>,🧠,2.14,8030261248,128256,131072,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,2.14,12200000000,262144,128000,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,2.14,,,128000,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,2.14,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/mistralai/Ministral-8B-Instruct-2410'>mistralai/Ministral-8B-Instruct-2410 (few-shot)</a>,📝,2.14,8019808256,131072,32768,✓,✗
 <a href='https://huggingface.co/senseable/WestLake-7B-v2'>senseable/WestLake-7B-v2 (few-shot)</a>,🧠,2.14,7241732096,32000,4096,✗,✗
 <a href='https://huggingface.co/google/gemma-2-27b'>google/gemma-2-27b (few-shot)</a>,🧠,2.15,27227128320,256000,4096,✓,✗
@@ -109,7 +109,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.92,,32000,32768,✓,✗
 <a href='https://huggingface.co/Twitter/twhin-bert-base'>Twitter/twhin-bert-base</a>,🔍,2.35,279080594,250002,512,✓,✗
 "<a href='https://huggingface.co/mayflowergmbh/Wiedervereinigung-7b-dpo'>mayflowergmbh/Wiedervereinigung-7b-dpo (few-shot, val)</a>",📝,2.36,7241732096,32000,32768,✗,✓
 <a href='https://huggingface.co/google/gemma-3-4b-pt'>google/gemma-3-4b-pt (few-shot)</a>,🧠,2.36,4300079472,262144,128000,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.37,,,,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.37,4299915632,262144,128000,✓,✗
 <a href='https://huggingface.co/seedboxai/KafkaLM-7B-German-V0.1'>seedboxai/KafkaLM-7B-German-V0.1 (few-shot)</a>,🧠,2.37,7241732096,32000,32768,✓,✗
 <a href='https://huggingface.co/seedboxai/KafkaLM-13B-German-V0.1-DPO'>seedboxai/KafkaLM-13B-German-V0.1-DPO (few-shot)</a>,📝,2.39,13015864320,32000,8192,✗,✗
 <a href='https://huggingface.co/RuterNorway/Llama-2-13b-chat-norwegian'>RuterNorway/Llama-2-13b-chat-norwegian (few-shot)</a>,📝,2.39,,32000,4096,✗,✗

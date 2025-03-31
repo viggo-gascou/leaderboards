@@ -13,7 +13,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407'>mistralai/Mistral-Nemo-Instruct-2407 (few-shot)</a>,📝,1.75,12247782400,131072,131072,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct'>meta-llama/Llama-3.1-70B-Instruct (few-shot)</a>,📝,1.77,70553706496,128256,131072,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,1.78,12200000000,262144,128000,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.78,,,128000,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.78,12187325040,262144,128000,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.79,,200019,128000,✓,✗
 <a href='https://huggingface.co/152334H/miqu-1-70b-sf'>152334H/miqu-1-70b-sf (few-shot)</a>,📝,1.81,68976648192,32000,32764,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,1.82,70553706496,128256,131072,✓,✗
@@ -47,7 +47,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-haiku-20241022 (zero-shot, val)</a>",📝,2.13,,,200000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct'>meta-llama/Llama-3.1-8B-Instruct (few-shot)</a>,📝,2.13,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-9B'>utter-project/EuroLLM-9B (few-shot)</a>,🧠,2.14,9152319488,128000,4096,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.15,,,,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.15,4299915632,262144,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct'>meta-llama/Meta-Llama-3-8B-Instruct (few-shot)</a>,📝,2.16,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/NousResearch/DeepHermes-3-Llama-3-8B-Preview'>NousResearch/DeepHermes-3-Llama-3-8B-Preview (few-shot)</a>,📝,2.17,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-v0.1'>mistralai/Mistral-7B-v0.1 (few-shot)</a>,🧠,2.17,7241732096,32000,4096,✓,✗

@@ -24,7 +24,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/Qwen/QwQ-32B-Preview'>Qwen/QwQ-32B-Preview (few-shot)</a>,📝,1.77,32763876352,152064,32768,✓,✗
 <a href='https://huggingface.co/intfloat/multilingual-e5-large'>intfloat/multilingual-e5-large</a>,🔍,1.77,559893507,250002,512,✓,✗
 <a href='https://huggingface.co/KennethEnevoldsen/dfm-sentence-encoder-large'>KennethEnevoldsen/dfm-sentence-encoder-large</a>,🔍,1.77,407389520,50000,512,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.78,,,128000,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.78,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-instruct'>meta-llama/Meta-Llama-3-70B-instruct (few-shot)</a>,📝,1.79,70553706496,128256,8192,✓,✗
 <a href='https://huggingface.co/NbAiLab/nb-roberta-base-scandi'>NbAiLab/nb-roberta-base-scandi</a>,🔍,1.79,278045955,250002,512,✓,✗
 "<a href='https://ollama.com/library/phi4:14b-q4_K_M'>ollama_chat/phi4:14b-q4_K_M (few-shot, val)</a>",📝,1.80,14700000000,100352,16384,✓,✗
@@ -84,7 +84,7 @@ mhenrichsen/danskgpt-chat-v2.1 (few-shot)</a>,📝,2.30,,32002,32768,✓,✗
 <a href='https://huggingface.co/ZurichNLP/unsup-simcse-xlm-roberta-base'>ZurichNLP/unsup-simcse-xlm-roberta-base</a>,🔍,2.33,278045955,250002,512,✓,✗
 <a href='https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1'>mistralai/Mixtral-8x7B-Instruct-v0.1 (few-shot)</a>,📝,2.33,46702792704,32000,32768,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct'>meta-llama/Meta-Llama-3-8B-Instruct (few-shot)</a>,📝,2.33,8030261248,128256,8192,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.33,,,,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.33,4299915632,262144,128000,✓,✗
 <a href='https://huggingface.co/upstage/SOLAR-10.7B-v1.0'>upstage/SOLAR-10.7B-v1.0 (few-shot)</a>,🧠,2.34,10731524096,32000,4096,✓,✗
 <a href='https://huggingface.co/KB/bert-base-swedish-cased'>KB/bert-base-swedish-cased</a>,🔍,2.34,124693251,50325,512,✓,✗
 <a href='https://huggingface.co/norallm/normistral-11b-warm'>norallm/normistral-11b-warm (few-shot)</a>,🧠,2.34,11429893120,51200,1024000,✓,✗

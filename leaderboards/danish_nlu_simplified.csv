@@ -32,7 +32,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF'>nvidia/Llama-3.1-Nemotron-70B-Instruct-HF (few-shot)</a>,📝,1.79,70553706496,128256,131072,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (zero-shot, val)</a>",📝,1.81,,200019,8191,✓,✗
 <a href='https://huggingface.co/ltg/norbert3-large'>ltg/norbert3-large</a>,🔍,1.81,354406402,50000,512,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.81,,,128000,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.81,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/KennethEnevoldsen/dfm-sentence-encoder-medium'>KennethEnevoldsen/dfm-sentence-encoder-medium</a>,🔍,1.84,123857666,50005,514,✓,✗
 "<a href='https://ollama.com/library/phi4:14b-q4_K_M'>ollama_chat/phi4:14b-q4_K_M (few-shot, val)</a>",📝,1.84,14700000000,100352,16384,✓,✗
 <a href='https://huggingface.co/NbAiLab/nb-sbert-base'>NbAiLab/nb-sbert-base</a>,🔍,1.88,177264386,119547,512,✓,✗
@@ -98,7 +98,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.16,,32000,32768,✓,✗
 <a href='https://huggingface.co/Nexusflow/Starling-LM-7B-beta'>Nexusflow/Starling-LM-7B-beta (few-shot)</a>,📝,2.31,7241748480,32002,4096,✗,✗
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3.1-8B'>allenai/Llama-3.1-Tulu-3.1-8B (few-shot)</a>,🧠,2.31,8030326784,128264,131072,✓,✗
 <a href='https://huggingface.co/google/rembert'>google/rembert</a>,🔍,2.32,574594434,250300,512,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.32,,,,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.32,4299915632,262144,128000,✓,✗
 "<a href='https://huggingface.co/merge-crew/da-sv-dare-ties-density-0.9'>merge-crew/da-sv-dare-ties-density-0.9 (few-shot, val)</a>",🧠,2.32,7241732096,32000,4096,✓,✓
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-v01'>CohereForAI/c4ai-command-r-v01 (few-shot)</a>,📝,2.33,34980831232,256000,8192,✗,✗
 <a href='https://huggingface.co/Maltehb/danish-bert-botxo'>Maltehb/danish-bert-botxo</a>,🔍,2.33,110028290,32000,512,✓,✗

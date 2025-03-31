@@ -48,7 +48,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://platform.openai.com/docs/models/gpt-4-turbo'>gpt-4-1106-preview (zero-shot, val)</a>",📝,1.71,,100256,8191,✓,✗
 <a href='https://huggingface.co/NbAiLab/nb-bert-base'>NbAiLab/nb-bert-base</a>,🔍,1.72,177855747,119547,512,✓,✗
 <a href='https://huggingface.co/google/gemma-2-9b-it'>google/gemma-2-9b-it (few-shot)</a>,📝,1.72,9241705984,256000,4096,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.72,,,128000,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.72,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-70b-hf'>meta-llama/Llama-2-70b-hf (few-shot)</a>,🧠,1.72,68976653312,32000,4096,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B'>NorwAI/NorwAI-Mixtral-8x7B (few-shot)</a>,🧠,1.73,46997647360,67993,32768,✓,✗
 <a href='https://huggingface.co/NbAiLab/nb-roberta-base-scandi-1e4'>NbAiLab/nb-roberta-base-scandi-1e4</a>,🔍,1.75,278295700,250002,514,✓,✗
@@ -136,7 +136,7 @@ mhenrichsen/danskgpt-chat-v2.1 (few-shot)</a>,📝,2.18,,32002,32768,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-10B-Base'>tiiuae/Falcon3-10B-Base (few-shot)</a>,🧠,2.18,10305653760,131072,32768,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-2-1124-13B'>allenai/OLMo-2-1124-13B (few-shot)</a>,🧠,2.19,13716198400,100352,4096,✓,✗
 "<a href='https://huggingface.co/merge-crew/da-sv-dare-ties-density-0.6'>merge-crew/da-sv-dare-ties-density-0.6 (few-shot, val)</a>",🧠,2.19,7241732096,32000,32768,✓,✓
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.19,,,,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.19,4299915632,262144,128000,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-7B-Instruct'>tiiuae/Falcon3-7B-Instruct (few-shot)</a>,📝,2.20,7455550464,131072,32768,✓,✗
 <a href='https://huggingface.co/vesteinn/DanskBERT'>vesteinn/DanskBERT</a>,🔍,2.20,124448259,50005,512,✓,✗
 <a href='https://huggingface.co/Mabeck/Heidrun-Mistral-7B-base'>Mabeck/Heidrun-Mistral-7B-base (few-shot)</a>,🧠,2.20,7241732096,32000,32768,✓,✗

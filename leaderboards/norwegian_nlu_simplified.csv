@@ -15,7 +15,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/abhishek/autotrain-llama3-oh-sft-v0-2'>abhishek/autotrain-llama3-oh-sft-v0-2 (few-shot)</a>,📝,1.74,70553837568,128264,8192,✗,✗
 <a href='https://huggingface.co/ltg/norbert3-base'>ltg/norbert3-base</a>,🔍,1.74,124032002,50000,512,✓,✗
 <a href='https://huggingface.co/NbAiLab/nb-roberta-base-scandi'>NbAiLab/nb-roberta-base-scandi</a>,🔍,1.74,278045186,250002,514,✓,✗
-"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.82,,,128000,✓,✗
+"<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.82,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/google/gemma-3-12b-pt'>google/gemma-3-12b-pt (few-shot)</a>,🧠,1.83,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/KennethEnevoldsen/dfm-sentence-encoder-large'>KennethEnevoldsen/dfm-sentence-encoder-large</a>,🔍,1.84,407389520,50000,512,✓,✗
 <a href='https://huggingface.co/vesteinn/ScandiBERT-no-faroese'>vesteinn/ScandiBERT-no-faroese</a>,🔍,1.87,124498007,50005,514,✓,✗
@@ -62,7 +62,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 skole-gpt-mixtral (few-shot)</a>,🧠,2.43,,32000,32768,✓,✗
 <a href='https://huggingface.co/Nexusflow/Starling-LM-7B-beta'>Nexusflow/Starling-LM-7B-beta (few-shot)</a>,📝,2.45,7241748480,32002,8192,✗,✗
 <a href='https://huggingface.co/google/gemma-2-27b'>google/gemma-2-27b (few-shot)</a>,🧠,2.47,27227128320,256000,8193,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.47,,,,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.47,4299915632,262144,128000,✓,✗
 <a href='https://huggingface.co/intfloat/multilingual-e5-base'>intfloat/multilingual-e5-base</a>,🔍,2.48,278044162,250002,512,✓,✗
 <a href='https://huggingface.co/mgoin/Nemotron-4-340B-Instruct-hf-FP8'>mgoin/Nemotron-4-340B-Instruct-hf-FP8 (few-shot)</a>,📝,2.49,341029195776,256000,4096,✓,✗
 <a href='https://huggingface.co/google/rembert'>google/rembert</a>,🔍,2.49,575922690,250300,512,✓,✗
