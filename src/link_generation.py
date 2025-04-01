@@ -1,6 +1,7 @@
 """Generating links for models."""
 
 import logging
+import os
 import re
 from huggingface_hub.errors import (
     GatedRepoError,
@@ -13,6 +14,7 @@ from huggingface_hub import HfApi
 from requests.exceptions import RequestException
 from dotenv import load_dotenv
 from anthropic import Anthropic
+from google.genai import Client as GoogleClient
 
 
 load_dotenv()
@@ -60,6 +62,8 @@ def generate_anchor_tag(model_id: str) -> str:
         url = generate_openai_url(model_id=model_id_without_revision)
     if url is None:
         url = generate_anthropic_url(model_id=model_id_without_revision)
+    if url is None:
+        url = generate_google_url(model_id=model_id_without_revision)
     if url is None:
         logger.error(f"Could not find a URL for model {model_id_without_revision}.")
 
@@ -157,4 +161,23 @@ def generate_ollama_url(model_id: str) -> str | None:
     if model_id.startswith("ollama/") or model_id.startswith("ollama_chat/"):
         model_id_without_prefix = model_id.split("/")[1]
         return f"https://ollama.com/library/{model_id_without_prefix}"
+    return None
+
+
+def generate_google_url(model_id: str) -> str | None:
+    """Generate a model URL for a model hosted on Google.
+
+    Args:
+        model_id:
+            The Google model ID.
+    """
+    client = GoogleClient(api_key=os.environ["GEMINI_API_KEY"])
+    available_google_models = [
+        model.name.split("/")[-1]
+        for model in client.models.list()
+        if model.name is not None
+    ]
+    if model_id in available_google_models:
+        model_id_without_suffix = re.sub(r"-\d+$", "", model_id)
+        return f"https://ai.google.dev/gemini-api/docs/models#{model_id_without_suffix}"
     return None
