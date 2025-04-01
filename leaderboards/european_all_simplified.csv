@@ -27,7 +27,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-08-2024'>CohereForAI/c4ai-command-r-08-2024 (few-shot)</a>,📝,2.16,32296476672,256000,131072,✗,✗
 <a href='https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407'>mistralai/Mistral-Nemo-Instruct-2407 (few-shot)</a>,📝,2.17,12247782400,131072,131072,✓,✗
 <a href='https://huggingface.co/google/gemma-2-9b'>google/gemma-2-9b (few-shot)</a>,🧠,2.18,9241705984,256000,4096,✓,✗
-<a href='https://huggingface.co/google/gemma-2-27b'>google/gemma-2-27b (few-shot)</a>,🧠,2.20,27227128320,256000,4096,✓,✗
+<a href='https://huggingface.co/google/gemma-2-27b'>google/gemma-2-27b (few-shot)</a>,🧠,2.20,27227128320,256000,8192,✓,✗
 <a href='https://huggingface.co/152334H/miqu-1-70b-sf'>152334H/miqu-1-70b-sf (few-shot)</a>,📝,2.23,68976648192,32000,32764,✓,✗
 <a href='https://huggingface.co/speakleash/Bielik-11B-v2.3-Instruct'>speakleash/Bielik-11B-v2.3-Instruct (few-shot)</a>,📝,2.27,11168796672,32128,32768,✓,✓
 <a href='https://huggingface.co/upstage/SOLAR-10.7B-v1.0'>upstage/SOLAR-10.7B-v1.0 (few-shot)</a>,🧠,2.31,10731524096,32000,4096,✓,✗
@@ -68,9 +68,9 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2'>mistralai/Mistral-7B-Instruct-v0.2 (few-shot)</a>,📝,2.98,7241732096,32000,32768,✗,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-14B'>Qwen/Qwen1.5-14B (few-shot)</a>,📝,2.98,14167290880,152064,32768,✓,✗
 <a href='https://huggingface.co/occiglot/occiglot-7b-eu5'>occiglot/occiglot-7b-eu5 (few-shot)</a>,🧠,3.02,7241732096,32000,4096,✓,✗
-<a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_2-3t-tokens_llama'>TrustLLMeu/baseline-7-8b_2-3t-tokens_llama (few-shot)</a>,🧠,3.07,7799574528,100096,4096,✓,✗
+<a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_2-3t-tokens_llama'>TrustLLMeu/baseline-7-8b_2-3t-tokens_llama (few-shot)</a>,🧠,3.08,7799574528,100096,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,3.09,8054910976,49152,4096,✓,✗
-<a href='https://huggingface.co/LumiOpen/Viking-33B'>LumiOpen/Viking-33B (few-shot)</a>,🧠,3.09,33119034368,131072,4096,✓,✗
+<a href='https://huggingface.co/LumiOpen/Viking-33B'>LumiOpen/Viking-33B (few-shot)</a>,🧠,3.10,33119034368,131072,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k'>ibm-granite/granite-8b-code-instruct-4k (few-shot)</a>,📝,3.12,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-chat-hf'>meta-llama/Llama-2-13b-chat-hf (few-shot)</a>,📝,3.20,13015866880,32000,4096,✓,✗
 <a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_1t-tokens_llama'>TrustLLMeu/baseline-7-8b_1t-tokens_llama (few-shot)</a>,🧠,3.20,7799574528,100096,4096,✓,✗
@@ -108,4 +108,4 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m'>AI-Sweden-Models/gpt-sw3-126m (few-shot)</a>,🧠,4.42,186112512,64000,2048,✓,✗
 <a href='https://huggingface.co/openai-community/gpt2-large'>openai-community/gpt2-large (few-shot)</a>,🧠,4.94,811778816,50257,1024,✓,✗
 <a href='https://huggingface.co/openai-community/gpt2-medium'>openai-community/gpt2-medium (few-shot)</a>,🧠,4.97,379988992,50257,1024,✓,✗
-<a href='https://huggingface.co/openai-community/gpt2'>openai-community/gpt2 (few-shot)</a>,🧠,4.99,137022720,50257,1024,✓,✗
+<a href='https://huggingface.co/openai-community/gpt2'>openai-community/gpt2 (few-shot)</a>,🧠,5.00,137022720,50257,1024,✓,✗

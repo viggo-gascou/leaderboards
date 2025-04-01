@@ -56,7 +56,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/norallm/normistral-11b-warm'>norallm/normistral-11b-warm (few-shot)</a>,🧠,2.58,11429893120,51200,1024000,✓,✗
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-08-2024'>CohereForAI/c4ai-command-r-08-2024 (few-shot)</a>,📝,2.58,32296476672,256000,131072,✗,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B'>meta-llama/Llama-3.1-8B (few-shot)</a>,🧠,2.58,8030261248,128256,131072,✓,✗
-<a href='https://huggingface.co/google/gemma-2-27b'>google/gemma-2-27b (few-shot)</a>,🧠,2.59,27227128320,256000,4096,✓,✗
+<a href='https://huggingface.co/google/gemma-2-27b'>google/gemma-2-27b (few-shot)</a>,🧠,2.59,27227128320,256000,8192,✓,✗
 <a href='https://huggingface.co/microsoft/xlm-align-base'>microsoft/xlm-align-base</a>,🔍,2.60,278045186,250002,512,✓,✗
 <a href='https://huggingface.co/clips/mfaq'>clips/mfaq</a>,🔍,2.60,278047490,250005,512,✓,✗
 <a href='https://huggingface.co/NousResearch/DeepHermes-3-Llama-3-8B-Preview'>NousResearch/DeepHermes-3-Llama-3-8B-Preview (few-shot)</a>,📝,2.62,8030261248,128256,131072,✓,✗
