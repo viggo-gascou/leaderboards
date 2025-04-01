@@ -175,8 +175,8 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/HPLT/gpt-7b-nordic-prerelease'>HPLT/gpt-7b-nordic-prerelease (few-shot)</a>,🧠,4.01,7550013440,131072,4096,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-1.2b-Preview'>PleIAs/Pleias-1.2b-Preview (few-shot)</a>,🧠,4.02,1195468800,65536,2048,✓,✗
 <a href='https://huggingface.co/infly/OpenCoder-1.5B-Instruct'>infly/OpenCoder-1.5B-Instruct (few-shot)</a>,📝,4.05,1905650880,96640,4096,✗,✗
-<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,4.08,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m-instruct'>AI-Sweden-Models/gpt-sw3-126m-instruct (few-shot)</a>,📝,4.12,186112512,64000,2048,✓,✗
+<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,4.13,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B'>Qwen/Qwen1.5-0.5B (few-shot)</a>,📝,4.14,619570176,151936,32768,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-Nano'>PleIAs/Pleias-Nano (few-shot)</a>,🧠,4.15,1195468800,65536,2048,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-Math-1.5B'>Qwen/Qwen2.5-Math-1.5B (few-shot)</a>,📝,4.20,1543714304,151936,4096,✓,✗

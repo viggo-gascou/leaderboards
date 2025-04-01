@@ -78,9 +78,9 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.83,,32000,32768,✓,✗
 <a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.06,4300079472,262144,128000,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-base'>ibm-granite/granite-3.0-8b-base (few-shot)</a>,🧠,2.09,8170835968,49152,4096,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B'>meta-llama/Llama-3.1-8B (few-shot)</a>,🧠,2.10,8030261248,128256,131072,✓,✗
+<a href='https://huggingface.co/ibm-granite/granite-3.0-2b-instruct'>ibm-granite/granite-3.0-2b-instruct (few-shot)</a>,📝,2.10,2634201088,49155,4097,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B'>meta-llama/Meta-Llama-3-8B (few-shot)</a>,🧠,2.11,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/alpindale/Mistral-7B-v0.2-hf'>alpindale/Mistral-7B-v0.2-hf (few-shot)</a>,🧠,2.11,7241732096,32000,32768,✓,✗
-<a href='https://huggingface.co/ibm-granite/granite-3.0-2b-instruct'>ibm-granite/granite-3.0-2b-instruct (few-shot)</a>,📝,2.11,2634201088,49155,4097,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-2b-base'>ibm-granite/granite-3.0-2b-base (few-shot)</a>,🧠,2.13,2533525504,49152,4097,✓,✗
 <a href='https://huggingface.co/CohereForAI/aya-23-8B'>CohereForAI/aya-23-8B (few-shot)</a>,🧠,2.15,8028033024,256000,8192,✗,✗
 <a href='https://huggingface.co/occiglot/occiglot-7b-de-en-instruct'>occiglot/occiglot-7b-de-en-instruct (few-shot)</a>,📝,2.15,7241748480,32002,32768,✗,✗
@@ -146,8 +146,8 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.35,7241732096,3
 <a href='https://huggingface.co/ibm-granite/granite-3.0-1b-a400m-instruct'>ibm-granite/granite-3.0-1b-a400m-instruct (few-shot)</a>,📝,2.86,1334628352,49155,4096,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B'>HuggingFaceTB/SmolLM2-1.7B (few-shot)</a>,🧠,2.86,1711376384,49152,8192,✓,✗
 <a href='https://huggingface.co/google/gemma-3-1b-it'>google/gemma-3-1b-it (few-shot)</a>,📝,2.88,999885952,262144,32768,✓,✗
+<a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,2.91,1000000000,262144,32768,✓,✗
 <a href='https://huggingface.co/VAGOsolutions/SauerkrautLM-Gemma-2b'>VAGOsolutions/SauerkrautLM-Gemma-2b (few-shot)</a>,🧠,2.92,2506172416,256000,8192,✗,✗
-<a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,2.92,1000000000,262144,32768,✓,✗
 <a href='https://huggingface.co/google/gemma-2b-it'>google/gemma-2b-it (few-shot)</a>,📝,2.94,2506172416,256000,8192,✗,✗
 <a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_1t-tokens_llama'>TrustLLMeu/baseline-7-8b_1t-tokens_llama (few-shot)</a>,🧠,2.94,7799574528,100096,4096,✓,✗
 <a href='https://huggingface.co/google/gemma-7b-it'>google/gemma-7b-it (few-shot)</a>,📝,2.96,8537680896,256000,8192,✗,✗
@@ -160,8 +160,8 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.35,7241732096,3
 <a href='https://huggingface.co/NorwAI/NorwAI-Llama2-7B'>NorwAI/NorwAI-Llama2-7B (few-shot)</a>,🧠,3.10,7033270272,67993,4096,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B'>Qwen/Qwen1.5-0.5B (few-shot)</a>,📝,3.10,619570176,151936,32768,✓,✗
 <a href='https://huggingface.co/infly/OpenCoder-8B-Base'>infly/OpenCoder-8B-Base (few-shot)</a>,🧠,3.12,7771263040,96640,8192,✓,✗
+<a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4'>openGPT-X/Teuken-7B-instruct-commercial-v0.4 (few-shot)</a>,📝,3.13,7452725248,250680,4096,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mistral-7B'>NorwAI/NorwAI-Mistral-7B (few-shot)</a>,🧠,3.14,7536586752,67993,4096,✓,✗
-<a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4'>openGPT-X/Teuken-7B-instruct-commercial-v0.4 (few-shot)</a>,📝,3.14,7452725248,250680,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-1b-a400m-base'>ibm-granite/granite-3.0-1b-a400m-base (few-shot)</a>,🧠,3.15,1384956928,49152,4096,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat'>Qwen/Qwen1.5-0.5B-Chat (few-shot)</a>,📝,3.15,619570176,151936,32768,✗,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.2-1B'>meta-llama/Llama-3.2-1B (few-shot)</a>,🧠,3.16,1235814400,128256,131073,✓,✗
@@ -199,5 +199,5 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.35,7241732096,3
 <a href='https://huggingface.co/ssmits/Falcon2-5.5B-multilingual'>ssmits/Falcon2-5.5B-multilingual (few-shot)</a>,🧠,4.55,5465415680,65024,8192,✓,✓
 <a href='https://huggingface.co/ai-forever/mGPT'>ai-forever/mGPT (few-shot)</a>,🧠,4.60,,100000,1024,✓,✗
 <a href='https://huggingface.co/alea-institute/kl3m-003-3.7b'>alea-institute/kl3m-003-3.7b (few-shot)</a>,🧠,4.64,3691382784,32768,4096,✓,✗
-<a href='https://huggingface.co/openai-community/gpt2-medium'>openai-community/gpt2-medium (few-shot)</a>,🧠,4.69,379988992,50257,1024,✓,✗
+<a href='https://huggingface.co/openai-community/gpt2-medium'>openai-community/gpt2-medium (few-shot)</a>,🧠,4.68,379988992,50257,1024,✓,✗
 <a href='https://huggingface.co/openai-community/gpt2'>openai-community/gpt2 (few-shot)</a>,🧠,4.92,137022720,50257,1024,✓,✗

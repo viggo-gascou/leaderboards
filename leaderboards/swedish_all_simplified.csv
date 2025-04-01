@@ -224,9 +224,9 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.44,7241732096,3
 <a href='https://huggingface.co/PleIAs/Pleias-1.2b-Preview'>PleIAs/Pleias-1.2b-Preview (few-shot)</a>,🧠,3.82,1195468800,65536,2048,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3b-code-instruct-2k'>ibm-granite/granite-3b-code-instruct-2k (few-shot)</a>,📝,3.88,3482503680,49152,2048,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-1B'>allenai/OLMo-1B (few-shot)</a>,🧠,3.90,1176764416,50280,2051,✓,✗
-<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,3.97,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/RJuro/kanelsnegl-v0.2'>RJuro/kanelsnegl-v0.2 (few-shot)</a>,📝,3.99,7241732096,32000,512,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m-instruct'>AI-Sweden-Models/gpt-sw3-126m-instruct (few-shot)</a>,📝,4.01,186112512,64000,2048,✓,✗
+<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,4.04,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/microsoft/phi-2'>microsoft/phi-2 (few-shot)</a>,🧠,4.04,2779683840,51200,2048,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-Math-1.5B'>Qwen/Qwen2.5-Math-1.5B (few-shot)</a>,📝,4.06,1543714304,151936,4096,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M'>HuggingFaceTB/SmolLM2-360M (few-shot)</a>,🧠,4.06,361821120,49152,8192,✓,✗
