@@ -139,6 +139,7 @@ def generate_anthropic_url(model_id: str) -> str | None:
         The URL for the model on Anthropic, or None if the model does not exist on
         Anthropic.
     """
+    model_id = model_id.replace("anthropic/", "")
     client = Anthropic()
     available_anthropic_models = [
         model_info.id for model_info in client.models.list().data
@@ -171,6 +172,7 @@ def generate_google_url(model_id: str) -> str | None:
         model_id:
             The Google model ID.
     """
+    model_id = model_id.replace("gemini/", "")
     client = GoogleClient(api_key=os.environ["GEMINI_API_KEY"])
     available_google_models = [
         model.name.split("/")[-1]
