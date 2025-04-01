@@ -31,7 +31,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (zero-shot, val)</a>",📝,1.89,,200019,8191,✓,✗
 <a href='https://huggingface.co/speakleash/Bielik-11B-v2.3-Instruct'>speakleash/Bielik-11B-v2.3-Instruct (few-shot)</a>,📝,1.91,11168796672,32128,32768,✓,✓
 <a href='https://huggingface.co/AI-Sweden-Models/Llama-3-8B-instruct'>AI-Sweden-Models/Llama-3-8B-instruct (few-shot)</a>,📝,1.92,8030261248,128256,8192,✓,✗
-<a href='https://huggingface.co/google/gemma-2-27b'>google/gemma-2-27b (few-shot)</a>,🧠,1.93,27227128320,256000,8192,✓,✗
+<a href='https://huggingface.co/google/gemma-2-27b'>google/gemma-2-27b (few-shot)</a>,🧠,1.94,27227128320,256000,8192,✓,✗
 <a href='https://huggingface.co/timpal0l/sol'>timpal0l/sol (few-shot)</a>,📝,1.94,10731540480,32002,4096,✗,✗
 <a href='https://huggingface.co/152334H/miqu-1-70b-sf'>152334H/miqu-1-70b-sf (few-shot)</a>,📝,1.96,68976648192,32000,32764,✓,✗
 <a href='https://huggingface.co/CohereForAI/aya-expanse-32b'>CohereForAI/aya-expanse-32b (few-shot)</a>,🧠,1.97,32296476672,256000,8192,✗,✗
@@ -92,7 +92,7 @@ mhenrichsen/danskgpt-chat-v2.1 (few-shot)</a>,📝,2.34,,32002,32768,✓,✗
 <a href='https://huggingface.co/01-ai/Yi-1.5-9B'>01-ai/Yi-1.5-9B (few-shot)</a>,🧠,2.41,8829407232,64000,4096,✓,✗
 "<a href='https://huggingface.co/merge-crew/da-sv-dare-ties-density-0.6'>merge-crew/da-sv-dare-ties-density-0.6 (few-shot, val)</a>",🧠,2.41,7241732096,32000,32768,✓,✓
 <a href='https://huggingface.co/timpal0l/njord-alpha'>timpal0l/njord-alpha (few-shot)</a>,🧠,2.41,7241732096,32000,32768,✓,✗
-<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.43,4299915632,262144,128000,✓,✗
+<a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.43,,,,✓,✗
 <a href='https://huggingface.co/google/gemma-3-4b-pt'>google/gemma-3-4b-pt (few-shot)</a>,🧠,2.44,4300079472,262144,128000,✓,✗
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-v01'>CohereForAI/c4ai-command-r-v01 (few-shot)</a>,📝,2.44,34980831232,256000,8192,✗,✗
 <a href='https://huggingface.co/alpindale/Mistral-7B-v0.2-hf'>alpindale/Mistral-7B-v0.2-hf (few-shot)</a>,🧠,2.44,7241732096,32000,32768,✓,✗
@@ -224,7 +224,7 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.44,7241732096,3
 <a href='https://huggingface.co/PleIAs/Pleias-1.2b-Preview'>PleIAs/Pleias-1.2b-Preview (few-shot)</a>,🧠,3.82,1195468800,65536,2048,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3b-code-instruct-2k'>ibm-granite/granite-3b-code-instruct-2k (few-shot)</a>,📝,3.88,3482503680,49152,2048,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-1B'>allenai/OLMo-1B (few-shot)</a>,🧠,3.90,1176764416,50280,2051,✓,✗
-<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,3.91,470607872,64000,2048,✓,✗
+<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,3.97,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/RJuro/kanelsnegl-v0.2'>RJuro/kanelsnegl-v0.2 (few-shot)</a>,📝,3.99,7241732096,32000,512,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m-instruct'>AI-Sweden-Models/gpt-sw3-126m-instruct (few-shot)</a>,📝,4.01,186112512,64000,2048,✓,✗
 <a href='https://huggingface.co/microsoft/phi-2'>microsoft/phi-2 (few-shot)</a>,🧠,4.04,2779683840,51200,2048,✓,✗
