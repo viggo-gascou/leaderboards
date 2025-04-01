@@ -22,7 +22,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.62,27400000000,262144,128000,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-3.5-turbo'>gpt-3.5-turbo-0613 (few-shot, val)</a>",📝,1.62,,100256,4094,✓,✗
 <a href='https://huggingface.co/Qwen/QwQ-32B-Preview'>Qwen/QwQ-32B-Preview (few-shot)</a>,📝,1.63,32763876352,152064,32768,✓,✗
-"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash'>gemini/gemini-2.0-flash (zero-shot, val)</a>",📝,1.70,,,1048576,✓,✗
+"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash'>gemini/gemini-2.0-flash (zero-shot, val)</a>",📝,1.70,,256128,1048576,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,1.70,12200000000,262144,128000,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4-turbo'>gpt-4-1106-preview (zero-shot, val)</a>",📝,1.71,,100256,8191,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (zero-shot, val)</a>",📝,1.72,,200019,8191,✓,✗

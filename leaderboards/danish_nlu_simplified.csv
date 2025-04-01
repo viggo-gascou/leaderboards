@@ -38,7 +38,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/NbAiLab/nb-sbert-base'>NbAiLab/nb-sbert-base</a>,🔍,1.88,177264386,119547,512,✓,✗
 <a href='https://huggingface.co/intfloat/multilingual-e5-large'>intfloat/multilingual-e5-large</a>,🔍,1.93,559890946,250002,512,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4-turbo'>gpt-4-1106-preview (zero-shot, val)</a>",📝,1.93,,100256,8191,✓,✗
-"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash'>gemini/gemini-2.0-flash (zero-shot, val)</a>",📝,1.93,,,1048576,✓,✗
+"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash'>gemini/gemini-2.0-flash (zero-shot, val)</a>",📝,1.93,,256128,1048576,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-70b-hf'>meta-llama/Llama-2-70b-hf (few-shot)</a>,🧠,1.94,68976653312,32000,4096,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B'>NorwAI/NorwAI-Mixtral-8x7B (few-shot)</a>,🧠,1.94,46997647360,67993,32768,✓,✗
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-08-2024'>CohereForAI/c4ai-command-r-08-2024 (few-shot)</a>,📝,1.95,32296476672,256000,131072,✗,✗

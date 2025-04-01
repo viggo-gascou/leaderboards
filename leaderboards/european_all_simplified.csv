@@ -70,7 +70,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/occiglot/occiglot-7b-eu5'>occiglot/occiglot-7b-eu5 (few-shot)</a>,🧠,3.03,7241732096,32000,4096,✓,✗
 <a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_2-3t-tokens_llama'>TrustLLMeu/baseline-7-8b_2-3t-tokens_llama (few-shot)</a>,🧠,3.09,7799574528,100096,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,3.10,8054910976,49152,4096,✓,✗
-<a href='https://huggingface.co/LumiOpen/Viking-33B'>LumiOpen/Viking-33B (few-shot)</a>,🧠,3.10,33119034368,131072,4096,✓,✗
+<a href='https://huggingface.co/LumiOpen/Viking-33B'>LumiOpen/Viking-33B (few-shot)</a>,🧠,3.11,33119034368,131072,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k'>ibm-granite/granite-8b-code-instruct-4k (few-shot)</a>,📝,3.13,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-chat-hf'>meta-llama/Llama-2-13b-chat-hf (few-shot)</a>,📝,3.21,13015866880,32000,4096,✓,✗
 <a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_1t-tokens_llama'>TrustLLMeu/baseline-7-8b_1t-tokens_llama (few-shot)</a>,🧠,3.21,7799574528,100096,4096,✓,✗
