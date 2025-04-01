@@ -180,6 +180,5 @@ def generate_google_url(model_id: str) -> str | None:
         if model.name is not None
     ]
     if model_id in available_google_models:
-        model_id_without_suffix = re.sub(r"-\d+$", "", model_id)
-        return f"https://ai.google.dev/gemini-api/docs/models#{model_id_without_suffix}"
+        return f"https://ai.google.dev/gemini-api/docs/models#{model_id}"
     return None
