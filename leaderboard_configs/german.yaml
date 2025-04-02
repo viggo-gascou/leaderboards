@@ -7,7 +7,7 @@ linguistic-acceptability:
 reading-comprehension:
   - germanquad
 summarization:
-  - mlsum
+  - mlsum-de
 knowledge:
   - mmlu-de
 common-sense-reasoning:
