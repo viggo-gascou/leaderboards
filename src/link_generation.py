@@ -65,6 +65,8 @@ def generate_anchor_tag(model_id: str) -> str:
     if url is None:
         url = generate_google_url(model_id=model_id_without_revision)
     if url is None:
+        url = generate_xai_url(model_id=model_id_without_revision)
+    if url is None:
         logger.error(f"Could not find a URL for model {model_id_without_revision}.")
 
     return model_id if url is None else f"<a href='{url}'>{model_id}</a>"
@@ -171,6 +173,9 @@ def generate_google_url(model_id: str) -> str | None:
     Args:
         model_id:
             The Google model ID.
+
+    Returns:
+        The URL for the model on Google, or None if the model does not exist on Google.
     """
     model_id = model_id.replace("gemini/", "")
     client = GoogleClient(api_key=os.environ["GEMINI_API_KEY"])
@@ -181,4 +186,24 @@ def generate_google_url(model_id: str) -> str | None:
     ]
     if model_id in available_google_models:
         return f"https://ai.google.dev/gemini-api/docs/models#{model_id}"
+    return None
+
+
+def generate_xai_url(model_id: str) -> str | None:
+    """Generate a model URL for a model hosted on xAI.
+
+    Args:
+        model_id:
+            The xAI model ID.
+
+    Returns:
+        The URL for the model on xAI, or None if the model does not exist on xAI.
+    """
+    model_id = model_id.replace("xai/", "")
+    client = openai.OpenAI(
+        api_key=os.environ["XAI_API_KEY"], base_url="https://api.x.ai/v1"
+    )
+    available_xai_models = [model.id for model in client.models.list()]
+    if model_id in available_xai_models:
+        return "https://docs.x.ai/docs/models"
     return None
