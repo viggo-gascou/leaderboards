@@ -5,6 +5,8 @@ update: pull check download process_results generate_leaderboards publish
 
 force-update: pull check download process_results force_generate_leaderboards publish
 
+no-download-update: pull check process_results generate_leaderboards publish
+
 pull:
 	@git pull
 
