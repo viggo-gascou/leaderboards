@@ -13,3 +13,6 @@ launch.json
 
 # Environment variables
 .env
+
+# Ipynb checkpoints
+**/.ipynb_checkpoints
