@@ -6,10 +6,10 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://platform.openai.com/docs/models/gpt-4'>gpt-4-0613 (few-shot, val)</a>",📝,1.45,,100256,8191,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct-FP8'>meta-llama/Llama-3.1-405B-Instruct-FP8 (few-shot)</a>,📝,1.45,405868625920,128256,131072,✓,✗
 <a href='https://huggingface.co/Qwen/QwQ-32B-Preview'>Qwen/QwQ-32B-Preview (few-shot)</a>,📝,1.47,32763876352,152064,32768,✓,✗
-"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-pro'>gemini/gemini-1.5-pro (few-shot, val)</a>",📝,1.48,,256128,2097152,✓,✗
+"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-pro-002'>gemini/gemini-1.5-pro-002 (few-shot, val)</a>",📝,1.48,,256128,2097152,✓,✗
 <a href='https://huggingface.co/intfloat/multilingual-e5-large-instruct'>intfloat/multilingual-e5-large-instruct</a>,🔍,1.49,559890432,250002,514,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct'>meta-llama/Llama-3.1-70B-Instruct (few-shot)</a>,📝,1.51,70553706496,128256,131072,✓,✗
-"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash'>gemini/gemini-2.0-flash (few-shot, val)</a>",📝,1.51,,256128,1048576,✓,✗
+"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-001'>gemini/gemini-2.0-flash-001 (few-shot, val)</a>",📝,1.51,,256128,1048576,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-72B-Instruct'>Qwen/Qwen2.5-72B-Instruct (few-shot)</a>,📝,1.52,72706203648,152064,32768,✓,✗
 <a href='https://huggingface.co/FacebookAI/roberta-large'>FacebookAI/roberta-large</a>,🔍,1.52,355362819,50265,512,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4-turbo'>gpt-4-1106-preview (few-shot, val)</a>",📝,1.53,,100256,128000,✓,✗
@@ -18,7 +18,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,1.55,70553706496,128256,131072,✓,✗
 <a href='https://huggingface.co/FacebookAI/roberta-base'>FacebookAI/roberta-base</a>,🔍,1.55,124647939,50265,512,✓,✗
 <a href='https://ollama.com/library/gemma3:27b-it-fp16'>ollama_chat/gemma3:27b-it-fp16 (few-shot)</a>,📝,1.56,,,,✓,✗
-"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-lite'>gemini/gemini-2.0-flash-lite (few-shot, val)</a>",📝,1.57,,256128,1048576,✓,✗
+"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-lite-001'>gemini/gemini-2.0-flash-lite-001 (few-shot, val)</a>",📝,1.57,,256128,1048576,✓,✗
 <a href='https://huggingface.co/ThatsGroes/gemma-2-27b-it-FP8-Dynamic'>ThatsGroes/gemma-2-27b-it-FP8-Dynamic (few-shot)</a>,📝,1.59,28410968576,256000,4096,✓,✗
 "<a href='https://platform.openai.com/docs/models/o3-mini'>o3-mini-2025-01-31 (few-shot, val)</a>",🤔,1.60,,,200000,✓,✗
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-sonnet-20241022 (zero-shot, val)</a>",📝,1.60,,,200000,✓,✗
@@ -48,7 +48,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/upstage/SOLAR-10.7B-v1.0'>upstage/SOLAR-10.7B-v1.0 (few-shot)</a>,🧠,1.73,10731524096,32000,4096,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.73,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B'>allenai/Llama-3.1-Tulu-3-8B (few-shot)</a>,📝,1.74,8030326784,128264,131072,✓,✗
-"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-pro'>gemini/gemini-1.5-pro (zero-shot, val)</a>",📝,1.74,,256128,2097152,✓,✗
+"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-pro-002'>gemini/gemini-1.5-pro-002 (zero-shot, val)</a>",📝,1.74,,256128,2097152,✓,✗
 <a href='https://huggingface.co/intfloat/multilingual-e5-base'>intfloat/multilingual-e5-base</a>,🔍,1.74,278044162,250002,512,✓,✗
 <a href='https://huggingface.co/CohereForAI/aya-23-35B'>CohereForAI/aya-23-35B (few-shot)</a>,🧠,1.75,34980831232,256000,8192,✗,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-7B-Instruct'>tiiuae/Falcon3-7B-Instruct (few-shot)</a>,📝,1.76,7455550464,131072,32768,✓,✗
@@ -72,9 +72,9 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/setu4993/LaBSE'>setu4993/LaBSE</a>,🔍,1.84,470927360,501153,512,✓,✗
 <a href='https://huggingface.co/google/gemma-2-27b-it'>google/gemma-2-27b-it (few-shot)</a>,📝,1.85,27227128320,256000,8192,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct'>meta-llama/Llama-3.1-8B-Instruct (few-shot)</a>,📝,1.85,8030261248,128256,131072,✓,✗
-"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash'>gemini/gemini-2.0-flash (zero-shot, val)</a>",📝,1.87,,256128,1048576,✓,✗
+"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-lite-001'>gemini/gemini-2.0-flash-lite-001 (zero-shot, val)</a>",📝,1.87,,256128,1048576,✓,✗
 skole-gpt-mixtral (few-shot)</a>,🧠,1.87,,32000,32768,✓,✗
-"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-lite'>gemini/gemini-2.0-flash-lite (zero-shot, val)</a>",📝,1.87,,256128,1048576,✓,✗
+"<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-001'>gemini/gemini-2.0-flash-001 (zero-shot, val)</a>",📝,1.87,,256128,1048576,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-10B-Base'>tiiuae/Falcon3-10B-Base (few-shot)</a>,🧠,1.87,10305653760,131072,32768,✓,✗
 <a href='https://huggingface.co/microsoft/Phi-3-mini-4k-instruct'>microsoft/Phi-3-mini-4k-instruct (few-shot)</a>,📝,1.87,3821079552,32064,2047,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-instruct'>ibm-granite/granite-3.0-8b-instruct (few-shot)</a>,📝,1.88,8170848256,49155,4096,✓,✗
