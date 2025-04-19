@@ -45,7 +45,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-08-2024'>CohereForAI/c4ai-command-r-08-2024 (few-shot)</a>,📝,1.70,32296476672,256000,131072,✗,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-10B-Instruct'>tiiuae/Falcon3-10B-Instruct (few-shot)</a>,📝,1.71,10305653760,131072,32768,✓,✗
 <a href='https://huggingface.co/google-bert/bert-large-uncased'>google-bert/bert-large-uncased</a>,🔍,1.72,335144963,30522,512,✓,✗
-"<a href='https://docs.x.ai/docs/models'>xai/grok-3-beta@ (zero-shot, val)</a>",📝,1.72,,,131072,✓,✗
+"<a href='https://docs.x.ai/docs/models'>xai/grok-3-beta (zero-shot, val)</a>",📝,1.72,,,131072,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,1.73,12200000000,262144,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-70b-hf'>meta-llama/Llama-2-70b-hf (few-shot)</a>,🧠,1.73,68976653312,32000,4096,✓,✗
 <a href='https://huggingface.co/upstage/SOLAR-10.7B-v1.0'>upstage/SOLAR-10.7B-v1.0 (few-shot)</a>,🧠,1.73,10731524096,32000,4096,✓,✗

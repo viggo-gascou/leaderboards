@@ -15,7 +15,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/google/gemma-3-27b-pt'>google/gemma-3-27b-pt (few-shot)</a>,🧠,1.99,27432406640,262144,,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct'>meta-llama/Llama-3.1-70B-Instruct (few-shot)</a>,📝,2.00,70553706496,128256,131072,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (few-shot, val)</a>",📝,2.01,,200019,8191,✓,✗
-"<a href='https://docs.x.ai/docs/models'>xai/grok-3-beta@ (zero-shot, val)</a>",📝,2.01,,,131072,✓,✗
+"<a href='https://docs.x.ai/docs/models'>xai/grok-3-beta (zero-shot, val)</a>",📝,2.01,,,131072,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,2.03,,200019,8191,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,2.05,70553706496,128256,131072,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-72B-Instruct'>Qwen/Qwen2.5-72B-Instruct (few-shot)</a>,📝,2.05,72706203648,152064,32768,✓,✗

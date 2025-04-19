@@ -20,7 +20,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://platform.openai.com/docs/models/o3-mini'>o3-mini-2025-01-31 (few-shot, val)</a>",🤔,1.53,,,200000,✓,✗
 <a href='https://huggingface.co/CohereForAI/aya-expanse-32b'>CohereForAI/aya-expanse-32b (few-shot)</a>,📝,1.53,32296476672,256000,8192,✗,✗
 <a href='https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501'>mistralai/Mistral-Small-24B-Instruct-2501 (few-shot)</a>,📝,1.55,23572403200,131072,32768,✓,✗
-"<a href='https://docs.x.ai/docs/models'>xai/grok-3-beta@ (zero-shot, val)</a>",📝,1.55,,,131072,✓,✗
+"<a href='https://docs.x.ai/docs/models'>xai/grok-3-beta (zero-shot, val)</a>",📝,1.55,,,131072,✓,✗
 <a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.55,27432406640,262144,,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (few-shot, val)</a>",📝,1.56,,200019,8191,✓,✗
 "<a href='https://docs.x.ai/docs/models'>xai/grok-2-1212 (zero-shot, val)</a>",📝,1.57,,,131072,✓,✗

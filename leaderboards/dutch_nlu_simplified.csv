@@ -24,7 +24,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/DTAI-KULeuven/robbertje-1-gb-merged'>DTAI-KULeuven/robbertje-1-gb-merged</a>,🔍,2.13,73646594,40000,512,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview-04-17'>gemini/gemini-2.5-flash-preview-04-17 (zero-shot, val)</a>",🤔,2.16,,256128,1048576,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-q4_K_M'>ollama_chat/gemma3:12b-it-q4_K_M (few-shot, val)</a>",📝,2.23,12200000000,262144,128000,✓,✗
-"<a href='https://docs.x.ai/docs/models'>xai/grok-3-beta@ (zero-shot, val)</a>",📝,2.25,,,131072,✓,✗
+"<a href='https://docs.x.ai/docs/models'>xai/grok-3-beta (zero-shot, val)</a>",📝,2.25,,,131072,✓,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,2.26,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct'>meta-llama/Llama-3.1-70B-Instruct (few-shot)</a>,📝,2.27,70553706496,128256,131072,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct-FP8'>meta-llama/Llama-3.1-405B-Instruct-FP8 (few-shot)</a>,📝,2.28,405868625920,128256,131072,✓,✗
