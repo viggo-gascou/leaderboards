@@ -68,7 +68,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B'>meta-llama/Llama-3.1-8B (few-shot)</a>,🧠,2.48,8030261248,128256,131072,✓,✗
 <a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.48,,,,✓,✗
 <a href='https://huggingface.co/NousResearch/DeepHermes-3-Llama-3-8B-Preview'>NousResearch/DeepHermes-3-Llama-3-8B-Preview (few-shot)</a>,📝,2.49,8030261248,128256,131072,✓,✗
-<a href='https://huggingface.co/google/gemma-7b'>google/gemma-7b (few-shot)</a>,🧠,2.50,8537680896,256000,8192,✓,✗
+<a href='https://huggingface.co/google/gemma-7b'>google/gemma-7b (few-shot)</a>,🧠,2.52,8537680896,256000,8192,✓,✗
 <a href='https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1'>mistralai/Mixtral-8x7B-Instruct-v0.1 (few-shot)</a>,📝,2.52,46702792704,32000,32768,✓,✗
 <a href='https://huggingface.co/norallm/normistral-11b-warm'>norallm/normistral-11b-warm (few-shot)</a>,🧠,2.53,11429893120,51200,1024000,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B'>meta-llama/Meta-Llama-3-8B (few-shot)</a>,🧠,2.56,8030261248,128256,8192,✓,✗

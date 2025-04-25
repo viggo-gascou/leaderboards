@@ -118,7 +118,7 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.44,7241732096,3
 <a href='https://huggingface.co/alpindale/Mistral-7B-v0.2-hf'>alpindale/Mistral-7B-v0.2-hf (few-shot)</a>,🧠,2.44,7241732096,32000,32768,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-8b-instruct'>ibm-granite/granite-3.0-8b-instruct (few-shot)</a>,📝,2.45,8170848256,49155,4096,✓,✗
 <a href='https://huggingface.co/mhenrichsen/hestenettetLM'>mhenrichsen/hestenettetLM (few-shot)</a>,🧠,2.45,7241732096,32000,32768,✓,✗
-<a href='https://huggingface.co/google/gemma-7b'>google/gemma-7b (few-shot)</a>,🧠,2.48,8537680896,256000,8192,✓,✗
+<a href='https://huggingface.co/google/gemma-7b'>google/gemma-7b (few-shot)</a>,🧠,2.47,8537680896,256000,8192,✓,✗
 "<a href='https://huggingface.co/KennethEnevoldsen/munin_mistral-7b'>KennethEnevoldsen/munin_mistral-7b (few-shot, val)</a>",🧠,2.48,7241732096,32000,32768,✗,✓
 <a href='https://huggingface.co/CohereForAI/aya-23-8B'>CohereForAI/aya-23-8B (few-shot)</a>,🧠,2.48,8028033024,256000,8192,✗,✗
 <a href='https://huggingface.co/BSC-LT/salamandra-7b-instruct'>BSC-LT/salamandra-7b-instruct (few-shot)</a>,📝,2.48,7768117248,256000,8192,✓,✗
