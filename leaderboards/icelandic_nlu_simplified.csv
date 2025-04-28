@@ -50,7 +50,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/intfloat/multilingual-e5-large-instruct'>intfloat/multilingual-e5-large-instruct</a>,🔍,2.23,559890432,250002,514,✓,✗
 <a href='https://huggingface.co/google/gemma-3-12b-it'>google/gemma-3-12b-it (few-shot)</a>,📝,2.24,12187325040,262144,,✓,✗
 <a href='https://huggingface.co/mgoin/Nemotron-4-340B-Instruct-hf-FP8'>mgoin/Nemotron-4-340B-Instruct-hf-FP8 (few-shot)</a>,📝,2.24,341029195776,256000,4096,✓,✗
-<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-instruct'>meta-llama/Meta-Llama-3-70B-instruct (few-shot)</a>,📝,2.28,70553706496,128256,8192,✓,✗
+<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct'>meta-llama/Meta-Llama-3-70B-Instruct (few-shot)</a>,📝,2.28,70553706496,128256,8192,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-pro-002'>gemini/gemini-1.5-pro-002 (zero-shot, val)</a>",📝,2.30,,256128,2097152,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4-turbo'>gpt-4-1106-preview (zero-shot, val)</a>",📝,2.30,,100256,8191,✓,✗
 <a href='https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF'>nvidia/Llama-3.1-Nemotron-70B-Instruct-HF (few-shot)</a>,📝,2.32,70553706496,128256,131072,✓,✗

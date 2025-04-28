@@ -13,7 +13,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/FacebookAI/roberta-large'>FacebookAI/roberta-large</a>,🔍,1.54,355362819,50265,512,✓,✗
 <a href='https://huggingface.co/intfloat/multilingual-e5-large'>intfloat/multilingual-e5-large</a>,🔍,1.54,559890946,250002,512,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4-turbo'>gpt-4-1106-preview (few-shot, val)</a>",📝,1.54,,100256,128000,✓,✗
-<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-instruct'>meta-llama/Meta-Llama-3-70B-instruct (few-shot)</a>,📝,1.55,70553706496,128256,8192,✓,✗
+<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct'>meta-llama/Meta-Llama-3-70B-Instruct (few-shot)</a>,📝,1.55,70553706496,128256,8192,✓,✗
 <a href='https://huggingface.co/FacebookAI/roberta-base'>FacebookAI/roberta-base</a>,🔍,1.56,124647939,50265,512,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,1.56,70553706496,128256,131072,✓,✗
 <a href='https://ollama.com/library/gemma3:27b-it-fp16'>ollama_chat/gemma3:27b-it-fp16 (few-shot)</a>,📝,1.56,,,,✓,✗

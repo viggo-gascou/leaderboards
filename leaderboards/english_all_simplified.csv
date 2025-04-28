@@ -12,7 +12,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.5-pro-preview-03-25'>gemini/gemini-2.5-pro-preview-03-25 (zero-shot, val)</a>",🤔,1.50,,256128,1048576,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (few-shot, val)</a>",📝,1.50,,200019,128000,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-lite-001'>gemini/gemini-2.0-flash-lite-001 (few-shot, val)</a>",📝,1.51,,256128,1048576,✓,✗
-<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-instruct'>meta-llama/Meta-Llama-3-70B-instruct (few-shot)</a>,📝,1.51,70553706496,128256,8192,✓,✗
+<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct'>meta-llama/Meta-Llama-3-70B-Instruct (few-shot)</a>,📝,1.51,70553706496,128256,8192,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.53,,200019,8191,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B'>meta-llama/Meta-Llama-3-70B (few-shot)</a>,🧠,1.53,70553706496,128256,8192,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-flash-002'>gemini/gemini-1.5-flash-002 (few-shot, val)</a>",📝,1.55,,256128,1048576,✓,✗

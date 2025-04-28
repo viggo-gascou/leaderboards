@@ -25,7 +25,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/KB/bert-base-swedish-cased'>KB/bert-base-swedish-cased</a>,🔍,1.48,124693251,50325,512,✓,✗
 <a href='https://huggingface.co/google/gemma-3-12b-pt'>google/gemma-3-12b-pt (few-shot)</a>,🧠,1.49,12187325040,262144,,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-3.5-turbo'>gpt-3.5-turbo-0613 (few-shot, val)</a>",📝,1.49,,100256,4095,✓,✗
-<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-instruct'>meta-llama/Meta-Llama-3-70B-instruct (few-shot)</a>,📝,1.50,70553706496,128256,8192,✓,✗
+<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct'>meta-llama/Meta-Llama-3-70B-Instruct (few-shot)</a>,📝,1.50,70553706496,128256,8192,✓,✗
 <a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.51,27432406640,262144,,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4.1'>gpt-4.1-2025-04-14 (zero-shot, val)</a>",📝,1.51,,,1047576,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-72B-Instruct'>Qwen/Qwen2.5-72B-Instruct (few-shot)</a>,📝,1.51,72706203648,152064,32768,✓,✗
