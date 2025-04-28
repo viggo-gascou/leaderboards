@@ -1,5 +1,5 @@
 sentiment-classification:
-  - dutch-social
+  - dbrd
 named-entity-recognition:
   - conll-nl
 linguistic-acceptability:
