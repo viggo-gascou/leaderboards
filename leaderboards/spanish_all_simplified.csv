@@ -18,7 +18,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/google/gemma-3-27b-pt'>google/gemma-3-27b-pt (few-shot)</a>,🧠,1.51,27432406640,262144,,✓,✗
 "<a href='https://docs.x.ai/docs/models'>xai/grok-3-beta (zero-shot, val)</a>",📝,1.53,,,131072,✓,✗
 <a href='https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF'>nvidia/Llama-3.1-Nemotron-70B-Instruct-HF (few-shot)</a>,📝,1.53,70553706496,128256,131072,✓,✗
-<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-instruct'>meta-llama/Meta-Llama-3-70B-instruct (few-shot)</a>,📝,1.55,70553706496,128256,8192,✓,✗
+<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct'>meta-llama/Meta-Llama-3-70B-Instruct (few-shot)</a>,📝,1.55,70553706496,128256,8192,✓,✗
 <a href='https://huggingface.co/CohereForAI/aya-expanse-32b'>CohereForAI/aya-expanse-32b (few-shot)</a>,📝,1.55,32296476672,256000,8192,✗,✗
 <a href='https://huggingface.co/google/gemma-3-12b-it'>google/gemma-3-12b-it (few-shot)</a>,📝,1.60,12187325040,262144,,✓,✗
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-sonnet-20241022 (zero-shot, val)</a>",📝,1.61,,,200000,✓,✗
