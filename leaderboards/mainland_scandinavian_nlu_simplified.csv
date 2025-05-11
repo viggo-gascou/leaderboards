@@ -136,8 +136,8 @@ mhenrichsen/danskgpt-chat-v2.1 (few-shot)</a>,📝,2.25,,32002,32768,✓,✗
 <a href='https://huggingface.co/timpal0l/njord-alpha'>timpal0l/njord-alpha (few-shot)</a>,🧠,2.39,7241732096,32000,32768,✓,✗
 "<a href='https://huggingface.co/birgermoell/Rapid-Cycling'>birgermoell/Rapid-Cycling (few-shot, val)</a>",🧠,2.39,7241732096,32000,32768,✗,✓
 "<a href='https://huggingface.co/merge-crew/da-sv-slerp'>merge-crew/da-sv-slerp (few-shot, val)</a>",🧠,2.39,7241732096,32000,32768,✓,✓
-<a href='https://huggingface.co/mistralai/Ministral-8B-Instruct-2410'>mistralai/Ministral-8B-Instruct-2410 (few-shot)</a>,📝,2.39,8019808256,131072,32768,✓,✗
 "<a href='https://huggingface.co/timpal0l/BeagleCatMunin2'>timpal0l/BeagleCatMunin2 (few-shot, val)</a>",🧠,2.40,7241732096,32000,32768,✗,✓
+<a href='https://huggingface.co/mistralai/Ministral-8B-Instruct-2410'>mistralai/Ministral-8B-Instruct-2410 (few-shot)</a>,📝,2.40,8019808256,131072,32768,✓,✗
 <a href='https://huggingface.co/KBLab/megatron-bert-base-swedish-cased-600k'>KBLab/megatron-bert-base-swedish-cased-600k</a>,🔍,2.40,135293955,64128,512,✓,✗
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-llama-3B'>deepcogito/cogito-v1-preview-llama-3B (few-shot)</a>,📝,2.40,3606752256,128256,131072,✓,✗
 <a href='https://huggingface.co/Mabeck/Heidrun-Mistral-7B-chat'>Mabeck/Heidrun-Mistral-7B-chat (few-shot)</a>,📝,2.41,7241732096,32000,32768,✗,✗
