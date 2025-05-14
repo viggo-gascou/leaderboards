@@ -43,8 +43,8 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/CohereForAI/aya-expanse-32b'>CohereForAI/aya-expanse-32b (few-shot)</a>,📝,2.13,32296476672,256000,8192,✗,✗
 <a href='https://huggingface.co/google/gemma-2-9b-it'>google/gemma-2-9b-it (few-shot)</a>,📝,2.15,9241705984,256000,8192,✓,✗
 <a href='https://huggingface.co/google/gemma-2-27b'>google/gemma-2-27b (few-shot)</a>,🧠,2.17,27227128320,256000,8192,✓,✗
+<a href='https://huggingface.co/deepcogito/cogito-v1-preview-llama-8B'>deepcogito/cogito-v1-preview-llama-8B (few-shot)</a>,📝,2.18,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407'>mistralai/Mistral-Nemo-Instruct-2407 (few-shot)</a>,📝,2.18,12247782400,131072,131072,✓,✗
-<a href='https://huggingface.co/deepcogito/cogito-v1-preview-llama-8B'>deepcogito/cogito-v1-preview-llama-8B (few-shot)</a>,📝,2.19,8030261248,128256,131072,✓,✗
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-08-2024'>CohereForAI/c4ai-command-r-08-2024 (few-shot)</a>,📝,2.20,32296476672,256000,131072,✗,✗
 <a href='https://huggingface.co/google/gemma-2-9b'>google/gemma-2-9b (few-shot)</a>,🧠,2.26,9241705984,256000,8192,✓,✗
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B-SFT'>allenai/Llama-3.1-Tulu-3-8B-SFT (few-shot)</a>,📝,2.27,8030326784,128264,131072,✓,✗
