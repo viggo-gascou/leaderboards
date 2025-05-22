@@ -211,7 +211,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B'>Qwen/Qwen1.5-0.5B (few-shot)</a>,📝,3.80,619570176,151936,32768,✓,✗
 <a href='https://huggingface.co/RuterNorway/Llama-2-7b-chat-norwegian'>RuterNorway/Llama-2-7b-chat-norwegian (few-shot)</a>,📝,3.81,,32000,4096,✗,✗
 <a href='https://huggingface.co/PleIAs/Pleias-Nano'>PleIAs/Pleias-Nano (few-shot)</a>,🧠,3.89,1195468800,65536,2048,✓,✗
-<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,3.99,470607872,64000,2048,✓,✗
+<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,3.98,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m-instruct'>AI-Sweden-Models/gpt-sw3-126m-instruct (few-shot)</a>,📝,4.00,186112512,64000,2048,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat'>Qwen/Qwen1.5-0.5B-Chat (few-shot)</a>,📝,4.05,619570176,151936,32768,✗,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M'>HuggingFaceTB/SmolLM2-360M (few-shot)</a>,🧠,4.06,361821120,49152,8192,✓,✗
