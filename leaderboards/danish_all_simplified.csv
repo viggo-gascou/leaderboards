@@ -268,8 +268,8 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.28,7241732096,3
 <a href='https://huggingface.co/infly/OpenCoder-8B-Base'>infly/OpenCoder-8B-Base (few-shot)</a>,📝,3.71,7771263040,96640,8192,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-1B-Instruct'>tiiuae/Falcon3-1B-Instruct (few-shot)</a>,📝,3.73,1669408768,131072,8192,✓,✗
 <a href='https://huggingface.co/DiscoResearch/DiscoLM-70b'>DiscoResearch/DiscoLM-70b (few-shot)</a>,🧠,3.74,68977172480,32032,8192,✗,✗
-<a href='https://huggingface.co/timpal0l/Mistral-7B-v0.1-flashback-v2'>timpal0l/Mistral-7B-v0.1-flashback-v2 (few-shot)</a>,📝,3.75,7241732096,32000,4096,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-3b-Preview'>PleIAs/Pleias-3b-Preview (few-shot)</a>,🧠,3.75,3211926528,65536,4096,✓,✗
+<a href='https://huggingface.co/timpal0l/Mistral-7B-v0.1-flashback-v2'>timpal0l/Mistral-7B-v0.1-flashback-v2 (few-shot)</a>,📝,3.75,7241732096,32000,4096,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-7B-Twin-2T'>allenai/OLMo-7B-Twin-2T (few-shot)</a>,🧠,3.79,6888095744,50280,2080,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat'>Qwen/Qwen1.5-0.5B-Chat (few-shot)</a>,📝,3.79,619570176,151936,32768,✗,✗
 <a href='https://huggingface.co/infly/OpenCoder-1.5B-Instruct'>infly/OpenCoder-1.5B-Instruct (few-shot)</a>,📝,3.80,1905650880,96640,4096,✗,✗
@@ -277,12 +277,12 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.28,7241732096,3
 <a href='https://huggingface.co/RJuro/kanelsnegl-v0.2'>RJuro/kanelsnegl-v0.2 (few-shot)</a>,📝,3.95,7241732096,32000,512,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M'>HuggingFaceTB/SmolLM2-360M (few-shot)</a>,🧠,3.96,361821120,49152,8192,✓,✗
 <a href='https://huggingface.co/RJuro/kanelsnegl-v0.1'>RJuro/kanelsnegl-v0.1 (few-shot)</a>,📝,3.97,7241732096,32000,512,✓,✗
-<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,3.98,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/NbAiLab/nb-gpt-j-6B-v2'>NbAiLab/nb-gpt-j-6B-v2 (few-shot)</a>,🧠,3.98,6050882784,50400,1024,✗,✗
+<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,3.98,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/RuterNorway/Llama-2-7b-chat-norwegian'>RuterNorway/Llama-2-7b-chat-norwegian (few-shot)</a>,📝,3.99,6738415616,32000,4096,✗,✗
 <a href='https://huggingface.co/PleIAs/Pleias-Pico'>PleIAs/Pleias-Pico (few-shot)</a>,🧠,4.03,353424384,65536,2048,✓,✗
-<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m-instruct'>AI-Sweden-Models/gpt-sw3-126m-instruct (few-shot)</a>,📝,4.04,186112512,64000,2048,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct'>HuggingFaceTB/SmolLM2-360M-Instruct (few-shot)</a>,📝,4.04,361821120,49152,8192,✓,✗
+<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m-instruct'>AI-Sweden-Models/gpt-sw3-126m-instruct (few-shot)</a>,📝,4.05,186112512,64000,2048,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M'>HuggingFaceTB/SmolLM2-135M (few-shot)</a>,🧠,4.06,134515008,49152,8192,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m'>AI-Sweden-Models/gpt-sw3-126m (few-shot)</a>,🧠,4.06,186112512,64000,2048,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-1B'>allenai/OLMo-1B (few-shot)</a>,🧠,4.06,1176764416,50280,2080,✓,✗
