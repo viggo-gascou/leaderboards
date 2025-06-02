@@ -12,11 +12,11 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview-04-17'>gemini/gemini-2.5-flash-preview-04-17 (zero-shot, val)</a>",🤔,1.65,,256128,1048576,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct'>meta-llama/Llama-3.1-70B-Instruct (few-shot)</a>,📝,1.69,70553706496,128256,131072,✓,✗
 "<a href='https://platform.openai.com/docs/models/o4-mini'>o4-mini-2025-04-16 (zero-shot, val)</a>",🤔,1.70,,,200000,✓,✗
+<a href='https://huggingface.co/Qwen/Qwen2.5-72B-Instruct'>Qwen/Qwen2.5-72B-Instruct (few-shot)</a>,📝,1.70,72706203648,152064,32768,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B'>meta-llama/Meta-Llama-3-70B (few-shot)</a>,🧠,1.70,70553706496,128256,8192,✓,✗
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-sonnet-20241022 (zero-shot, val)</a>",📝,1.70,,,200000,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (few-shot, val)</a>",📝,1.71,,200019,8191,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct'>meta-llama/Llama-3.3-70B-Instruct (few-shot)</a>,📝,1.71,70553706496,128256,131072,✓,✗
-<a href='https://huggingface.co/Qwen/Qwen2.5-72B-Instruct'>Qwen/Qwen2.5-72B-Instruct (few-shot)</a>,📝,1.71,72706203648,152064,32768,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.71,,200019,8191,✓,✗
 <a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.72,27432406640,262144,,✓,✗
 "<a href='https://docs.x.ai/docs/models'>xai/grok-3-beta (zero-shot, val)</a>",📝,1.72,,,131072,✓,✗
@@ -25,9 +25,9 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-qwen-14B'>deepcogito/cogito-v1-preview-qwen-14B (few-shot)</a>,📝,1.78,14765947904,151665,131072,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-001'>gemini/gemini-2.0-flash-001 (zero-shot, val)</a>",📝,1.82,,256128,1048576,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen3-32B'>Qwen/Qwen3-32B (few-shot)</a>,🤔,1.83,32762123264,151936,40960,✓,✗
+<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct'>meta-llama/Meta-Llama-3-70B-Instruct (few-shot)</a>,📝,1.83,70553706496,128256,8192,✓,✗
 "<a href='https://docs.x.ai/docs/models'>xai/grok-3-mini-beta@high (zero-shot, val)</a>",🤔,1.83,,,131072,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen3-30B-A3B'>Qwen/Qwen3-30B-A3B (few-shot)</a>,🤔,1.84,30532122624,151936,40960,✓,✗
-<a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct'>meta-llama/Meta-Llama-3-70B-Instruct (few-shot)</a>,📝,1.84,70553706496,128256,8192,✓,✗
 <a href='https://huggingface.co/Qwen/QwQ-32B'>Qwen/QwQ-32B (few-shot)</a>,🤔,1.84,32763876352,152064,40960,✓,✗
 "<a href='https://docs.x.ai/docs/models'>xai/grok-2-1212 (zero-shot, val)</a>",📝,1.84,,,131072,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-pro-002'>gemini/gemini-1.5-pro-002 (zero-shot, val)</a>",📝,1.85,,256128,2097152,✓,✗
@@ -40,10 +40,10 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/ThatsGroes/gemma-2-27b-it-FP8-Dynamic'>ThatsGroes/gemma-2-27b-it-FP8-Dynamic (few-shot)</a>,📝,1.94,28410968576,256000,8192,✓,✗
 "<a href='https://platform.openai.com/docs/models/o3-mini'>o3-mini-2025-01-31 (zero-shot, val)</a>",🤔,1.95,,,200000,✓,✗
 <a href='https://huggingface.co/google/gemma-3-12b-pt'>google/gemma-3-12b-pt (few-shot)</a>,🧠,1.98,12187325040,262144,,✓,✗
+"<a href='https://platform.openai.com/docs/models/gpt-4.1-nano'>gpt-4.1-nano-2025-04-14 (few-shot, val)</a>",📝,2.00,,,1047576,✓,✗
 <a href='https://huggingface.co/CohereForAI/aya-expanse-32b'>CohereForAI/aya-expanse-32b (few-shot)</a>,📝,2.00,32296476672,256000,8192,✗,✗
-"<a href='https://platform.openai.com/docs/models/gpt-4.1-nano'>gpt-4.1-nano-2025-04-14 (few-shot, val)</a>",📝,2.01,,,1047576,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (zero-shot, val)</a>",📝,2.01,,200019,8191,✓,✗
-<a href='https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF'>nvidia/Llama-3.1-Nemotron-70B-Instruct-HF (few-shot)</a>,📝,2.02,70553706496,128256,131072,✓,✗
+<a href='https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF'>nvidia/Llama-3.1-Nemotron-70B-Instruct-HF (few-shot)</a>,📝,2.01,70553706496,128256,131072,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-flash-002'>gemini/gemini-1.5-flash-002 (zero-shot, val)</a>",📝,2.02,,256128,1048576,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen3-8B'>Qwen/Qwen3-8B (few-shot)</a>,🤔,2.08,8190735360,151936,40960,✓,✗
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-llama-8B'>deepcogito/cogito-v1-preview-llama-8B (few-shot)</a>,📝,2.10,8030261248,128256,131072,✓,✗
@@ -64,7 +64,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B'>allenai/Llama-3.1-Tulu-3-8B (few-shot)</a>,📝,2.30,8030326784,128264,131072,✓,✗
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3.1-8B'>allenai/Llama-3.1-Tulu-3.1-8B (few-shot)</a>,📝,2.30,8030326784,128264,131072,✓,✗
 <a href='https://huggingface.co/CohereForAI/aya-23-35B'>CohereForAI/aya-23-35B (few-shot)</a>,📝,2.31,34980831232,256000,8192,✗,✗
-<a href='https://huggingface.co/nvidia/mistral-nemo-minitron-8b-base'>nvidia/mistral-nemo-minitron-8b-base (few-shot)</a>,🧠,2.33,8414105600,131072,8192,✓,✗
+<a href='https://huggingface.co/nvidia/mistral-nemo-minitron-8b-base'>nvidia/mistral-nemo-minitron-8b-base (few-shot)</a>,🧠,2.32,8414105600,131072,8192,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct'>meta-llama/Meta-Llama-3-8B-Instruct (few-shot)</a>,📝,2.34,8030261248,128256,8192,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4.1-nano'>gpt-4.1-nano-2025-04-14 (zero-shot, val)</a>",📝,2.35,,,1047576,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B-instruct'>NorwAI/NorwAI-Mixtral-8x7B-instruct (few-shot)</a>,📝,2.38,46997647360,67993,32768,✓,✗
