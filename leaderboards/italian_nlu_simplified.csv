@@ -192,13 +192,13 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M'>HuggingFaceTB/SmolLM2-360M (few-shot)</a>,🧠,3.81,361821120,49152,8192,✓,✗
 <a href='https://huggingface.co/croissantllm/CroissantLLMBase'>croissantllm/CroissantLLMBase (few-shot)</a>,🧠,3.86,,32000,2048,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat'>Qwen/Qwen1.5-0.5B-Chat (few-shot)</a>,📝,3.87,619570176,151936,32768,✗,✗
-<a href='https://huggingface.co/PleIAs/Pleias-350m-Preview'>PleIAs/Pleias-350m-Preview (few-shot)</a>,🧠,3.91,353424384,65536,2048,✓,✗
+<a href='https://huggingface.co/PleIAs/Pleias-350m-Preview'>PleIAs/Pleias-350m-Preview (few-shot)</a>,🧠,3.92,353424384,65536,2048,✓,✗
 <a href='https://huggingface.co/microsoft/Phi-4-mini-reasoning'>microsoft/Phi-4-mini-reasoning (few-shot)</a>,📝,3.93,3836021760,200064,131072,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-Pico'>PleIAs/Pleias-Pico (few-shot)</a>,🧠,3.99,353424384,65536,2048,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct'>HuggingFaceTB/SmolLM2-360M-Instruct (few-shot)</a>,📝,4.06,361821120,49152,8192,✓,✗
 <a href='https://huggingface.co/croissantllm/CroissantLLMChat-v0.1'>croissantllm/CroissantLLMChat-v0.1 (few-shot)</a>,📝,4.13,1345431552,32002,2048,✗,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-Math-1.5B'>Qwen/Qwen2.5-Math-1.5B (few-shot)</a>,📝,4.14,1543714304,151936,4096,✓,✗
-<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m'>AI-Sweden-Models/gpt-sw3-356m (few-shot)</a>,🧠,4.24,470607872,64000,2048,✓,✗
+<a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m'>AI-Sweden-Models/gpt-sw3-356m (few-shot)</a>,🧠,4.25,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M'>HuggingFaceTB/SmolLM2-135M (few-shot)</a>,🧠,4.26,134515008,49152,8192,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,4.29,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B'>Qwen/Qwen1.5-0.5B (few-shot)</a>,📝,4.30,619570176,151936,32768,✓,✗
