@@ -100,6 +100,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.13,,32000,32768,✓,✗
 "<a href='https://huggingface.co/merge-crew/da-sv-task-arithmetic'>merge-crew/da-sv-task-arithmetic (few-shot, val)</a>",🧠,2.24,7241732096,32000,32768,✓,✓
 "<a href='https://huggingface.co/merge-crew/da-sv-slerp'>merge-crew/da-sv-slerp (few-shot, val)</a>",🧠,2.24,7241732096,32000,32768,✓,✓
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-haiku-20241022 (zero-shot, val)</a>",📝,2.25,,,200000,✓,✗
+<a href='https://huggingface.co/Qwen/Qwen1.5-7B'>Qwen/Qwen1.5-7B (few-shot)</a>,📝,2.25,7721324544,151936,32768,✓,✗
 <a href='https://huggingface.co/allenai/Llama-3.1-Tulu-3.1-8B'>allenai/Llama-3.1-Tulu-3.1-8B (few-shot)</a>,📝,2.25,8030326784,128264,131072,✓,✗
 <a href='https://huggingface.co/01-ai/Yi-1.5-9B'>01-ai/Yi-1.5-9B (few-shot)</a>,🧠,2.25,8829407232,64000,4096,✓,✗
 "<a href='https://huggingface.co/AI-Sweden-Models/tyr'>AI-Sweden-Models/tyr (few-shot, val)</a>",📝,2.25,7241732096,32000,32768,✗,✓
@@ -107,7 +108,6 @@ skole-gpt-mixtral (few-shot)</a>,🧠,2.13,,32000,32768,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct'>meta-llama/Meta-Llama-3-8B-Instruct (few-shot)</a>,📝,2.26,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B'>meta-llama/Meta-Llama-3-8B (few-shot)</a>,🧠,2.26,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.26,4300079472,262144,,✓,✗
-<a href='https://huggingface.co/Qwen/Qwen1.5-7B'>Qwen/Qwen1.5-7B (few-shot)</a>,📝,2.26,7721324544,151936,32768,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-9B'>utter-project/EuroLLM-9B (few-shot)</a>,🧠,2.26,9152319488,128000,4096,✓,✗
 "<a href='https://huggingface.co/RJuro/munin-neuralbeagle-SkoleGPTOpenOrca-7b'>RJuro/munin-neuralbeagle-SkoleGPTOpenOrca-7b (few-shot, val)</a>",📝,2.26,7241748480,32002,32768,✗,✓
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r7b-12-2024'>CohereForAI/c4ai-command-r7b-12-2024 (few-shot)</a>,📝,2.27,8028033024,256000,4096,✗,✗
