@@ -107,9 +107,9 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (zero-shot)</a>,📝,2.29,27432406640,262144,,✓,✗
 <a href='https://huggingface.co/mistralai/Mixtral-8x7B-v0.1'>mistralai/Mixtral-8x7B-v0.1 (few-shot)</a>,🧠,2.30,46702792704,32000,32768,✓,✗
 skole-gpt-mixtral (few-shot)</a>,🧠,2.32,,32000,32768,✓,✗
+<a href='https://huggingface.co/CohereForAI/aya-23-35B'>CohereForAI/aya-23-35B (few-shot)</a>,📝,2.33,34980831232,256000,8192,✗,✗
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-08-2024'>CohereForAI/c4ai-command-r-08-2024 (few-shot)</a>,📝,2.34,32296476672,256000,131072,✗,✗
 <a href='https://huggingface.co/intfloat/multilingual-e5-base'>intfloat/multilingual-e5-base</a>,🔍,2.34,278044162,250002,512,✓,✗
-<a href='https://huggingface.co/CohereForAI/aya-23-35B'>CohereForAI/aya-23-35B (few-shot)</a>,📝,2.34,34980831232,256000,8192,✗,✗
 <a href='https://ollama.com/library/hf.co'>ollama_chat/hf.co/google/gemma-3-4b-it-qat-q4_0-gguf (few-shot)</a>,📝,2.34,3880099328,,131072,✓,✗
 <a href='https://huggingface.co/google/rembert'>google/rembert</a>,🔍,2.35,575922690,250300,512,✓,✗
 <a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.35,,,,✓,✗
@@ -185,8 +185,8 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.63,7241732096,3
 <a href='https://huggingface.co/tiiuae/Falcon3-7B-Instruct'>tiiuae/Falcon3-7B-Instruct (few-shot)</a>,📝,2.73,7455550464,131072,32768,✓,✗
 <a href='https://huggingface.co/google/gemma-2-2b-it'>google/gemma-2-2b-it (few-shot)</a>,📝,2.73,2614341888,256000,8192,✓,✗
 <a href='https://huggingface.co/Mabeck/Heidrun-Mistral-7B-base'>Mabeck/Heidrun-Mistral-7B-base (few-shot)</a>,🧠,2.73,7241732096,32000,32768,✓,✗
+<a href='https://huggingface.co/KBLab/megatron-bert-large-swedish-cased-165k'>KBLab/megatron-bert-large-swedish-cased-165k</a>,🔍,2.73,369621120,64128,512,✓,✗
 "<a href='https://huggingface.co/RJuro/munin-neuralbeagle-SkoleGPTOpenOrca-7b'>RJuro/munin-neuralbeagle-SkoleGPTOpenOrca-7b (few-shot, val)</a>",📝,2.73,7241748480,32002,4096,✗,✓
-<a href='https://huggingface.co/KBLab/megatron-bert-large-swedish-cased-165k'>KBLab/megatron-bert-large-swedish-cased-165k</a>,🔍,2.74,369621120,64128,512,✓,✗
 <a href='https://huggingface.co/RekaAI/reka-flash-3'>RekaAI/reka-flash-3 (few-shot)</a>,📝,2.74,20905482240,100352,32768,✓,✗
 <a href='https://huggingface.co/Geotrend/bert-base-en-no-cased'>Geotrend/bert-base-en-no-cased</a>,🔍,2.75,111441410,33071,512,✓,✗
 <a href='https://huggingface.co/BSC-LT/salamandra-7b'>BSC-LT/salamandra-7b (few-shot)</a>,🧠,2.75,7768117248,256000,8192,✓,✗
@@ -310,13 +310,13 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.63,7241732096,3
 <a href='https://huggingface.co/birgermoell/roberta-swedish-scandi'>birgermoell/roberta-swedish-scandi</a>,🔍,3.30,124647170,50265,512,✓,✗
 <a href='https://huggingface.co/timpal0l/Mistral-7B-v0.1-flashback-v2-instruct'>timpal0l/Mistral-7B-v0.1-flashback-v2-instruct (few-shot)</a>,📝,3.31,7241732096,32000,32768,✓,✗
 <a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,3.33,1000000000,262144,32768,✓,✗
-<a href='https://huggingface.co/NorwAI/NorwAI-Mistral-7B-instruct'>NorwAI/NorwAI-Mistral-7B-instruct (few-shot)</a>,📝,3.35,7536586752,67993,3969,✗,✗
 <a href='https://huggingface.co/LumiOpen/Viking-7B'>LumiOpen/Viking-7B (few-shot)</a>,🧠,3.35,7550013440,131072,4096,✓,✗
+<a href='https://huggingface.co/NorwAI/NorwAI-Mistral-7B-instruct'>NorwAI/NorwAI-Mistral-7B-instruct (few-shot)</a>,📝,3.35,7536586752,67993,3969,✗,✗
 <a href='https://huggingface.co/infly/OpenCoder-8B-Base'>infly/OpenCoder-8B-Base (few-shot)</a>,📝,3.37,7771263040,96640,8192,✓,✗
-<a href='https://huggingface.co/jjzha/dajobbert-base-uncased'>jjzha/dajobbert-base-uncased</a>,🔍,3.39,110425346,31748,512,✓,✗
 "<a href='https://huggingface.co/mlabonne/NeuralBeagle14-7B'>mlabonne/NeuralBeagle14-7B (few-shot, val)</a>",📝,3.39,7241732096,32000,4096,✗,✓
-<a href='https://huggingface.co/google/gemma-2-2b'>google/gemma-2-2b (few-shot)</a>,🧠,3.39,2614341888,256000,8192,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-3b-a800m-instruct'>ibm-granite/granite-3.0-3b-a800m-instruct (few-shot)</a>,📝,3.39,3374295552,49155,4096,✓,✗
+<a href='https://huggingface.co/google/gemma-2-2b'>google/gemma-2-2b (few-shot)</a>,🧠,3.39,2614341888,256000,8192,✓,✗
+<a href='https://huggingface.co/jjzha/dajobbert-base-uncased'>jjzha/dajobbert-base-uncased</a>,🔍,3.39,110425346,31748,512,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-Math-7B'>Qwen/Qwen2.5-Math-7B (few-shot)</a>,📝,3.40,7615616512,152064,4096,✓,✗
 <a href='https://huggingface.co/LumiOpen/Viking-13B'>LumiOpen/Viking-13B (few-shot)</a>,🧠,3.40,14030361600,131072,4096,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct'>meta-llama/Llama-3.2-1B-Instruct (few-shot)</a>,📝,3.42,1235814400,128256,131073,✓,✗
@@ -324,7 +324,6 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.63,7241732096,3
 <a href='https://huggingface.co/HPLT/gpt-13b-nordic-prerelease'>HPLT/gpt-13b-nordic-prerelease (few-shot)</a>,🧠,3.45,14030361600,131072,4096,✓,✗
 <a href='https://huggingface.co/vesteinn/XLMR-ENIS'>vesteinn/XLMR-ENIS</a>,🔍,3.46,124548012,50005,514,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-7b-instruct'>ibm-granite/granite-7b-instruct (few-shot)</a>,📝,3.46,6738481152,32008,4096,✓,✗
-<a href='https://huggingface.co/DDSC/roberta-base-scandinavian'>DDSC/roberta-base-scandinavian</a>,🔍,3.47,124647170,50265,514,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-3b-a800m-base'>ibm-granite/granite-3.0-3b-a800m-base (few-shot)</a>,🧠,3.47,3374286336,49152,4096,✓,✗
 <a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-research-v0.4'>openGPT-X/Teuken-7B-instruct-research-v0.4 (few-shot)</a>,📝,3.48,7452725248,250680,4096,✗,✗
 <a href='https://huggingface.co/BSC-LT/salamandra-2b-instruct'>BSC-LT/salamandra-2b-instruct (few-shot)</a>,📝,3.48,2253490176,256000,8192,✓,✗
@@ -337,16 +336,17 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.63,7241732096,3
 "<a href='https://huggingface.co/mlabonne/AlphaMonarch-7B'>mlabonne/AlphaMonarch-7B (few-shot, val)</a>",📝,3.52,7241732096,32000,4096,✗,✓
 <a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4'>openGPT-X/Teuken-7B-instruct-commercial-v0.4 (few-shot)</a>,📝,3.53,7452725248,250680,4096,✓,✗
 <a href='https://huggingface.co/google/gemma-3-1b-pt'>google/gemma-3-1b-pt (few-shot)</a>,🧠,3.54,999885952,262144,32768,✓,✗
+<a href='https://huggingface.co/DDSC/roberta-base-scandinavian'>DDSC/roberta-base-scandinavian</a>,🔍,3.54,124647170,50265,514,✓,✗
 <a href='https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased'>sentence-transformers/distiluse-base-multilingual-cased</a>,🔍,3.55,134734080,119547,512,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-6.7b'>AI-Sweden-Models/gpt-sw3-6.7b (few-shot)</a>,🧠,3.55,7111057408,64000,2048,✓,✗
 <a href='https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2'>sentence-transformers/distiluse-base-multilingual-cased-v2</a>,🔍,3.55,134734080,119547,512,✓,✗
+<a href='https://huggingface.co/utter-project/EuroLLM-1.7B-Instruct'>utter-project/EuroLLM-1.7B-Instruct (few-shot)</a>,📝,3.56,1656850432,128000,4096,✓,✗
 <a href='https://huggingface.co/jonfd/electra-small-nordic'>jonfd/electra-small-nordic</a>,🔍,3.56,21943938,96105,128,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m'>AI-Sweden-Models/gpt-sw3-356m (few-shot)</a>,🧠,3.56,470607872,64000,2048,✓,✗
-<a href='https://huggingface.co/utter-project/EuroLLM-1.7B-Instruct'>utter-project/EuroLLM-1.7B-Instruct (few-shot)</a>,📝,3.56,1656850432,128000,4096,✓,✗
 <a href='https://huggingface.co/microsoft/infoxlm-base'>microsoft/infoxlm-base</a>,🔍,3.57,278045186,250002,514,✓,✗
+<a href='https://huggingface.co/NbAiLab/roberta_jan_128_ncc'>NbAiLab/roberta_jan_128_ncc</a>,🔍,3.57,124647170,50265,514,✓,✗
 <a href='https://huggingface.co/NbAiLab/nb-gpt-j-6B-alpaca'>NbAiLab/nb-gpt-j-6B-alpaca (few-shot)</a>,📝,3.58,6055077088,50400,1024,✗,✗
 <a href='https://huggingface.co/KBLab/sentence-bert-swedish-cased'>KBLab/sentence-bert-swedish-cased</a>,🔍,3.58,124691456,50325,512,✓,✗
-<a href='https://huggingface.co/NbAiLab/roberta_jan_128_ncc'>NbAiLab/roberta_jan_128_ncc</a>,🔍,3.58,124647170,50265,514,✓,✗
 <a href='https://huggingface.co/EuropeanParliament/EUBERT'>EuropeanParliament/EUBERT</a>,🔍,3.59,93990500,65636,512,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen3-0.6B'>Qwen/Qwen3-0.6B (few-shot)</a>,🤔,3.59,751632384,151936,40960,✓,✗
 <a href='https://huggingface.co/answerdotai/ModernBERT-large'>answerdotai/ModernBERT-large</a>,🔍,3.59,395881664,50368,8192,✓,✗
@@ -402,8 +402,8 @@ fresh-xlm-roberta-base,🔍,4.26,278045186,250002,512,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M'>HuggingFaceTB/SmolLM2-360M (few-shot)</a>,🧠,4.28,361821120,49152,8192,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct'>HuggingFaceTB/SmolLM2-360M-Instruct (few-shot)</a>,📝,4.29,361821120,49152,8192,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-350m-Preview'>PleIAs/Pleias-350m-Preview (few-shot)</a>,🧠,4.30,353424384,65536,2048,✓,✗
+<a href='https://huggingface.co/PleIAs/Pleias-Pico'>PleIAs/Pleias-Pico (few-shot)</a>,🧠,4.34,353424384,65536,2048,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M'>HuggingFaceTB/SmolLM2-135M (few-shot)</a>,🧠,4.34,134515008,49152,8192,✓,✗
-<a href='https://huggingface.co/PleIAs/Pleias-Pico'>PleIAs/Pleias-Pico (few-shot)</a>,🧠,4.35,353424384,65536,2048,✓,✗
 fresh-electra-small,🔍,4.36,13549314,30522,512,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mistral-7B-pretrain'>NorwAI/NorwAI-Mistral-7B-pretrain (few-shot)</a>,🧠,4.36,7536586752,67993,4096,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m'>AI-Sweden-Models/gpt-sw3-126m (few-shot)</a>,🧠,4.38,186112512,64000,2048,✓,✗

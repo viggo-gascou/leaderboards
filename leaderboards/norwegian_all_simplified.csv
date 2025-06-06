@@ -219,7 +219,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/ibm-granite/granite-3.0-1b-a400m-instruct'>ibm-granite/granite-3.0-1b-a400m-instruct (few-shot)</a>,📝,3.73,1334628352,49155,4096,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B'>HuggingFaceTB/SmolLM2-1.7B (few-shot)</a>,🧠,3.74,1711376384,49152,8192,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-1.8B'>Qwen/Qwen1.5-1.8B (few-shot)</a>,📝,3.79,1836828672,151936,32768,✓,✗
-<a href='https://huggingface.co/mhenrichsen/danskgpt-tiny'>mhenrichsen/danskgpt-tiny (few-shot)</a>,🧠,3.83,1100048384,32000,2048,✓,✗
+<a href='https://huggingface.co/mhenrichsen/danskgpt-tiny'>mhenrichsen/danskgpt-tiny (few-shot)</a>,🧠,3.82,1100048384,32000,2048,✓,✗
 <a href='https://huggingface.co/RuterNorway/Llama-2-7b-chat-norwegian'>RuterNorway/Llama-2-7b-chat-norwegian (few-shot)</a>,📝,3.83,,32000,4096,✗,✗
 <a href='https://huggingface.co/ibm-granite/granite-3b-code-base-2k'>ibm-granite/granite-3b-code-base-2k (few-shot)</a>,🧠,3.83,3482503680,49152,2048,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-1b-a400m-base'>ibm-granite/granite-3.0-1b-a400m-base (few-shot)</a>,🧠,3.86,1384956928,49152,4096,✓,✗
