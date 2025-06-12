@@ -121,8 +121,8 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_2-3t-tokens_llama'>TrustLLMeu/baseline-7-8b_2-3t-tokens_llama (few-shot)</a>,🧠,2.97,7799574528,100096,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k'>ibm-granite/granite-8b-code-instruct-4k (few-shot)</a>,📝,2.98,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/occiglot/occiglot-7b-eu5-instruct'>occiglot/occiglot-7b-eu5-instruct (few-shot)</a>,📝,3.06,7241748480,32002,4096,✗,✗
-<a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_1t-tokens_llama'>TrustLLMeu/baseline-7-8b_1t-tokens_llama (few-shot)</a>,🧠,3.09,7799574528,100096,4096,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-Math-7B'>Qwen/Qwen2.5-Math-7B (few-shot)</a>,📝,3.10,7615616512,152064,4096,✓,✗
+<a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_1t-tokens_llama'>TrustLLMeu/baseline-7-8b_1t-tokens_llama (few-shot)</a>,🧠,3.10,7799574528,100096,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-3b-a800m-instruct'>ibm-granite/granite-3.0-3b-a800m-instruct (few-shot)</a>,📝,3.10,3374295552,49155,4096,✓,✗
 <a href='https://huggingface.co/google/gemma-2-2b'>google/gemma-2-2b (few-shot)</a>,🧠,3.17,2614341888,256000,8192,✓,✗
 <a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-research-v0.4'>openGPT-X/Teuken-7B-instruct-research-v0.4 (few-shot)</a>,📝,3.19,7452725248,250680,4096,✗,✗

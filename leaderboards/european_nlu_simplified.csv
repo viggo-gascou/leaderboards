@@ -43,10 +43,10 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-pro-002'>gemini/gemini-1.5-pro-002 (zero-shot, val)</a>",📝,1.94,,256128,2097152,✓,✗
 <a href='https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF'>nvidia/Llama-3.1-Nemotron-70B-Instruct-HF (few-shot)</a>,📝,1.94,70553706496,128256,131072,✓,✗
 "<a href='https://docs.x.ai/docs/models'>xai/grok-2-1212 (zero-shot, val)</a>",📝,1.95,,,131072,✓,✗
-<a href='https://huggingface.co/intfloat/multilingual-e5-large'>intfloat/multilingual-e5-large</a>,🔍,1.95,559893507,250002,512,✓,✗
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-08-2024'>CohereForAI/c4ai-command-r-08-2024 (few-shot)</a>,📝,1.96,32296476672,256000,131072,✗,✗
 <a href='https://huggingface.co/ThatsGroes/gemma-2-27b-it-FP8-Dynamic'>ThatsGroes/gemma-2-27b-it-FP8-Dynamic (few-shot)</a>,📝,1.96,28410968576,256000,8192,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4.1-mini'>gpt-4.1-mini-2025-04-14 (zero-shot, val)</a>",📝,1.98,,,1047576,✓,✗
+<a href='https://huggingface.co/intfloat/multilingual-e5-large'>intfloat/multilingual-e5-large</a>,🔍,1.98,559890946,250002,512,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-lite-001'>gemini/gemini-2.0-flash-lite-001 (zero-shot, val)</a>",📝,2.01,,256128,1048576,✓,✗
 <a href='https://huggingface.co/google/rembert'>google/rembert</a>,🔍,2.01,575923843,250300,256,✓,✗
 "<a href='https://platform.openai.com/docs/models/o3-mini'>o3-mini-2025-01-31 (zero-shot, val)</a>",🤔,2.01,,,200000,✓,✗
@@ -180,7 +180,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/dbmdz/bert-tiny-historic-multilingual-cased'>dbmdz/bert-tiny-historic-multilingual-cased</a>,🔍,4.11,4575491,32000,512,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct'>HuggingFaceTB/SmolLM2-360M-Instruct (few-shot)</a>,📝,4.11,361821120,49152,8192,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-350m-Preview'>PleIAs/Pleias-350m-Preview (few-shot)</a>,🧠,4.12,353424384,65536,2048,✓,✗
-<a href='https://huggingface.co/Qwen/Qwen2.5-Math-1.5B'>Qwen/Qwen2.5-Math-1.5B (few-shot)</a>,📝,4.17,1543714304,151936,4096,✓,✗
+<a href='https://huggingface.co/Qwen/Qwen2.5-Math-1.5B'>Qwen/Qwen2.5-Math-1.5B (few-shot)</a>,📝,4.16,1543714304,151936,4096,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-Pico'>PleIAs/Pleias-Pico (few-shot)</a>,🧠,4.21,353424384,65536,2048,✓,✗
 fresh-xlm-roberta-base,🔍,4.26,278045955,250002,512,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M'>HuggingFaceTB/SmolLM2-135M (few-shot)</a>,🧠,4.30,134515008,49152,8192,✓,✗
