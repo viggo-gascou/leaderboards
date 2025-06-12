@@ -146,7 +146,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://ollama.com/library/gemma3:1b'>ollama_chat/gemma3:1b (few-shot)</a>,📝,3.44,1000000000,262144,32768,✓,✗
 <a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4'>openGPT-X/Teuken-7B-instruct-commercial-v0.4 (few-shot)</a>,📝,3.44,7452725248,250680,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-3b-a800m-base'>ibm-granite/granite-3.0-3b-a800m-base (few-shot)</a>,🧠,3.45,3374286336,49152,4096,✓,✗
-<a href='https://huggingface.co/Qwen/Qwen3-0.6B'>Qwen/Qwen3-0.6B (few-shot)</a>,🤔,3.48,751632384,151936,40960,✓,✗
+<a href='https://huggingface.co/Qwen/Qwen3-0.6B'>Qwen/Qwen3-0.6B (few-shot)</a>,🤔,3.47,751632384,151936,40960,✓,✗
 <a href='https://huggingface.co/BSC-LT/salamandra-2b-instruct'>BSC-LT/salamandra-2b-instruct (few-shot)</a>,📝,3.53,2253490176,256000,8192,✓,✗
 <a href='https://huggingface.co/infly/OpenCoder-8B-Base'>infly/OpenCoder-8B-Base (few-shot)</a>,📝,3.54,7771263040,96640,8192,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct'>HuggingFaceTB/SmolLM2-1.7B-Instruct (few-shot)</a>,📝,3.55,1711376384,49152,8192,✓,✗

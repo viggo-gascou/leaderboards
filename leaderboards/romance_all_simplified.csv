@@ -89,8 +89,8 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/nvidia/Mistral-NeMo-Minitron-8B-Base'>nvidia/Mistral-NeMo-Minitron-8B-Base (few-shot)</a>,🧠,2.13,8414105600,131072,8192,✓,✗
 <a href='https://huggingface.co/01-ai/Yi-1.5-9B'>01-ai/Yi-1.5-9B (few-shot)</a>,🧠,2.13,8829407232,64000,4096,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4.1-nano'>gpt-4.1-nano-2025-04-14 (zero-shot, val)</a>",📝,2.14,,,1047576,✓,✗
-<a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct'>meta-llama/Meta-Llama-3-8B-Instruct (few-shot)</a>,📝,2.15,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B-instruct'>NorwAI/NorwAI-Mixtral-8x7B-instruct (few-shot)</a>,🧠,2.15,46997647360,67993,32768,✓,✗
+<a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct'>meta-llama/Meta-Llama-3-8B-Instruct (few-shot)</a>,📝,2.16,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.18,4300079472,262144,,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-7B-Base'>tiiuae/Falcon3-7B-Base (few-shot)</a>,🧠,2.21,7455550464,131072,32768,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B'>meta-llama/Llama-3.1-8B (few-shot)</a>,🧠,2.21,8030261248,128256,131072,✓,✗
@@ -163,9 +163,9 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct'>HuggingFaceTB/SmolLM2-360M-Instruct (few-shot)</a>,📝,3.75,361821120,49152,8192,✓,✗
 <a href='https://huggingface.co/croissantllm/CroissantLLMBase'>croissantllm/CroissantLLMBase (few-shot)</a>,🧠,3.76,,32000,2048,✓,✗
 <a href='https://huggingface.co/croissantllm/CroissantLLMChat-v0.1'>croissantllm/CroissantLLMChat-v0.1 (few-shot)</a>,📝,3.78,1345431552,32002,2048,✗,✗
-<a href='https://huggingface.co/PleIAs/Pleias-350m-Preview'>PleIAs/Pleias-350m-Preview (few-shot)</a>,🧠,3.79,353424384,65536,2048,✓,✗
+<a href='https://huggingface.co/PleIAs/Pleias-350m-Preview'>PleIAs/Pleias-350m-Preview (few-shot)</a>,🧠,3.80,353424384,65536,2048,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B'>Qwen/Qwen1.5-0.5B (few-shot)</a>,📝,3.83,619570176,151936,32768,✓,✗
-<a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M'>HuggingFaceTB/SmolLM2-135M (few-shot)</a>,🧠,3.85,134515008,49152,8192,✓,✗
+<a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M'>HuggingFaceTB/SmolLM2-135M (few-shot)</a>,🧠,3.86,134515008,49152,8192,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-Pico'>PleIAs/Pleias-Pico (few-shot)</a>,🧠,3.88,353424384,65536,2048,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct'>HuggingFaceTB/SmolLM2-135M-Instruct (few-shot)</a>,📝,3.96,134515008,49152,8192,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m'>AI-Sweden-Models/gpt-sw3-356m (few-shot)</a>,🧠,4.17,470607872,64000,2048,✓,✗
