@@ -4,7 +4,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-llama-70B'>deepcogito/cogito-v1-preview-llama-70B (few-shot)</a>,📝,1.39,70553706496,128256,131072,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.5-pro-preview-03-25'>gemini/gemini-2.5-pro-preview-03-25 (zero-shot, val)</a>",🤔,1.39,,256128,1048576,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4.1'>gpt-4.1-2025-04-14 (zero-shot, val)</a>",📝,1.40,,,1047576,✓,✗
-<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,🧠,1.42,24011361280,131072,,✓,✗
+<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,📝,1.42,24011361280,131072,,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.46,,200019,8191,✓,✗
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-qwen-32B'>deepcogito/cogito-v1-preview-qwen-32B (few-shot)</a>,📝,1.47,32759790592,151665,131072,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B'>meta-llama/Llama-3.1-70B (few-shot)</a>,🧠,1.47,70553706496,128256,131072,✓,✗

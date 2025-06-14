@@ -4,7 +4,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-qwen-32B'>deepcogito/cogito-v1-preview-qwen-32B (few-shot)</a>,📝,1.60,32759790592,151665,131072,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B'>meta-llama/Meta-Llama-3-70B (few-shot)</a>,🧠,1.60,70553706496,128256,8192,✓,✗
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-llama-70B'>deepcogito/cogito-v1-preview-llama-70B (few-shot)</a>,📝,1.61,70553706496,128256,131072,✓,✗
-<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,🧠,1.62,24011361280,131072,,✓,✗
+<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,📝,1.62,24011361280,131072,,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.5-pro-preview-03-25'>gemini/gemini-2.5-pro-preview-03-25 (zero-shot, val)</a>",🤔,1.67,,256128,1048576,✓,✗
 <a href='https://huggingface.co/NovaSky-AI/Sky-T1-32B-Preview'>NovaSky-AI/Sky-T1-32B-Preview (few-shot)</a>,📝,1.68,32763876352,152064,32768,✓,✗
 <a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,1.69,27432406640,262144,,✓,✗

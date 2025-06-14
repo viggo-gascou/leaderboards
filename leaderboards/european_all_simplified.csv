@@ -4,7 +4,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-llama-70B'>deepcogito/cogito-v1-preview-llama-70B (few-shot)</a>,📝,1.59,70553706496,128256,131072,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4.1'>gpt-4.1-2025-04-14 (zero-shot, val)</a>",📝,1.61,,,1047576,✓,✗
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-qwen-32B'>deepcogito/cogito-v1-preview-qwen-32B (few-shot)</a>,📝,1.61,32759790592,151665,131072,✓,✗
-<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,🧠,1.62,24011361280,131072,,✓,✗
+<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,📝,1.62,24011361280,131072,,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview-04-17'>gemini/gemini-2.5-flash-preview-04-17 (zero-shot, val)</a>",🤔,1.62,,256128,1048576,✓,✗
 "<a href='https://platform.openai.com/docs/models/o4-mini'>o4-mini-2025-04-16 (zero-shot, val)</a>",🤔,1.67,,,200000,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct'>meta-llama/Llama-3.1-70B-Instruct (few-shot)</a>,📝,1.69,70553706496,128256,131072,✓,✗
@@ -142,7 +142,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/PleIAs/Pleias-1.2b-Preview'>PleIAs/Pleias-1.2b-Preview (few-shot)</a>,🧠,3.77,1195468800,65536,2048,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat'>Qwen/Qwen1.5-0.5B-Chat (few-shot)</a>,📝,3.92,619570176,151936,32768,✗,✗
 <a href='https://huggingface.co/Qwen/Qwen1.5-0.5B'>Qwen/Qwen1.5-0.5B (few-shot)</a>,📝,3.94,619570176,151936,32768,✓,✗
-<a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M'>HuggingFaceTB/SmolLM2-360M (few-shot)</a>,🧠,3.96,361821120,49152,8192,✓,✗
+<a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M'>HuggingFaceTB/SmolLM2-360M (few-shot)</a>,🧠,3.97,361821120,49152,8192,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-Math-1.5B'>Qwen/Qwen2.5-Math-1.5B (few-shot)</a>,📝,4.03,1543714304,151936,4096,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m'>AI-Sweden-Models/gpt-sw3-356m (few-shot)</a>,🧠,4.07,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct'>HuggingFaceTB/SmolLM2-360M-Instruct (few-shot)</a>,📝,4.07,361821120,49152,8192,✓,✗
