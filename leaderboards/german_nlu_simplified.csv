@@ -6,7 +6,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/intfloat/multilingual-e5-large-instruct'>intfloat/multilingual-e5-large-instruct</a>,🔍,1.51,559890432,250002,514,✓,✗
 <a href='https://huggingface.co/intfloat/multilingual-e5-large'>intfloat/multilingual-e5-large</a>,🔍,1.54,559890946,250002,512,✓,✗
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-qwen-32B'>deepcogito/cogito-v1-preview-qwen-32B (few-shot)</a>,📝,1.55,32759790592,151665,131072,✓,✗
-<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,🧠,1.56,24011361280,131072,,✓,✗
+<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,📝,1.56,24011361280,131072,,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-70B'>meta-llama/Llama-3.1-70B (few-shot)</a>,🧠,1.59,70553706496,128256,131072,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B'>meta-llama/Meta-Llama-3-70B (few-shot)</a>,🧠,1.59,70553706496,128256,8192,✓,✗
 "<a href='https://ollama.com/library/phi4:14b-q4_K_M'>ollama_chat/phi4:14b-q4_K_M (few-shot, val)</a>",📝,1.60,14700000000,100352,16384,✓,✗

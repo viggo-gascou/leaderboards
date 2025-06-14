@@ -13,7 +13,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/vesteinn/ScandiBERT-no-faroese'>vesteinn/ScandiBERT-no-faroese</a>,🔍,1.89,124498007,50005,514,✓,✗
 <a href='https://huggingface.co/setu4993/LaBSE'>setu4993/LaBSE</a>,🔍,1.95,470927360,501153,512,✓,✗
 "<a href='https://ollama.com/library/gemma3:27b-it-q4_K_M'>ollama_chat/gemma3:27b-it-q4_K_M (few-shot, val)</a>",📝,1.95,27400000000,262144,128000,✓,✗
-<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,🧠,1.98,24011361280,131072,,✓,✗
+<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,📝,1.98,24011361280,131072,,✓,✗
 <a href='https://ollama.com/library/gemma3:27b-it-fp16'>ollama_chat/gemma3:27b-it-fp16 (few-shot)</a>,📝,2.01,,,,✓,✗
 <a href='https://huggingface.co/google/gemma-3-27b-it'>google/gemma-3-27b-it (few-shot)</a>,📝,2.01,27432406640,262144,,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-001'>gemini/gemini-2.0-flash-001 (zero-shot, val)</a>",📝,2.02,,256128,1048576,✓,✗

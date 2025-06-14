@@ -21,7 +21,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/KennethEnevoldsen/dfm-sentence-encoder-large-1'>KennethEnevoldsen/dfm-sentence-encoder-large-1</a>,🔍,1.46,407389520,50000,512,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o'>gpt-4o-2024-05-13 (zero-shot, val)</a>",📝,1.47,,200019,8191,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/roberta-large-1160k'>AI-Sweden-Models/roberta-large-1160k</a>,🔍,1.48,355412057,50265,512,✓,✗
-<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,🧠,1.49,24011361280,131072,,✓,✗
+<a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503'>mistralai/Mistral-Small-3.1-24B-Instruct-2503 (few-shot)</a>,📝,1.49,24011361280,131072,,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Base-2503'>mistralai/Mistral-Small-3.1-24B-Base-2503 (few-shot)</a>,🧠,1.49,24011361280,131072,,✓,✗
 <a href='https://huggingface.co/danish-foundation-models/encoder-large-v1'>danish-foundation-models/encoder-large-v1</a>,🔍,1.50,355139920,50000,512,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct'>meta-llama/Meta-Llama-3-70B-Instruct (few-shot)</a>,📝,1.51,70553706496,128256,8192,✓,✗
