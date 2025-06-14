@@ -29,6 +29,11 @@ GENERATIVE_TYPE_CACHE: dict[str, str | None] = dict()
 MERGE_CACHE: dict[str, bool] = dict()
 COMMERCIALLY_LICENSED_CACHE: dict[str, bool] = dict()
 ANCHOR_TAG_CACHE: dict[str, str] = dict()
+API_MODEL_REGEXES: list[re.Pattern] = [
+    re.compile(r"gemini/.*"),
+    re.compile(r"gpt-4.*"),
+    re.compile(r"(anthropic/)?claude.*"),
+]
 
 
 @click.command()
@@ -379,12 +384,25 @@ def record_is_valid(record: dict) -> bool:
     Returns:
         True if the record is valid, False otherwise.
     """
+    # Remove records with banned EuroEval versions
     if record.get("euroeval_version") in BANNED_VERSIONS:
         return False
+
+    # Remove banned models
     if any(
         re.search(pattern=pattern, string=record["model"]) for pattern in BANNED_MODELS
     ):
         return False
+
+    # Do not allow few-shot evaluation for API models
+    model_id_match = re.search(r">(.+?)<", record["model"])
+    model_id = model_id_match.group(1) if model_id_match else record["model"]
+    if any(
+        re.fullmatch(pattern=pattern, string=model_id) for pattern in API_MODEL_REGEXES
+    ) and record.get("few_shot", True):
+        return False
+
+    # Otherwise, the record is valid
     return True
 
 
