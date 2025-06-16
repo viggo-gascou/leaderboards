@@ -12,7 +12,6 @@ pull:
 
 download:
 	@scp -o ConnectTimeout=5 lancelot:/home/alex-admin/euroeval/euroeval_benchmark_results.jsonl lancelot_results.jsonl || true
-	@scp -o ConnectTimeout=5 lancelot:/home/alex-admin/euroeval/api/euroeval_benchmark_results.jsonl lancelot_api_results.jsonl || true
 	@scp -o ConnectTimeout=5 ucloud:/home/ucloud/euroeval_benchmark_results.jsonl ucloud_results.jsonl || true
 	@scp -o ConnectTimeout=5 ucloud:/home/ucloud/api/euroeval_benchmark_results.jsonl ucloud_api_results.jsonl || true
 	@scp -o ConnectTimeout=5 ucloud2:/home/ucloud/euroeval_benchmark_results.jsonl ucloud2_results.jsonl || true
@@ -21,10 +20,6 @@ download:
 	@if [ -f lancelot_results.jsonl ]; then \
 		cat lancelot_results.jsonl >> results/results.jsonl; \
 		rm lancelot_results.jsonl; \
-	fi
-	@if [ -f lancelot_api_results.jsonl ]; then \
-		cat lancelot_api_results.jsonl >> results/results.jsonl; \
-		rm lancelot_api_results.jsonl; \
 	fi
 	@if [ -f blackknight_results.jsonl ]; then \
 		cat blackknight_results.jsonl >> results/results.jsonl; \
