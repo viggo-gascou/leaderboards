@@ -226,7 +226,7 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.53,7241732096,3
 <a href='https://huggingface.co/tiiuae/Falcon3-7B-Base'>tiiuae/Falcon3-7B-Base (few-shot)</a>,🧠,2.57,7455550464,131072,32768,✓,✗
 <a href='https://huggingface.co/mhenrichsen/hestenettetLM'>mhenrichsen/hestenettetLM (few-shot)</a>,🧠,2.57,7241732096,32000,32768,✓,✗
 <a href='https://huggingface.co/lightonai/alfred-40b-1023'>lightonai/alfred-40b-1023 (few-shot)</a>,📝,2.58,,65024,,✓,✗
-<a href='https://huggingface.co/CohereForAI/aya-23-8B'>CohereForAI/aya-23-8B (few-shot)</a>,🧠,2.58,8028033024,256000,8192,✗,✗
+<a href='https://huggingface.co/CohereForAI/aya-23-8B'>CohereForAI/aya-23-8B (few-shot)</a>,📝,2.58,8028033024,256000,8192,✗,✗
 <a href='https://huggingface.co/jjzha/dajobbert-base-uncased'>jjzha/dajobbert-base-uncased</a>,🔍,2.59,109834754,31748,512,✓,✗
 <a href='https://huggingface.co/sentence-transformers/stsb-xlm-r-multilingual'>sentence-transformers/stsb-xlm-r-multilingual</a>,🔍,2.59,277455362,250002,512,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-chat-hf'>meta-llama/Llama-2-13b-chat-hf (few-shot)</a>,📝,2.60,13015866880,32000,4096,✓,✗

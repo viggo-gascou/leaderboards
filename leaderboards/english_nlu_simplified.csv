@@ -160,7 +160,7 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.84,,32000,32768,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-chat-hf'>meta-llama/Llama-2-13b-chat-hf (few-shot)</a>,📝,2.18,13015866880,32000,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-8b-code-base-4k'>ibm-granite/granite-8b-code-base-4k (few-shot)</a>,🧠,2.20,8054910976,49152,4096,✓,✗
 <a href='https://huggingface.co/tiiuae/falcon-11B'>tiiuae/falcon-11B (few-shot)</a>,📝,2.20,11102822400,65024,8192,✓,✗
-<a href='https://huggingface.co/CohereForAI/aya-23-8B'>CohereForAI/aya-23-8B (few-shot)</a>,🧠,2.20,8028033024,256000,8192,✗,✗
+<a href='https://huggingface.co/CohereForAI/aya-23-8B'>CohereForAI/aya-23-8B (few-shot)</a>,📝,2.20,8028033024,256000,8192,✗,✗
 <a href='https://huggingface.co/occiglot/occiglot-7b-de-en'>occiglot/occiglot-7b-de-en (few-shot)</a>,🧠,2.21,7241732096,32000,32768,✓,✗
 <a href='https://huggingface.co/BSC-LT/salamandra-7b-instruct'>BSC-LT/salamandra-7b-instruct (few-shot)</a>,📝,2.21,7768117248,256000,8192,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-hf'>meta-llama/Llama-2-13b-hf (few-shot)</a>,🧠,2.21,13015866880,32000,4096,✓,✗

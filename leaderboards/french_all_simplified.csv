@@ -85,7 +85,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/Nexusflow/Starling-LM-7B-beta'>Nexusflow/Starling-LM-7B-beta (few-shot)</a>,📝,2.04,7241748480,32002,4096,✗,✗
 <a href='https://huggingface.co/nvidia/Mistral-NeMo-Minitron-8B-Base'>nvidia/Mistral-NeMo-Minitron-8B-Base (few-shot)</a>,🧠,2.04,8414105600,131072,8192,✓,✗
 <a href='https://huggingface.co/ai21labs/Jamba-v0.1'>ai21labs/Jamba-v0.1 (few-shot)</a>,🧠,2.05,51570323328,65536,262144,✓,✗
-<a href='https://huggingface.co/CohereForAI/aya-expanse-8b'>CohereForAI/aya-expanse-8b (few-shot)</a>,🧠,2.06,8028033024,256000,8192,✗,✗
+<a href='https://huggingface.co/CohereForAI/aya-expanse-8b'>CohereForAI/aya-expanse-8b (few-shot)</a>,📝,2.06,8028033024,256000,8192,✗,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B'>NorwAI/NorwAI-Mixtral-8x7B (few-shot)</a>,🧠,2.07,46997647360,67993,32768,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct'>allenai/OLMo-2-0325-32B-Instruct (few-shot)</a>,📝,2.07,32234279936,100352,4096,✗,✗
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-v01'>CohereForAI/c4ai-command-r-v01 (few-shot)</a>,📝,2.07,34980831232,256000,8192,✗,✗

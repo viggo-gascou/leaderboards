@@ -177,7 +177,7 @@ mhenrichsen/danskgpt-chat-v2.1 (few-shot)</a>,📝,2.20,,32002,32768,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-10B-Base'>tiiuae/Falcon3-10B-Base (few-shot)</a>,🧠,2.21,10305653760,131072,32768,✓,✗
 <a href='https://huggingface.co/jonfd/electra-small-nordic'>jonfd/electra-small-nordic</a>,🔍,2.22,21944195,96105,128,✓,✗
 <a href='https://huggingface.co/allenai/OLMo-2-1124-13B'>allenai/OLMo-2-1124-13B (few-shot)</a>,🧠,2.22,13716198400,100352,4096,✓,✗
-<a href='https://huggingface.co/CohereForAI/aya-23-8B'>CohereForAI/aya-23-8B (few-shot)</a>,🧠,2.22,8028033024,256000,8192,✗,✗
+<a href='https://huggingface.co/CohereForAI/aya-23-8B'>CohereForAI/aya-23-8B (few-shot)</a>,📝,2.22,8028033024,256000,8192,✗,✗
 "<a href='https://huggingface.co/merge-crew/da-sv-dare-ties-density-0.6'>merge-crew/da-sv-dare-ties-density-0.6 (few-shot, val)</a>",🧠,2.23,7241732096,32000,32768,✓,✓
 <a href='https://huggingface.co/ibm-granite/granite-34b-code-instruct'>ibm-granite/granite-34b-code-instruct (few-shot)</a>,📝,2.23,33715603456,49152,8192,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-34b-code-base'>ibm-granite/granite-34b-code-base (few-shot)</a>,🧠,2.23,33715603456,49152,8192,✓,✗

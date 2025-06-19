@@ -98,8 +98,8 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/meta-llama/Llama-2-13b-hf'>meta-llama/Llama-2-13b-hf (few-shot)</a>,🧠,1.97,13015866880,32000,4096,✓,✗
 <a href='https://huggingface.co/lightonai/alfred-40b-1023'>lightonai/alfred-40b-1023 (few-shot)</a>,📝,1.97,,65024,,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4.1-nano'>gpt-4.1-nano-2025-04-14 (zero-shot, val)</a>",📝,1.97,,,1047576,✓,✗
-<a href='https://huggingface.co/CohereForAI/aya-expanse-8b'>CohereForAI/aya-expanse-8b (few-shot)</a>,🧠,1.98,8028033024,256000,8192,✗,✗
-<a href='https://huggingface.co/CohereForAI/aya-23-8B'>CohereForAI/aya-23-8B (few-shot)</a>,🧠,1.99,8028033024,256000,8192,✗,✗
+<a href='https://huggingface.co/CohereForAI/aya-expanse-8b'>CohereForAI/aya-expanse-8b (few-shot)</a>,📝,1.98,8028033024,256000,8192,✗,✗
+<a href='https://huggingface.co/CohereForAI/aya-23-8B'>CohereForAI/aya-23-8B (few-shot)</a>,📝,1.99,8028033024,256000,8192,✗,✗
 <a href='https://huggingface.co/alpindale/Mistral-7B-v0.2-hf'>alpindale/Mistral-7B-v0.2-hf (few-shot)</a>,🧠,2.01,7241732096,32000,32768,✓,✗
 <a href='https://huggingface.co/microsoft/mdeberta-v3-base'>microsoft/mdeberta-v3-base</a>,🔍,2.01,278220290,251000,512,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-34b-code-base'>ibm-granite/granite-34b-code-base (few-shot)</a>,🧠,2.02,33715603456,49152,8192,✓,✗
