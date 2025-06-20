@@ -191,13 +191,13 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/croissantllm/CroissantLLMChat-v0.1'>croissantllm/CroissantLLMChat-v0.1 (few-shot)</a>,📝,4.16,1345431552,32002,2048,✗,✗
 fresh-xlm-roberta-base,🔍,4.27,278885778,250002,512,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m'>AI-Sweden-Models/gpt-sw3-356m (few-shot)</a>,🧠,4.27,470607872,64000,2048,✓,✗
-<a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct'>HuggingFaceTB/SmolLM2-135M-Instruct (few-shot)</a>,📝,4.28,134515008,49152,8192,✓,✗
+<a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct'>HuggingFaceTB/SmolLM2-135M-Instruct (few-shot)</a>,📝,4.29,134515008,49152,8192,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,4.40,470607872,64000,2048,✓,✗
 fresh-electra-small,🔍,4.44,13738755,32000,128,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m-instruct'>AI-Sweden-Models/gpt-sw3-126m-instruct (few-shot)</a>,📝,4.48,186112512,64000,2048,✓,✗
 <a href='https://huggingface.co/openai-community/gpt2-medium'>openai-community/gpt2-medium (few-shot)</a>,🧠,4.60,379988992,50257,1024,✓,✗
 <a href='https://huggingface.co/dbmdz/bert-tiny-historic-multilingual-cased'>dbmdz/bert-tiny-historic-multilingual-cased</a>,🔍,4.61,4624642,32000,512,✓,✗
-<a href='https://huggingface.co/openai-community/gpt2-large'>openai-community/gpt2-large (few-shot)</a>,🧠,4.61,811778816,50257,1024,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m'>AI-Sweden-Models/gpt-sw3-126m (few-shot)</a>,🧠,4.61,186112512,64000,2048,✓,✗
+<a href='https://huggingface.co/openai-community/gpt2-large'>openai-community/gpt2-large (few-shot)</a>,🧠,4.62,811778816,50257,1024,✓,✗
 <a href='https://huggingface.co/openai-community/gpt2'>openai-community/gpt2 (few-shot)</a>,🧠,4.65,137022720,50257,1024,✓,✗
 <a href='https://huggingface.co/alea-institute/kl3m-003-3.7b'>alea-institute/kl3m-003-3.7b (few-shot)</a>,🧠,4.71,3691382784,32768,4096,✓,✗

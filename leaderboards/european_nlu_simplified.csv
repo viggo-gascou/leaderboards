@@ -167,7 +167,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/PleIAs/Pleias-1.2b-Preview'>PleIAs/Pleias-1.2b-Preview (few-shot)</a>,🧠,3.61,1195468800,65536,2048,✓,✗
 <a href='https://huggingface.co/answerdotai/ModernBERT-base'>answerdotai/ModernBERT-base</a>,🔍,3.63,149655232,50368,8192,✓,✗
 <a href='https://huggingface.co/microsoft/phi-2'>microsoft/phi-2 (few-shot)</a>,🧠,3.66,2779683840,51200,2048,✓,✗
-<a href='https://huggingface.co/timpal0l/Mistral-7B-v0.1-flashback-v2'>timpal0l/Mistral-7B-v0.1-flashback-v2 (few-shot)</a>,📝,3.67,7241732096,32000,4096,✓,✗
+<a href='https://huggingface.co/timpal0l/Mistral-7B-v0.1-flashback-v2'>timpal0l/Mistral-7B-v0.1-flashback-v2 (few-shot)</a>,📝,3.68,7241732096,32000,4096,✓,✗
 <a href='https://huggingface.co/DiscoResearch/DiscoLM-70b'>DiscoResearch/DiscoLM-70b (few-shot)</a>,🧠,3.69,68977172480,32032,8192,✗,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-1b-a400m-base'>ibm-granite/granite-3.0-1b-a400m-base (few-shot)</a>,🧠,3.70,1384956928,49152,4096,✓,✗
 <a href='https://huggingface.co/utter-project/EuroVLM-1.7B-Preview'>utter-project/EuroVLM-1.7B-Preview (few-shot)</a>,📝,3.85,2061162016,128000,,✓,✗
@@ -182,7 +182,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/PleIAs/Pleias-350m-Preview'>PleIAs/Pleias-350m-Preview (few-shot)</a>,🧠,4.15,353424384,65536,2048,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-Math-1.5B'>Qwen/Qwen2.5-Math-1.5B (few-shot)</a>,📝,4.19,1543714304,151936,4096,✓,✗
 <a href='https://huggingface.co/PleIAs/Pleias-Pico'>PleIAs/Pleias-Pico (few-shot)</a>,🧠,4.24,353424384,65536,2048,✓,✗
-fresh-xlm-roberta-base,🔍,4.28,278045955,250002,512,✓,✗
+fresh-xlm-roberta-base,🔍,4.29,278045955,250002,512,✓,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M'>HuggingFaceTB/SmolLM2-135M (few-shot)</a>,🧠,4.33,134515008,49152,8192,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,4.37,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m-instruct'>AI-Sweden-Models/gpt-sw3-126m-instruct (few-shot)</a>,📝,4.43,186112512,64000,2048,✓,✗

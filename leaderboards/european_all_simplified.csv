@@ -77,8 +77,8 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/ai21labs/Jamba-v0.1'>ai21labs/Jamba-v0.1 (few-shot)</a>,🧠,2.39,51570323328,65536,262144,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B-instruct'>NorwAI/NorwAI-Mixtral-8x7B-instruct (few-shot)</a>,📝,2.41,46997647360,67993,32768,✓,✗
 <a href='https://huggingface.co/NousResearch/DeepHermes-3-Llama-3-8B-Preview'>NousResearch/DeepHermes-3-Llama-3-8B-Preview (few-shot)</a>,📝,2.41,8030261248,128256,131072,✓,✗
-<a href='https://huggingface.co/mistralai/Ministral-8B-Instruct-2410'>mistralai/Ministral-8B-Instruct-2410 (few-shot)</a>,📝,2.42,8019808256,131072,32768,✓,✗
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-v01'>CohereForAI/c4ai-command-r-v01 (few-shot)</a>,📝,2.43,34980831232,256000,8192,✗,✗
+<a href='https://huggingface.co/mistralai/Ministral-8B-Instruct-2410'>mistralai/Ministral-8B-Instruct-2410 (few-shot)</a>,📝,2.43,8019808256,131072,32768,✓,✗
 <a href='https://huggingface.co/google/gemma-3-4b-it'>google/gemma-3-4b-it (few-shot)</a>,📝,2.43,4300079472,262144,,✓,✗
 <a href='https://huggingface.co/senseable/WestLake-7B-v2'>senseable/WestLake-7B-v2 (few-shot)</a>,🧠,2.43,7241732096,32000,4096,✗,✗
 <a href='https://huggingface.co/Nexusflow/Starling-LM-7B-beta'>Nexusflow/Starling-LM-7B-beta (few-shot)</a>,📝,2.44,7241748480,32002,4096,✗,✗
