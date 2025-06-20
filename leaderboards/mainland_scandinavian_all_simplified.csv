@@ -190,13 +190,13 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/stabilityai/stablelm-2-1_6b'>stabilityai/stablelm-2-1_6b (few-shot)</a>,🧠,3.28,1644515328,100352,4096,✓,✗
 <a href='https://huggingface.co/BSC-LT/salamandra-2b-instruct'>BSC-LT/salamandra-2b-instruct (few-shot)</a>,📝,3.31,2253490176,256000,8192,✓,✗
 <a href='https://huggingface.co/HPLT/gpt-13b-nordic-prerelease'>HPLT/gpt-13b-nordic-prerelease (few-shot)</a>,🧠,3.31,14030361600,131072,4096,✓,✗
-<a href='https://huggingface.co/ibm-granite/granite-7b-base'>ibm-granite/granite-7b-base (few-shot)</a>,🧠,3.32,6738415616,32000,2048,✓,✗
 <a href='https://huggingface.co/LumiOpen/Viking-7B'>LumiOpen/Viking-7B (few-shot)</a>,🧠,3.33,7550013440,131072,4096,✓,✗
+<a href='https://huggingface.co/ibm-granite/granite-7b-base'>ibm-granite/granite-7b-base (few-shot)</a>,🧠,3.33,6738415616,32000,2048,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-7b-instruct'>ibm-granite/granite-7b-instruct (few-shot)</a>,📝,3.34,6738481152,32008,4096,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-1.7B-Instruct'>utter-project/EuroLLM-1.7B-Instruct (few-shot)</a>,📝,3.35,1656850432,128000,4096,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-3.0-3b-a800m-base'>ibm-granite/granite-3.0-3b-a800m-base (few-shot)</a>,🧠,3.37,3374286336,49152,4096,✓,✗
-<a href='https://huggingface.co/utter-project/EuroLLM-1.7B'>utter-project/EuroLLM-1.7B (few-shot)</a>,🧠,3.38,,128000,4096,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-6.7b'>AI-Sweden-Models/gpt-sw3-6.7b (few-shot)</a>,🧠,3.39,7111057408,64000,2048,✓,✗
+<a href='https://huggingface.co/utter-project/EuroLLM-1.7B'>utter-project/EuroLLM-1.7B (few-shot)</a>,🧠,3.39,,128000,4096,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.2-1B'>meta-llama/Llama-3.2-1B (few-shot)</a>,🧠,3.45,1235814400,128256,131073,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-1.3b'>AI-Sweden-Models/gpt-sw3-1.3b (few-shot)</a>,🧠,3.45,1444532224,64000,2048,✓,✗
 <a href='https://huggingface.co/mhenrichsen/danskgpt-tiny-chat'>mhenrichsen/danskgpt-tiny-chat (few-shot)</a>,📝,3.47,1100056576,32002,2048,✓,✗
@@ -228,8 +228,8 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/PleIAs/Pleias-Nano'>PleIAs/Pleias-Nano (few-shot)</a>,🧠,3.89,1195468800,65536,2048,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-356m-instruct'>AI-Sweden-Models/gpt-sw3-356m-instruct (few-shot)</a>,📝,3.98,470607872,64000,2048,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m-instruct'>AI-Sweden-Models/gpt-sw3-126m-instruct (few-shot)</a>,📝,3.99,186112512,64000,2048,✓,✗
-<a href='https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat'>Qwen/Qwen1.5-0.5B-Chat (few-shot)</a>,📝,4.05,619570176,151936,32768,✗,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-360M'>HuggingFaceTB/SmolLM2-360M (few-shot)</a>,🧠,4.05,361821120,49152,8192,✓,✗
+<a href='https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat'>Qwen/Qwen1.5-0.5B-Chat (few-shot)</a>,📝,4.06,619570176,151936,32768,✗,✗
 <a href='https://huggingface.co/HuggingFaceTB/SmolLM2-135M'>HuggingFaceTB/SmolLM2-135M (few-shot)</a>,🧠,4.07,134515008,49152,8192,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen2.5-Math-1.5B'>Qwen/Qwen2.5-Math-1.5B (few-shot)</a>,📝,4.12,1543714304,151936,4096,✓,✗
 <a href='https://huggingface.co/AI-Sweden-Models/gpt-sw3-126m'>AI-Sweden-Models/gpt-sw3-126m (few-shot)</a>,🧠,4.13,186112512,64000,2048,✓,✗
