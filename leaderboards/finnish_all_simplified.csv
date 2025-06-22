@@ -83,7 +83,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/deepcogito/cogito-v1-preview-llama-3B'>deepcogito/cogito-v1-preview-llama-3B (few-shot)</a>,📝,2.50,3606752256,128256,131072,✓,✗
 <a href='https://huggingface.co/01-ai/Yi-1.5-9B'>01-ai/Yi-1.5-9B (few-shot)</a>,🧠,2.50,8829407232,64000,4096,✓,✗
 <a href='https://huggingface.co/LumiOpen/Poro-34B-chat'>LumiOpen/Poro-34B-chat (few-shot)</a>,📝,2.50,34216949760,128000,,✓,✗
-<a href='https://huggingface.co/utter-project/EuroLLM-9B-Instruct'>utter-project/EuroLLM-9B-Instruct (few-shot)</a>,📝,2.53,9152319488,128000,4096,✗,✗
+<a href='https://huggingface.co/utter-project/EuroLLM-9B-Instruct'>utter-project/EuroLLM-9B-Instruct (few-shot)</a>,📝,2.54,9152319488,128000,4096,✗,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B-instruct'>NorwAI/NorwAI-Mixtral-8x7B-instruct (few-shot)</a>,📝,2.55,46997647360,67993,32768,✓,✗
 <a href='https://huggingface.co/NorwAI/NorwAI-Mixtral-8x7B'>NorwAI/NorwAI-Mixtral-8x7B (few-shot)</a>,🧠,2.59,46997647360,67993,32768,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-34b-code-instruct'>ibm-granite/granite-34b-code-instruct (few-shot)</a>,📝,2.61,33715603456,49152,8192,✓,✗
@@ -104,7 +104,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/lightonai/alfred-40b-1023'>lightonai/alfred-40b-1023 (few-shot)</a>,📝,2.89,,65024,,✓,✗
 <a href='https://huggingface.co/google/gemma-3-1b-it'>google/gemma-3-1b-it (few-shot)</a>,📝,2.90,999885952,262144,32768,✓,✗
 <a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-research-v0.4'>openGPT-X/Teuken-7B-instruct-research-v0.4 (few-shot)</a>,📝,2.95,7452725248,250680,4096,✗,✗
-<a href='https://huggingface.co/LumiOpen/Viking-13B'>LumiOpen/Viking-13B (few-shot)</a>,🧠,3.01,14030361600,131072,4096,✓,✗
+<a href='https://huggingface.co/LumiOpen/Viking-13B'>LumiOpen/Viking-13B (few-shot)</a>,🧠,3.02,14030361600,131072,4096,✓,✗
 <a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_1t-tokens_llama'>TrustLLMeu/baseline-7-8b_1t-tokens_llama (few-shot)</a>,🧠,3.04,7799574528,100096,4096,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-1.7B-Instruct'>utter-project/EuroLLM-1.7B-Instruct (few-shot)</a>,📝,3.06,1656850432,128000,4096,✓,✗
 <a href='https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4'>openGPT-X/Teuken-7B-instruct-commercial-v0.4 (few-shot)</a>,📝,3.06,7452725248,250680,4096,✓,✗
