@@ -44,8 +44,8 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/Qwen/QwQ-32B'>Qwen/QwQ-32B (few-shot)</a>,🤔,1.90,32763876352,152064,40960,✓,✗
 <a href='https://huggingface.co/meta-llama/Meta-Llama-3-8B'>meta-llama/Meta-Llama-3-8B (few-shot)</a>,🧠,1.92,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/01-ai/Yi-1.5-34B'>01-ai/Yi-1.5-34B (few-shot)</a>,🧠,1.94,34388917248,64000,4096,✓,✗
+<a href='https://huggingface.co/LumiOpen/Llama-Poro-2-8B-SFT'>LumiOpen/Llama-Poro-2-8B-SFT (few-shot)</a>,📝,1.94,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.1-8B'>meta-llama/Llama-3.1-8B (few-shot)</a>,🧠,1.95,8030261248,128256,131072,✓,✗
-<a href='https://huggingface.co/LumiOpen/Llama-Poro-2-8B-SFT'>LumiOpen/Llama-Poro-2-8B-SFT (few-shot)</a>,📝,1.95,8030261248,128256,8192,✓,✗
 <a href='https://huggingface.co/LumiOpen/Llama-Poro-2-8B-Instruct'>LumiOpen/Llama-Poro-2-8B-Instruct (few-shot)</a>,📝,1.96,8030261248,128256,8192,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-lite-001'>gemini/gemini-2.0-flash-lite-001 (zero-shot, val)</a>",📝,1.97,,256128,1048576,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-pro-002'>gemini/gemini-1.5-pro-002 (zero-shot, val)</a>",📝,1.97,,256128,2097152,✓,✗
@@ -63,11 +63,11 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://docs.anthropic.com/en/docs/about-claude/models/all-models'>claude-3-5-haiku-20241022 (zero-shot, val)</a>",📝,2.10,,,200000,✓,✗
 <a href='https://huggingface.co/LumiOpen/Poro-34B'>LumiOpen/Poro-34B (few-shot)</a>,🧠,2.11,34216949760,128000,,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (zero-shot, val)</a>",📝,2.12,,200019,128000,✓,✗
+<a href='https://huggingface.co/CohereForAI/aya-23-35B'>CohereForAI/aya-23-35B (few-shot)</a>,📝,2.12,34980831232,256000,8192,✗,✗
 <a href='https://huggingface.co/intfloat/multilingual-e5-large'>intfloat/multilingual-e5-large</a>,🔍,2.12,559890946,250002,512,✓,✗
 "<a href='https://ai.google.dev/gemini-api/docs/models#gemini-1.5-flash-002'>gemini/gemini-1.5-flash-002 (zero-shot, val)</a>",📝,2.13,,256128,1048576,✓,✗
 <a href='https://huggingface.co/Qwen/Qwen3-4B'>Qwen/Qwen3-4B (few-shot)</a>,🤔,2.14,4022468096,151936,40960,✓,✗
 <a href='https://huggingface.co/152334H/miqu-1-70b-sf'>152334H/miqu-1-70b-sf (few-shot)</a>,📝,2.16,68976648192,32000,32764,✓,✗
-<a href='https://huggingface.co/CohereForAI/aya-23-35B'>CohereForAI/aya-23-35B (few-shot)</a>,📝,2.17,34980831232,256000,8192,✗,✗
 <a href='https://huggingface.co/microsoft/phi-4'>microsoft/phi-4 (few-shot)</a>,📝,2.17,14659507200,100352,16384,✓,✗
 <a href='https://huggingface.co/ibm-granite/granite-34b-code-base'>ibm-granite/granite-34b-code-base (few-shot)</a>,🧠,2.18,33715603456,49152,8192,✓,✗
 "<a href='https://platform.openai.com/docs/models/gpt-4.1-nano'>gpt-4.1-nano-2025-04-14 (zero-shot, val)</a>",📝,2.20,,,1047576,✓,✗
@@ -106,7 +106,7 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 <a href='https://huggingface.co/CohereForAI/aya-expanse-8b'>CohereForAI/aya-expanse-8b (few-shot)</a>,📝,2.52,8028033024,256000,8192,✗,✗
 <a href='https://huggingface.co/occiglot/occiglot-7b-eu5-instruct'>occiglot/occiglot-7b-eu5-instruct (few-shot)</a>,📝,2.52,7241748480,32002,32768,✗,✗
 <a href='https://huggingface.co/ZurichNLP/unsup-simcse-xlm-roberta-base'>ZurichNLP/unsup-simcse-xlm-roberta-base</a>,🔍,2.53,277453570,250002,514,✓,✗
-<a href='https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct'>meta-llama/Llama-3.2-3B-Instruct (few-shot)</a>,📝,2.54,3212749824,128256,131072,✓,✗
+<a href='https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct'>meta-llama/Llama-3.2-3B-Instruct (few-shot)</a>,📝,2.55,3212749824,128256,131072,✓,✗
 <a href='https://huggingface.co/TrustLLMeu/baseline-7-8b_2-3t-tokens_llama'>TrustLLMeu/baseline-7-8b_2-3t-tokens_llama (few-shot)</a>,🧠,2.55,7799574528,100096,4096,✓,✗
 <a href='https://huggingface.co/microsoft/xlm-align-base'>microsoft/xlm-align-base</a>,🔍,2.57,277455362,250002,514,✓,✗
 <a href='https://huggingface.co/Twitter/twhin-bert-large'>Twitter/twhin-bert-large</a>,🔍,2.57,561713298,250002,512,✓,✗

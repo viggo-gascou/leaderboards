@@ -49,8 +49,8 @@ model,generative_type,rank,parameters,vocabulary_size,context,commercial,merge
 "<a href='https://platform.openai.com/docs/models/gpt-4o-mini'>gpt-4o-mini-2024-07-18 (zero-shot, val)</a>",📝,1.75,,200019,8191,✓,✗
 <a href='https://huggingface.co/RekaAI/reka-flash-3'>RekaAI/reka-flash-3 (few-shot)</a>,🤔,1.75,20905482240,100352,32768,✓,✗
 <a href='https://huggingface.co/CohereForAI/c4ai-command-r-08-2024'>CohereForAI/c4ai-command-r-08-2024 (few-shot)</a>,📝,1.76,32296476672,256000,131072,✗,✗
-<a href='https://huggingface.co/CohereForAI/aya-23-35B'>CohereForAI/aya-23-35B (few-shot)</a>,📝,1.76,34980831232,256000,8192,✗,✗
 <a href='https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407'>mistralai/Mistral-Nemo-Instruct-2407 (few-shot)</a>,📝,1.77,12247782400,131072,1024001,✓,✗
+<a href='https://huggingface.co/CohereForAI/aya-23-35B'>CohereForAI/aya-23-35B (few-shot)</a>,📝,1.77,34980831232,256000,8192,✗,✗
 "<a href='https://ollama.com/library/gemma3:12b-it-fp16'>ollama_chat/gemma3:12b-it-fp16 (few-shot, val)</a>",📝,1.78,12187325040,262144,128000,✓,✗
 <a href='https://huggingface.co/google/gemma-2-27b-it'>google/gemma-2-27b-it (few-shot)</a>,📝,1.79,27227128320,256000,8192,✓,✗
 <a href='https://huggingface.co/152334H/miqu-1-70b-sf'>152334H/miqu-1-70b-sf (few-shot)</a>,📝,1.79,68976648192,32000,32764,✓,✗
@@ -128,8 +128,8 @@ skole-gpt-mixtral (few-shot)</a>,🧠,1.87,,32000,32768,✓,✗
 <a href='https://huggingface.co/nvidia/mistral-nemo-minitron-8b-instruct'>nvidia/mistral-nemo-minitron-8b-instruct (few-shot)</a>,📝,2.23,8414105600,131072,8192,✓,✗
 <a href='https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B'>deepseek-ai/DeepSeek-R1-Distill-Llama-70B (few-shot)</a>,🤔,2.23,70553706496,128256,131072,✓,✗
 <a href='https://huggingface.co/tiiuae/Falcon3-3B-Instruct'>tiiuae/Falcon3-3B-Instruct (few-shot)</a>,📝,2.25,3227655168,131072,32768,✓,✗
-<a href='https://huggingface.co/microsoft/Phi-3-mini-4k-instruct'>microsoft/Phi-3-mini-4k-instruct (few-shot)</a>,📝,2.26,3821079552,32064,2047,✓,✗
 <a href='https://ollama.com/library/gemma3:4b-it-q4_K_M'>ollama_chat/gemma3:4b-it-q4_K_M (few-shot)</a>,📝,2.27,,,,✓,✗
+<a href='https://huggingface.co/microsoft/Phi-3-mini-4k-instruct'>microsoft/Phi-3-mini-4k-instruct (few-shot)</a>,📝,2.27,3821079552,32064,2047,✓,✗
 <a href='https://huggingface.co/RuterNorway/Llama-2-13b-chat-norwegian'>RuterNorway/Llama-2-13b-chat-norwegian (few-shot)</a>,📝,2.27,,32000,4096,✗,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-v0.1'>mistralai/Mistral-7B-v0.1 (few-shot)</a>,🧠,2.28,7241732096,32000,4096,✓,✗
 <a href='https://huggingface.co/utter-project/EuroLLM-9B-Instruct'>utter-project/EuroLLM-9B-Instruct (few-shot)</a>,📝,2.28,9152319488,128000,4096,✗,✗
