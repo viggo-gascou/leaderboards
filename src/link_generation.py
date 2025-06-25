@@ -3,19 +3,19 @@
 import logging
 import os
 import re
+
+import openai
+from anthropic import Anthropic
+from dotenv import load_dotenv
+from google.genai import Client as GoogleClient
+from huggingface_hub import HfApi
 from huggingface_hub.errors import (
     GatedRepoError,
     HFValidationError,
     LocalTokenNotFoundError,
     RepositoryNotFoundError,
 )
-import openai
-from huggingface_hub import HfApi
 from requests.exceptions import RequestException
-from dotenv import load_dotenv
-from anthropic import Anthropic
-from google.genai import Client as GoogleClient
-
 
 load_dotenv()
 logging.basicConfig(
@@ -34,6 +34,11 @@ KNOWN_MODELS_WITHOUT_URLS = [
     "mhenrichsen/danskgpt-chat-v2.1",
     "syvai/danskgpt-chat-llama3-70b",
 ]
+
+
+def generate_task_link(task_slug, label):
+    styling = "style='font-size: 12px; font-weight: normal; color: Grey; text-decoration: underline;'"
+    return f"<a href='https://euroeval.com/tasks/{task_slug}/' {styling}>{label}</a>"
 
 
 def generate_anchor_tag(model_id: str) -> str:
