@@ -526,7 +526,6 @@ def create_leaderboard_headers(
     Returns:
         The first and second header.
     """
-    # get the old header
     old_header = list(df.columns)
     language = list(leaderboard_configs.keys())[0]
     DATASET_LINK_TAG = (
