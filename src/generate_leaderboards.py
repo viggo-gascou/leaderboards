@@ -533,25 +533,6 @@ def create_leaderboard_headers(
         f"<a href='https://euroeval.com/datasets/{language}#"
         + "{anchor}'>{dataset}</a>"
     )
-    TASK_TO_LINK = {
-        "sentiment-classification": generate_task_link(
-            "sentiment-classification", "Sentiment Classification"
-        ),
-        "named-entity-recognition": generate_task_link(
-            "named-entity-recognition", "Named Entity Recognition"
-        ),
-        "linguistic-acceptability": generate_task_link(
-            "linguistic-acceptability", "Linguistic Acceptability"
-        ),
-        "reading-comprehension": generate_task_link(
-            "reading-comprehension", "Reading Comprehension"
-        ),
-        "summarization": generate_task_link("summarization", "Summarization"),
-        "knowledge": generate_task_link("knowledge", "Knowledge"),
-        "common-sense-reasoning": generate_task_link(
-            "common-sense-reasoning", "Common-sense Reasoning"
-        ),
-    }
     datasets = list(chain.from_iterable(leaderboard_configs[language].values()))
     dataset_to_task_num = {
         dataset: (task, len(datasets))
@@ -578,7 +559,7 @@ def create_leaderboard_headers(
                 )
                 continue
 
-            task_link = TASK_TO_LINK[task]
+            task_link = generate_task_link(task)
             if num_datasets > 1:
                 task_link = f"~~~{task_link}~~~"
 
