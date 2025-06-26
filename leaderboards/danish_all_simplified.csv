@@ -157,7 +157,7 @@ danish-foundation-models/munin-7b-v0.1dev0 (few-shot)</a>,🧠,2.26,7241732096,3
 <a href='https://huggingface.co/nvidia/mistral-nemo-minitron-8b-instruct'>nvidia/mistral-nemo-minitron-8b-instruct (few-shot)</a>,📝,2.58,8414105600,131072,8192,✓,✗
 <a href='https://huggingface.co/google/gemma-2-2b-it'>google/gemma-2-2b-it (few-shot)</a>,📝,2.59,2614341888,256000,8192,✓,✗
 <a href='https://huggingface.co/mistralai/Mistral-7B-v0.1'>mistralai/Mistral-7B-v0.1 (few-shot)</a>,🧠,2.59,7241732096,32000,4096,✓,✗
-<a href='https://huggingface.co/NLPnorth/snakmodel-7b-instruct'>NLPnorth/snakmodel-7b-instruct (few-shot)</a>,📝,2.61,6738415616,32000,4096,✗,✗
+<a href='https://huggingface.co/NLPnorth/snakmodel-7b-instruct'>NLPnorth/snakmodel-7b-instruct (few-shot)</a>,📝,2.60,6738415616,32000,4096,✗,✗
 <a href='https://huggingface.co/RuterNorway/Llama-2-13b-chat-norwegian'>RuterNorway/Llama-2-13b-chat-norwegian (few-shot)</a>,📝,2.61,13015866880,32000,4096,✗,✗
 <a href='https://huggingface.co/Mabeck/Heidrun-Mistral-7B-chat'>Mabeck/Heidrun-Mistral-7B-chat (few-shot)</a>,📝,2.62,7241732096,32000,4096,✗,✗
 <a href='https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct'>meta-llama/Llama-3.2-3B-Instruct (few-shot)</a>,📝,2.64,3212749824,128256,131072,✓,✗
