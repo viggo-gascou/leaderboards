@@ -7,6 +7,7 @@ import math
 import re
 import warnings
 from collections import defaultdict
+from itertools import chain
 from pathlib import Path
 
 import click
@@ -15,6 +16,7 @@ import pandas as pd
 import scipy.stats as stats
 from yaml import safe_load
 
+from link_generation import generate_task_link
 
 logging.basicConfig(
     level=logging.INFO,
@@ -185,6 +187,15 @@ def main(leaderboard_config: str | Path, force: bool, categories: tuple[str]) ->
         ]
 
         if new_records or force:
+            top_header, second_header = create_leaderboard_headers(df, configs)
+
+            df.columns = top_header
+            # add second_header as the first row
+            df.loc[-1] = second_header
+            df.index = df.index + 1
+            df.sort_index(inplace=True)
+            df = df.fillna("?")
+
             df.to_csv(leaderboard_path, index=False)
             df_simplified.to_csv(simplified_leaderboard_path, index=False)
             timestamp = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -495,6 +506,83 @@ def extract_model_id_from_record(record: dict) -> str:
         model_id = f"{re.sub(r'</a>$', '', model_id)} ({', '.join(model_notes)})</a>"
 
     return model_id
+
+
+def create_leaderboard_headers(
+    df: pd.DataFrame | pd.Series,
+    leaderboard_configs: dict[str, dict[str, list[str]]],
+) -> tuple[list[str], list[str]]:
+    """Create the leaderboard headers.
+
+    The first header includes the task types (with links), and the second header
+    contains the 'original' header but with html links to the datasets.
+
+    Args:
+        df:
+            The dataframe.
+        leaderboard_configs:
+            The leaderboard configurations.
+
+    Returns:
+        The first and second header.
+    """
+    old_header = list(df.columns)
+    language = list(leaderboard_configs.keys())[0]
+    DATASET_LINK_TAG = (
+        f"<a href='https://euroeval.com/datasets/{language}#"
+        + "{anchor}'>{dataset}</a>"
+    )
+    datasets = list(chain.from_iterable(leaderboard_configs[language].values()))
+    dataset_to_task_num = {
+        dataset: (task, len(datasets))
+        for task, datasets in leaderboard_configs[language].items()
+        for dataset in datasets
+    }
+
+    top_header = []
+    second_header = []
+    processed_tasks = set()
+    # so we can create a dummy/hidden column for the first column after the datasets
+    seen_version_col = False
+
+    for col in old_header:
+        leaderboard_col = col.replace("_", "-")
+        if leaderboard_col in datasets:
+            task, num_datasets = dataset_to_task_num[leaderboard_col]
+
+            # Skip if this task has already been processed
+            if task in processed_tasks:
+                top_header.append("")
+                second_header.append(
+                    DATASET_LINK_TAG.format(anchor=leaderboard_col, dataset=col)
+                )
+                continue
+
+            task_link = generate_task_link(task)
+            if num_datasets > 1:
+                task_link = f"~~~{task_link}~~~"
+
+            top_header.append(task_link)
+            second_header.append(
+                DATASET_LINK_TAG.format(anchor=leaderboard_col, dataset=col)
+            )
+            processed_tasks.add(task)
+        else:
+            if "version" in col and not seen_version_col:
+                top_header.append("<span style='visibility: hidden;'>hidden</span>")
+                seen_version_col = True
+            else:
+                top_header.append("")
+
+            second_header.append(col)
+
+    # handle the first and second columns
+    top_header[0] = (
+        "<span style='font-size: 12px; font-weight: normal; opacity: 0.6;'>Task Type</span>"
+    )
+    top_header[1] = "<span style='visibility: hidden;'>dummy</span>"
+
+    return top_header, second_header
 
 
 def generate_dataframe(
