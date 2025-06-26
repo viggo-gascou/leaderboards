@@ -36,10 +36,12 @@ KNOWN_MODELS_WITHOUT_URLS = [
 ]
 
 
-def generate_task_link(label: str) -> str:
+def generate_task_link(id: int, label: str) -> str:
     """Generate a link to a EuroEval task.
 
     Args:
+        id:
+            A unique task ID.
         label:
             The task ID, in kebab-case.
 
@@ -47,7 +49,7 @@ def generate_task_link(label: str) -> str:
         The anchor tag of the task, linking to the EuroEval task description.
     """
     styling = "style='font-size: 12px; font-weight: normal; color: Grey; text-decoration: underline;'"
-    return f"<a href='https://euroeval.com/tasks/{label}/' {styling}>{label.replace('-', ' ').capitalize()}</a>"
+    return f"<a id={id} href='https://euroeval.com/tasks/{label}/' {styling}>{label.replace('-', ' ').capitalize()}</a>"
 
 
 def generate_anchor_tag(model_id: str) -> str:
