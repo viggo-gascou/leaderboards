@@ -527,38 +527,49 @@ def create_leaderboard_headers(
         The first and second header.
     """
     old_header = list(df.columns)
-    language = list(leaderboard_configs.keys())[0]
-    DATASET_LINK_TAG = (
-        f"<a href='https://euroeval.com/datasets/{language}#"
-        + "{anchor}'>{dataset}</a>"
-    )
-    datasets = list(chain.from_iterable(leaderboard_configs[language].values()))
-    dataset_to_task_num = {
-        dataset: (task, len(datasets))
-        for task, datasets in leaderboard_configs[language].items()
-        for dataset in datasets
-    }
+
+    all_datasets = []
+    dataset_to_language = {}
+    dataset_to_task_info = {}
+
+    for language, tasks in leaderboard_configs.items():
+        DATASET_LINK_TAG = (
+            f"<a href='https://euroeval.com/datasets/{language}#"
+            + "{anchor}'>{dataset}</a>"
+        )
+
+        language_datasets = list(chain.from_iterable(tasks.values()))
+        all_datasets.extend(language_datasets)
+
+        for dataset in language_datasets:
+            dataset_to_language[dataset] = (language, DATASET_LINK_TAG)
+
+        for task, datasets in tasks.items():
+            for dataset in datasets:
+                dataset_to_task_info[dataset] = (task, len(datasets))
 
     top_header = []
     second_header = []
-    processed_tasks = set()
-    # so we can create a dummy/hidden column for the first column after the datasets
+    processed_tasks_per_language: dict[str, set[str]] = {}
     seen_version_col = False
 
-    for col in old_header:
+    for id, col in enumerate(old_header):
         leaderboard_col = col.replace("_", "-")
-        if leaderboard_col in datasets:
-            task, num_datasets = dataset_to_task_num[leaderboard_col]
+        if leaderboard_col in all_datasets:
+            language, DATASET_LINK_TAG = dataset_to_language[leaderboard_col]
+            task, num_datasets = dataset_to_task_info[leaderboard_col]
 
-            # Skip if this task has already been processed
-            if task in processed_tasks:
+            if language not in processed_tasks_per_language:
+                processed_tasks_per_language[language] = set()
+
+            if task in processed_tasks_per_language[language]:
                 top_header.append("")
                 second_header.append(
                     DATASET_LINK_TAG.format(anchor=leaderboard_col, dataset=col)
                 )
                 continue
 
-            task_link = generate_task_link(task)
+            task_link = generate_task_link(id, task)
             if num_datasets > 1:
                 task_link = f"~~~{task_link}~~~"
 
@@ -566,7 +577,7 @@ def create_leaderboard_headers(
             second_header.append(
                 DATASET_LINK_TAG.format(anchor=leaderboard_col, dataset=col)
             )
-            processed_tasks.add(task)
+            processed_tasks_per_language[language].add(task)
         else:
             if "version" in col and not seen_version_col:
                 top_header.append("<span style='visibility: hidden;'>hidden</span>")
